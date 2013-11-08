@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/task_editor_scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:id="@+id/task_editor"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+                 android:paddingTop="6dp"
+                 android:paddingBottom="5dp"
+                 android:paddingLeft="3dp"
+            >
+
+        <TableRow
+                android:layout_marginRight="2dip">
+            <TextView
+                    android:id="@+id/edit_name_label"
+                    android:text="@string/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:gravity="right|top"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    />
+            <EditText android:id="@+id/edit_name"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:hint="@string/hint_taskTitle"
+                      android:layout_marginLeft="3dip"
+                      android:inputType="textCapSentences|textMultiLine|textAutoCorrect"
+                    />
+
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                    android:text="@string/priority"
+                    android:gravity="right|fill_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    />
+            <LinearLayout
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:baselineAlignedChildIndex="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <Button
+                        android:id="@+id/priority"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notSet"
+                        android:textSize="16sp"
+                        android:minWidth="100dip"
+                        />
+            </LinearLayout>
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                    android:text="@string/dueDate"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    />
+            <LinearLayout
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:baselineAlignedChildIndex="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <Button android:id="@+id/pickDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notSet"
+                        android:textSize="16sp"
+                        android:minWidth="100dip"
+                        />
+                <ImageView
+                        android:id="@+id/pickDueDateInPastWarning"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/warning"
+                        />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow android:id="@+id/alarm_row_id" >
+            <TextView
+                    android:gravity="right|center_vertical"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alarm"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    />
+            <LinearLayout
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:baselineAlignedChildIndex="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <Button
+                        android:id="@+id/pickAlarm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notSet"
+                        android:textSize="16sp"
+                        android:minWidth="100dip"
+                        />
+                <ImageView
+                        android:id="@+id/pickAlarmInPastWarning"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/warning"
+                        />
+            </LinearLayout>
+        </TableRow>
+        <TableRow
+                android:layout_marginRight="2dip">
+            <TextView android:id="@+id/edit_description_label"
+                      android:text="@string/details"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:singleLine="true"
+                      android:textStyle="bold"
+                      android:textAppearance="?android:attr/textAppearanceMedium"
+                      android:gravity="right"
+                    />
+
+            <!-- Added the autoLink="none" and linksClickable="false" because error happened when text contained clickable link or phone number. See http://code.google.com/p/android/issues/detail?id=6040 -->
+            <EditText android:id="@+id/edit_description"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:layout_marginLeft="3dip"
+                      android:hint="@string/hint_taskDetails"
+                      android:linksClickable="false"
+                      android:autoLink="none"
+                      android:inputType="textCapSentences|textMultiLine|textAutoCorrect"
+                    />
+
+        </TableRow>
+        <TableRow
+                android:layout_marginRight="2dip"
+                android:id="@+id/task_labels_row"
+                android:visibility="gone">
+            <TextView android:id="@+id/task_labels_label"
+                      android:text="@string/labels"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:singleLine="true"
+                      android:textStyle="bold"
+                      android:textAppearance="?android:attr/textAppearanceMedium"
+                      android:gravity="right"
+                      android:layout_marginTop="5dip"
+                    />
+
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dip"
+                    android:layout_weight="1"
+                    >
+                <ImageButton
+                        android:id="@+id/task_label_add_button"
+                        android:layout_width="54dip"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/button_add"
+                        android:src="@drawable/btn_add"
+                        android:textSize="16sp"
+                        />
+                <AutoCompleteTextView
+                        android:id="@+id/task_labels_add_text_box"
+                        android:completionThreshold="1"
+                        android:completionHint="@string/typingSTARWillShowAllLabels"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@id/task_label_add_button"
+                        android:layout_weight="1"
+                        android:inputType="textCapSentences|textAutoCorrect"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_taskLabels"
+                        />
+                <View
+                        android:id="@+id/focus_controller"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/task_labels_add_text_box"
+                        android:layout_toLeftOf="@id/task_label_add_button"
+                        android:focusable="true"
+                        />
+                <LinearLayout
+                        android:id="@+id/label_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/focus_controller"
+                        android:orientation="vertical"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:paddingLeft="3dip"
+                        android:paddingBottom="1dip"
+                        />
+            </RelativeLayout>
+        </TableRow>
+        <TableRow android:id="@+id/button_bar"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  style="@android:style/ButtonBar"
+                >
+
+            <Button android:id="@+id/save_button"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_save"
+                    />
+            <Button android:id="@+id/complete_button"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_complete"
+                    />
+            <Button android:id="@+id/revert_button"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_revert"
+                    />
+        </TableRow>
+    </TableLayout>
+
+
+</ScrollView>
+

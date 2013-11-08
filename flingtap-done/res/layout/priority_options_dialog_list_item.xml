@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flingtap.done.CheckableRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res/com.flingtap.done.base"
+        android:layout_width="fill_parent"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:drawSelectorOnTop="false"
+        app:radioButton="@+id/priority_options_list_item_radio_button"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip">
+    <RadioButton
+            android:id="@id/priority_options_list_item_radio_button"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_height="wrap_content">
+    </RadioButton>
+    <ImageView
+            android:id="@+id/priority_options_list_item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:paddingTop="3dip"
+            android:layout_marginRight="6dip" />
+
+    <TextView
+            android:id="@+id/priority_options_list_item_dual_line_text_2"
+            android:textAppearance="?android:attr/textAppearanceSmallInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/priority_options_list_item_radio_button"
+            android:layout_toRightOf="@id/priority_options_list_item_icon"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:singleLine="true"
+            android:ellipsize="marquee">
+    </TextView>
+    <TextView
+            android:id="@+id/priority_options_list_item_dual_line_text_1"
+            android:textAppearance="?android:attr/textAppearanceLargeInverse"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/priority_options_list_item_radio_button"
+            android:layout_toRightOf="@id/priority_options_list_item_icon"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/priority_options_list_item_dual_line_text_2"
+            android:layout_alignWithParentIfMissing="true"
+            android:gravity="center_vertical"
+            >
+    </TextView>
+
+</com.flingtap.done.CheckableRelativeLayout>
+
+
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:nextFocusUp="@+id/edit_task_contacts_list"
+
+        >
+    <TextView android:id="@+id/task_edit_geo_list_item_name"
+              android:layout_width="wrap_content"
+              android:gravity="center_vertical"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_height="?android:attr/listPreferredItemHeight"
+              android:paddingLeft="5px"
+              android:paddingRight="10dip"
+              android:layout_alignParentLeft="true"
+            />
+    <ImageView android:id="@+id/task_edit_geo_list_item_icon"
+               android:layout_alignParentRight="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/bluelargeproimity"
+               android:paddingTop="2dip"
+               android:paddingLeft="2dip"
+               android:visibility="gone"
+            />
+</RelativeLayout>
+

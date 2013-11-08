@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- **************************************************************** -->
+	<!-- ********  Do not translate  ************************************ -->
+	<!-- **************************************************************** -->
+	
+	<!-- Shared User id -->
+    <string name="flingtap_done_shared_user_id">FlingTap Done User</string>
+	
+	<!-- SearchServices -->
+    <string name="dialog_pleaseWaitWhileLoading">Please wait while loading...</string>	
+	<string name="search_services">Search services</string>
+	<string name="toast_networkTimeout">Network timeout. Unable to complete users request.</string>
+	<string name="selectCenterForServices">Select center for services</string>
+
+	<!-- **************************************************************** -->
+	<!-- ******** Copied directly from the SDK 1.5 strings.xml  ********* -->	
+	<!-- **************************************************************** -->
+    <string name="fast_scroll_alphabet">\u0020ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+	<!-- **************************************************************** -->	 
+
+</resources>

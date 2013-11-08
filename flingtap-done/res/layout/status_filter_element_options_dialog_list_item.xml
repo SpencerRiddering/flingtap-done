@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flingtap.done.CheckableRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res/com.flingtap.done.base"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:drawSelectorOnTop="false"
+        app:radioButton="@+id/status_filter_element_options_list_item_radio_button"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip">
+
+    <RadioButton
+            android:id="@id/status_filter_element_options_list_item_radio_button"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_height="wrap_content">
+    </RadioButton>
+    <TextView
+            android:id="@+id/status_filter_element_options_list_item_dual_line_text_1"
+            android:textAppearance="?android:attr/textAppearanceLargeInverse"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/status_filter_element_options_list_item_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+            android:id="@+id/status_filter_element_options_list_item_dual_line_text_2"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/status_filter_element_options_list_item_radio_button"
+            android:layout_below="@id/status_filter_element_options_list_item_dual_line_text_1">
+    </TextView>
+
+    <RelativeLayout
+            android:id="@+id/status_filter_element_options_list_item_date_range_config"
+            android:paddingLeft="2dip"
+            android:paddingRight="2dip"
+            android:visibility="gone"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/status_filter_element_options_list_item_dual_line_text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <!-- From: -->
+        <TextView
+                android:id="@+id/status_filter_element_options_list_item_from_text"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:text="@string/dialog_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <com.flingtap.done.SpecialDatePicker
+                android:id="@+id/from_date_picker"
+                android:layout_below="@id/status_filter_element_options_list_item_from_text"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:fadingEdge="none"
+                android:scrollbars="none"
+                android:paddingLeft="0dip"
+                android:layout_marginLeft="0dip"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                />
+        <!-- To: -->
+        <TextView
+                android:id="@+id/status_filter_element_options_list_item_to_text"
+                android:layout_below="@id/from_date_picker"
+                android:text="@string/dialog_to"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <com.flingtap.done.SpecialDatePicker
+                android:id="@+id/to_date_picker"
+                android:layout_below="@id/status_filter_element_options_list_item_to_text"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:drawSelectorOnTop="false"
+                android:fadingEdge="none"
+                android:scrollbars="none"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                />
+
+    </RelativeLayout>
+
+</com.flingtap.done.CheckableRelativeLayout>
+
+
+

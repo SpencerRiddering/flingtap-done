@@ -1,0 +1,662 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources xmlns:android='http://schemas.android.com/apk/res/android'>
+	
+	<!-- Search -->
+    <string name='task_titles'>Títulos de las tareas</string>
+
+    <string name='dialog_addOnNeeded'>Complemento necesario</string>
+    <string name='dialog_thisFeatureIsPartOfTheOrganizerAddOnAndMustBeDownloadedSeparately'>Esta función es parte del complemento \" Organizador\" y debe descargarse por separado.</string>
+    <string name='dialog_thisFeatureIsPartOfTheMindersAddOnAndMustBeDownloadedSeparately'>Esta función es parte del complemento \"Minders\" y debe descargarse por separado.</string>
+    <string name='dialog_thisFeatureIsPartOfTheBackupAddOnAndMustBeDownloadedSeparately'>Esta característica es parte del complemento \"Copia de seguridad\" y debe descargarse por separado.</string>
+    <string name='button_tellMeMore'>¡Deseo más información!</string>
+    
+    <string name='enableThisFeature'>¿Desea activar esta función?</string>
+    
+    <!-- Preference Group - Advanced -->
+    <string name='advancedSettings'>Configuración avanzada</string>
+    <!-- Preferences - Default Editor Tab -->
+    <string name='defaultEditorTab'>Pestaña del editor por defecto</string>
+    <string-array name='defaultEditorTabEntries'>
+        
+        
+    <item>Detalles</item><item>Adjuntos</item></string-array>
+    <string name='defaultTab_NAME'>Pestaña por defecto: ^1</string>
+    <string name='app_widget_label_2x2'>Lista de tareas - reducida</string>
+    <string name='app_widget_label_3x3'>Lista de tareas - grande</string>
+    <string name='select_a_theme'>Seleccione un tema:</string>
+    <string name='light_theme'>Tema claro</string>
+    <string name='dark_theme'>Tema oscuro</string>
+    <string name='select_a_font_size'>Seleccione una fuente:</string>
+    <string name='small'>Pequeña</string>
+    <string name='medium'>Mediana</string>
+    <string name='large'>Grande</string>
+    <string name='jumbo'>Jumbo</string>
+    <string name='create_widget'>Crear widget</string>
+    <string name='create_task_list_widget'>Crear widget de lista de tareas</string>
+    
+    
+    
+
+
+	<!-- Option Menu -->
+    <string name='option_edit'>Editar</string>
+    <string name='option_delete'>Suprimir</string>
+    <string name='option_save'>Guardar</string>
+    <string name='option_revert'>Volver</string>
+    <string name='option_discard'>Descartar</string>
+    <string name='option_help'>Ayuda</string>
+    <string name='option_feedback'>Sugerencias</string>
+    <string name='option_archive'>Archivar</string>
+    <string name='option_unarchive'>Desarchivar</string>
+        
+	<!-- Toasts -->
+    <string name='toast_pleaseEnterAName'>Por favor, introduzca un nombre.</string>
+    <string name='toast_noTasksDeleted'>No se ha eliminado ninguna tarea</string>
+    <string name='toast_deletedNTask'>^1 tarea eliminada</string>
+
+	<!-- Buttons -->
+	<string name='button_ok'>Ok</string>  
+	<string name='button_cancel'>Cancelar</string>  
+    <string name='button_add'>Añadir</string>
+	<string name='button_save'>Guardar</string>
+	<string name='button_revert'>Deshacer</string>
+	<string name='button_discard'>Descartar</string>
+	<string name='button_yes'>Sí</string>
+	<string name='button_no'>No</string>
+    <string name='button_next'>Siguiente</string>
+    <string name='button_back'>Volver</string>
+    <string name='button_remove'>Quitar</string>	
+    <string name='button_set'>Establecer</string>	
+	<string name='button_skip'>Saltar</string>
+	<string name='button_delete'>Suprimir</string>
+    		
+	<!-- Dialog -->		
+	<string name='dialog_confirmDelete'>Confirmar borrado</string>
+	<string name='dialog_confirmRemoval'>Confirmar eliminación</string>
+	<string name='dialog_areYouSure'>¿Está seguro?</string>
+			
+	<!-- Activity/Intents -->
+	<string name='activity_flingtapDone'>FlingTap Done</string>  
+    <string name='intent_taskAttachment'>Archivo adjunto a la tarea</string>
+	<string name='activity_taskList'>Lista de tareas</string>   
+	<string name='activity_taskListCOLONX'>Lista de tareas: ^1</string>   
+	<string name='intent_contactEQUALSX'>Contacto = ^1</string>   
+	<string name='intent_task'>Tarea</string>  
+	<string name='activity_taskEditor'>Editor de tareas</string>  
+	<string name='activity_filters'>Filtros</string>   		    
+	<string name='activity_completable'>Subtarea</string> 
+    <string name='activity_viewNearminder'>Ver Nearminder</string>
+		    
+	<!--  Task List -->
+    <string name='option_newTask'>Nueva tarea</string>
+    <string name='option_filter'>Filtro</string>
+    <string name='option_tutorials'>Tutoriales</string>
+    <string name='option_featuresIntroduction'>Presentación de la función</string>
+    <string name='option_addOns'>Complementos </string>
+    <string name='option_blog'>Blog</string>
+    <string name='option_discussAndSupport'>Sugerencias y ayuda</string>
+    <string name='option_donate'>Donar</string>
+    <string name='toast_youAreLeavingFlingTapDone'>Está saliendo de\n FlingTap Done</string>
+
+	<!--  Task List Item -->
+    <string name='context_editTask'>Editar tarea</string>
+    <string name='context_deleteTask'>Eliminar tarea</string>
+    <string name='context_markComplete'>Marcar como completada</string><!-- See Email application for example of how to dynamically change this String in the context menu. -->
+    <string name='context_markIncomplete'>Marcar como pendiente</string>
+    <string name='context_archiveTask'>Archivar tarea</string>
+    <string name='context_unarchiveTask'>No archivar tarea</string>
+    <string name='context_labelTask'>Etiquetar tarea</string>
+    <string name='context_setAs'>Establecer como</string>	
+    <string name='chooser_setAs'>Establecer tarea como ...</string>	
+    
+    <!-- Edit Task -->
+    <string name='option_complete'>Completada</string>
+    <string name='option_incomplete'>Pendiente</string>
+    
+    <!-- DefaultFilterElementDelegate -->
+    <string name='error'>Error</string> 
+    
+    <!-- CompletableUtil -->
+    <string name='toast_completableDeleted'>Subtarea eliminada</string> 
+    
+    <!-- CompletableAttachHandler -->
+    <string name='context_editCompletable'>Editar subtarea</string>
+    <string name='context_deleteCompletable'>Eliminar subtarea</string>
+    
+    
+	<!-- FilterUtil -->
+    <string name='toast_filtersMayNotHaveTheSameName'>Los filtros no pueden tener el mismo nombre</string>
+    
+    <!-- LabelUtil -->
+    <string name='toast_failedToAddNewLabel'>No se ha podido añadir la nueva etiqueta</string>
+    <string name='toast_failedToRemoveLabel'>No se ha podido eliminar la etiqueta</string>
+
+    <!-- LabelFilterElementDelegate -->
+    <string name='tasksWithNoLabel'>Tareas sin etiqueta</string>
+
+	<!-- Nearminder -->
+    <string name='nearminderDeleted'>Nearminder eliminado</string>
+
+	<!-- PickAttachmentPart -->
+    <string name='applications'>Aplicaciones</string>
+
+	<!--  TrialPeriodUtil  -->
+    <string name='button_noThanks'>No, gracias</string>
+    <string name='button_updateNow'>Actualizar ahora</string>
+    <string name='dialog_yourTrialVersionHasExpired_'>Su versión de prueba ha caducado.</string>
+    <string name='dialog_pleaseUpdate'>Por favor, actualice</string>
+
+	<!-- PostalContactMethodGeocoderPart -->
+    <string name='toast_communicationError'>Error de comunicación</string>
+
+
+	<!-- TaskEditorTabActivity  -->
+    <string name='toast_canceled'>Cancelado</string>
+
+
+    <!-- Displayed full screen when the user has no attachments and they are displaying the attachments list view -->
+    <string name='noFilterElements'>Al seleccionar este filtro <font fgcolor='#ffffffff'><b>se muestran todas las tareas en la pantalla</b></font>.</string>
+    <string name='allNonArchivedTasks'>Todas las tareas sin archivar.</string>
+    <string name='allTasksInTheArchive'>Todas las tareas en el Archivo.</string>
+
+    <!-- TaskList -->
+    <string name='dialog_filterNotEditableNow'>No se puede editar el filtro en este momento</string>
+    <string name='dialog_taskListWarnCustomFilter'>Este filtro ha sido diseñado para mostrar exclusivamente las tareas relacionadas con el contacto que acaba de llamarle.\n\nPara volver al filtro anterior seleccione \"Borrar\", o bien seleccione \"Continuar\" para seguir usando este filtro.</string>
+    <string name='button_clear'>Borrar</string>
+    <string name='button_continue'>Continuar</string>
+    <string name='toast_nothingRecognized'>Nada reconocido</string>
+    <string name='dialog_whatDidYouMeanToSay'>¿Qué quiere decir?</string>
+    <string name='hint_buyGroceries'>Comprar frutas y verduras</string>
+	
+
+
+    <!-- Callminder something.. -->
+    <string name='notify_tasksRelatedToThisContact'>Tareas relacionadas con este contacto.</string>
+    <string name='notify_contextTasksExist'>Hay tareas de contexto</string>
+    
+    
+    <!-- Filter List -->
+	<string name='filterList'>Filtrar lista</string>
+	<string name='chooseActiveFilter'>Seleccione el filtro activo</string>
+	<string name='activeFilter'>Filtro activo</string>
+	<string name='availableFilters'>Filtros disponibles</string>
+    <string name='option_newFilter'>Nuevo filtro</string>
+	<string name='dialog_setFilterName'>Nombrar filtro</string>
+	<string name='append_restored'>(Recuperado)</string>
+	
+	
+    <!-- Filter -->
+    <string name='context_deleteFilter'>Eliminar filtro</string>
+    <string name='context_renameFilter'>Cambiar nombre del filtro</string>
+    <string name='context_editFilter'>Editar filtro</string>
+        
+	<!-- Label -->
+	<string name='option_addLabel'>Nueva etiqueta</string>
+	<string name='dialog_setLabelName'>Establecer nombre de etiqueta</string>
+	<string name='dialog_editLabelName'>Editar nombre de etiqueta</string>
+	<string name='context_deleteLabel'>Eliminar etiqueta</string>
+	<string name='context_renameLabel'>Cambiar nombre de etiqueta</string>
+    
+    <!-- FilterElements -->
+    <string name='dialog_selectDueDateFilter'>Seleccionar fecha de vencimiento del filtro</string>
+    <string name='dialog_tasksWithoutDueDates'>¿Tareas sin vencimiento?</string> <!-- Include no due date tasks? -->
+    <string name='dialog_lowestDisplayedPriority'>Mostrando la prioridad más baja</string>
+    <string name='dialog_selectFolder'>Seleccionar carpeta</string>
+    <string name='unlabeled'>Sin etiqueta</string> 
+    <string name='dueDateX'>Fecha de vencimiento: ^1</string>
+    <string-array name='array_dueDateFilter'>        
+	    	 <!-- 0 -->
+	    <!-- 1 -->
+	    	 <!-- 2 -->        
+	    	 <!-- 3 -->
+	    	 <!-- 4 -->
+	     		 <!-- 5 -->
+	         <!-- 6 -->
+	             <!-- 7 -->
+    <item>En cualquier momento</item><item>en los próximos 30 días</item><item>la próxima semana</item><item>esta semana</item><item>mañana</item><item>hoy</item><item>en el pasado</item><item>off.</item></string-array>
+    <string name='priorityX'>Prioridad: ^1</string>
+    <string name='tasksWithLowerPriorityWillNotBeDisplayed'>Las tareas con prioridad inferior no se mostrarán</string>
+    <string name='folderX'>Carpeta: ^1</string>
+    <string-array name='array_repository'>
+	        <!-- 0 -->
+	     <!-- 1 -->
+    <item>Principal</item><item>Archivo</item></string-array>    
+    <string name='statusX'>Estado: ^1</string>
+    <string-array name='array_statusFilter'>
+	              <!-- 0 -->
+	        <!-- 1 -->
+	       <!-- 2 -->
+	       <!-- 3 -->
+    <item>Todas</item><item>Completadas</item><item>En espera</item><item>Intervalo de fechas</item></string-array>    
+    <string name='areTheTasksCompletedOrNot'>¿Tareas completadas?</string>
+    <string-array name='array_stockFilters'>        
+	          <!-- 0 -->
+	            <!-- 1 -->
+	              <!-- 2 -->
+    <item>Todas las tareas</item><item>Archivo</item><item>Básico</item></string-array>
+    
+	<!-- status_filter_element_options_list_item -->
+    <string name='dialog_from'>De:</string>
+    <string name='dialog_to'>Para:</string>
+    <string name='dialog_all'>Todos</string>
+    <string name='dialog_bothCompletedAndIncompleteTasks'>Tareas completadas y pendientes</string>
+    <string name='dialog_completed'>Completadas</string>
+    <string name='dialog_onlyCompletedTasks'>Sólo tareas completadas</string>
+    <string name='dialog_incomplete'>Pendientes</string>
+    <string name='dialog_onlyIncompleteTasks'>Sólo tareas pendientes</string>
+    <string name='dialog_dateRange'>Intervalo de fechas</string>
+    <string name='dialog_tasksCompletedWithinADateRange'>Tareas completadas dentro de un intervalo de fechas</string>
+    <string name='dialog_taskStatus'>Estado de la tarea</string>
+
+
+    <string name='filterCOLONX'>Filtro: ^1</string>
+    <string name='filterCOLON'>Filtro:</string>
+    <string name='dialog_addRemoveLabels'>Añadir o eliminar etiquetas</string>
+
+	<!-- ArchiveMenuPart -->
+	<string name='toast_taskArchived'>Tarea archivada</string>
+	<string name='toast_nothingArchived'>Nada archivado</string>
+	<string name='toast_unarchivedTask'>Tarea sin archivar</string>
+	<string name='toast_noTasksUnarchived'>No hay tareas sin archivar</string>
+	<string name='toast_archivedNTasks'>^1 tarea(s) archivada(s)</string>
+	<string name='toast_noTasksArchived'>No hay tareas archivadas</string>
+
+	<!-- AttachmentPart -->
+	<string name='toast_operationCanceled'>Operación cancelada</string>
+    <string name='dialog_setAttachmentName'>Establecer nombre del adjunto</string>
+
+
+
+    <!-- PickAttachmentPart -->
+    <string name='option_attach'>Adjuntar</string>
+    <string name='context_removeAttachment'>Eliminar adjunto</string>
+    <string name='context_renameAttachment'>Cambiar el nombre de adjunto</string>
+    <string name='context_viewAttachment'>Ver adjunto</string>
+
+	<!-- ContactAttachmentHandler -->
+    <string name='context_viewContact'>Ver contacto</string>
+    <string name='context_removeContact'>Eliminar contacto</string>
+    <string name='context_addNearminder'>Añadir Nearminder</string>
+    <string name='toast_nearminderAlreadyExists'>El Nearminder ya existe.\nEditando Nearminder preexistente.</string>	
+
+	<!-- Task Editor -->
+	<string name='title'>Título</string>
+	<string name='hint_taskTitle'>Breve descripción de la tarea</string>
+	<string name='details'>Características</string>
+    <string name='attachments'>Archivos adjuntos</string>	
+	<string name='hint_taskDetails'>Descripción detallada de la tarea</string>
+	<string name='labels'>Etiquetas</string>
+	<string name='hint_taskLabels'>Escuela</string>	
+	<string name='dueDate'>Vencimiento</string>
+	<string name='alarm'>Alerta</string>
+	<string name='priority'>Prioridad</string>
+	<string name='dialog_selectAPriority'>Seleccione una prioridad</string>
+    <string-array name='array_priority'>        
+	   		<!-- 0 -->
+			<!-- 1 -->
+		 <!-- 2 -->
+			<!-- 3 -->
+    <item>Ninguna</item><item>Baja</item><item>Media</item><item>Alta</item></string-array>	
+	<string name='dialog_attachmentType'>Tipo de adjunto</string>	
+    <string name='typingSTARWillShowAllLabels'>Pulse * para ver todas las etiquetas.</string>
+    <string name='toast_labelNameXNotAllowed'>Nombre de etiqueta \"^1\" no permitido.</string>
+    <string name='toast_labelApplied'>Etiqueta aplicada</string>
+    <string name='toast_duplicateLabel'>Etiqueta duplicada</string>
+    <string name='toast_labelCreatedAndApplied'>Etiqueta creada y aplicada</string>
+	<string name='toast_alarmIsAfterDueDate'>Se ha superado el vencimiento del aviso</string>
+    <string name='toast_alarmIsInThePast'>La alerta corresponde a una fecha ya transcurrida</string>
+    <string name='toast_alarmHasNotChanged'>La alerta no ha sido modificada</string>
+    <string name='toast_dueDateIsInThePast'>El vencimiento corresponde a una fecha ya transcurrida</string>
+    <string name='toast_dueDateIsBeforeAlarm'>La fecha de vencimiento es anterior a la alerta</string>
+    <string name='toast_dueDateMayNotBeAfterTheAlarm'>La fecha de vencimiento no puede ser posterior a la alerta</string>
+	<string name='notSet'>Ninguna</string>
+	<string name='button_complete'>Completadas</string>
+    <string name='button_incomplete'>Pendientes</string> 
+    
+	<!-- Task Attachments -->
+    <!-- Displayed full screen when the user has no attachments and they are displaying the attachments list view -->
+    <string name='thisTaskHasNoAttachments'>Esta tarea no tiene adjuntos.\n\Los adjuntos permiten añadir detalles como contactos y mapas a las tareas de modo que esté todo en el mismo lugar.\n\nPara añadir adjuntos, pulse <font fgcolor='#ffffffff'><b>Menú</b></font>, seleccione <font fgcolor='#ffffffff'><b>Adjuntar</b></font>, y a continuación seleccione el tipo de adjunto.</string>
+    <string name='hint_vacuumTheTug'>Aspirar la alfombra</string>
+
+
+ 	<!-- CompletableEditor -->
+	<string name='dialog_completableEditor'>Editor de subtareas</string>
+	
+	<!-- PickAttachmentPart -->
+	<string name='type_contact'>Contacto</string>
+	<string name='type_image'>Imagen</string>
+	<string name='type_audio'>Audio</string>
+	<string name='type_video'>Vídeo</string>
+	<string name='type_nearminder'>Nearminder</string>
+	
+	<!-- BasicMapActivity -->
+    <string name='option_zoom'>Zoom</string>
+    <string name='option_mapMode'>Modo mapa</string>
+    <string name='dialog_mapMode'>Modo mapa</string>
+    <string name='option_myLocation'>Mi ubicación</string>
+    <string-array name='basic_map_map_modes'>
+        
+        
+        
+    <item>Mapa</item><item>Satélite</item><item>Tráfico</item></string-array> 
+    
+	<!-- Nearminder notification -->
+    <string name='notify_snooze'>Snooze</string>
+    <string name='notify_or'>o</string>
+    <string name='notify_chooseAction'>Elegir acción</string>    
+    <string-array name='options_nearminderNotification'>
+        
+        
+        
+    <item>Abrir tarea</item><item>obtener direcciones</item><item>eliminar Nearminder</item></string-array> 
+    
+	<!-- Nearminder Activity -->
+    <string name='toast_unableToDetermineYourLocation'>No se puede determinar su ubicación</string>
+    <string name='notifyMeWhenImThisClose'>Avisarme cuando esté a la distancia indicada</string>
+    <string name='selectTheCenter'>Seleccionar centro</string>
+    <string name='activity_configureNearminder'>Configurar Nearminder</string>
+    <string name='dialog_chooseAddress'>Elegir dirección</string>
+
+	<!-- NearminderAttachmentHandler -->
+    <string name='context_viewNearminder'>Ver Nearminder</string>
+    <string name='context_editNearminder'>Editar Nearminder</string>
+    <string name='context_deleteNearminder'>Eliminar Nearminder</string>
+    <string name='dialog_setNearminderName'>Establecer nombre del Nearminder </string>
+    
+	<!-- Nearminder Viewer -->
+    <string name='option_directions'>Indicaciones</string>
+
+    
+    <string name='toast_removedBrokenAttachmentLink'>Enlace adjunto roto eliminado</string>
+    
+    <string name='dialog_theAddressXWasNotUnderstood'>La dirección \n\"^1\"\n no se puede entender.\nEs posible que se refiera a:</string>
+    
+    <string name='toast_attachmentAdded'>Adjunto añadido</string>	
+    <string name='toast_taskAdded'>Tarea añadida</string>	
+    <string name='toast_taskAddedButNotVisibleWithCurrentFilterSettings'>Tarea añadida pero invisible con la actual configuración del filtro</string>	
+    <string name='toast_taskDeleted'>Tarea eliminada</string>	
+    <string name='toast_taskDiscarded'>Tarea descartada</string>	
+    <string name='toast_taskSaved'>Tarea guardada</string>	
+    	
+    <!-- LicenseModifiedReceiver -->
+    <string name='notify_watchMindersTutorial'>Ver tutorial de notificaciones</string>	
+    <string name='notify_watchLabelsTutorial'>Ver tutorial de etiquetas</string>	
+    <string name='notify_watchArchiveTutorial'>Ver tutorial de archivación</string>	
+    <string name='notify_flingTapDoneMenuTutorials'>FlingTap Done (Menú-->Tutoriales)</string>	
+
+    	
+    <!-- Preferences - application_preferences.xml --> 
+    <string name='activity_settings'>Configuración</string>	
+    <string name='option_settings'>Configuración</string>	
+    
+    <!-- ApplicationPreferenceActivity  -->
+    <string name='toast_checkingForUpdate'>Comprobando actualización</string>	
+    
+    <string name='archiveSettings'>Configuración de archivo</string>	
+    <string name='enableArchive'>Habilitar archivo</string>	
+    <string name='archiveCompletedOrAbandonedTasks'>¿Archivar tareas completadas e inacabadas?</string>	
+
+    <string name='alarmSettings'>Configuración de alerta</string>	
+    <string name='sound'>Sonido</string>	
+    <string name='whichAlarmRingtoneWillBePlayed'>¿Qué sonido de alerta prefiere?</string>	
+    <string name='vibrate'>Vibración</string>	
+    <string name='vibratePhoneWhenAlarmOccurs'>¿Vibrar en caso de alerta?</string>	
+    <string name='flash'>Parpadeo</string>	
+    <string name='flashLEDWhenAlarmOccurs'>¿Parpadear LED en caso de alerta?</string>	
+
+    <string name='nearminderSettings'>Configuración de Nearminder </string>	
+    <string name='whichNotificationSoundWillBePlayed'>¿Qué sonido de aviso prefiere?</string>	
+    <string name='vibratePhoneWhenNearminderOccurs'>¿Vibrar al alcanzar el Nearminder?</string>	
+    <string name='flashLEDWhenNearminderOccurs'>¿Parpadear LED al alcanzar el Nearminder?</string>	
+
+    <string name='callmindeSettings'>Configuración de Callminder</string>	
+    <string name='enableCallminders'>Habilitar Callminders</string>	
+    <string name='notifyMeAboutRelevantTasksWhenImOnThePhone'>¿Notificar tareas importantes durante una conversación?</string>	
+    <string name='vibratePhoneWhenCallminderOccurs'>¿Vibrar cuando se active un Callminder?</string>	
+    <string name='flashLEDWhenCallminderOccurs'>¿Parpadear LED en caso de que se active un Callminder?</string>	
+
+    <string name='labelSettings'>Configuración de etiquetas</string>	
+    <string name='enableLabels'>Habilitar etiquetas</string>	
+     
+    <string name='updateSettings'>Actualizar configuración</string>	
+    <string name='checkForUpdateNow'>¡Buscar actualizaciones ahora!</string>	
+
+    <string name='completedTasks'>Tareas completadas</string>	
+    <string name='automaticallyArchive'>Archivar automáticamente</string>	
+    <string name='completedTasksWillBeArchivedAfterMidnightEachDay'>Las tareas completadas se archivan a diario después de medianoche</string>	
+    <string name='automaticallyDelete'>Eliminar automáticamente</string>	
+    <string name='completedTasksWillBeDeletedAfterMidnightEachDay'>Las tareas completadas se eliminan a diario después de medianoche</string>	
+    
+	<!-- Archive Preferences -->
+	<string name='toast_noArchivedTasksWereDeleted'>Las tareas no archivadas han sido eliminadas.</string>
+	<string name='toast_allArchivedTasksDeleted'>Todas las tareas archivadas han sido borradas.</string>
+	
+	<!-- Archive Preferences - Retention -->
+	<string name='deleteArchivedTasksAfterHowManyDays'>¿Tras cuántos días desea borrar las tareas archivadas?</string>
+	<string name='automaticRemoval'>Eliminación automática</string>
+	<string name='howLongShouldArchivedTasksBeKept'>¿Cuánto tiempo desea guardar las tareas archivadas?</string>
+	<string name='archiveHousekeeping'>Mantenimiento de archivos</string>
+
+	<!-- Archive Preferences - Clear now -->
+	<string name='clearArchiveNow'>¡Vaciar archivo!</string>
+	<string name='dialog_confirmDeletion'>Confirmar eliminación</string>
+	<string name='dialog_deleteAllArchivedTasks'>¿Desea eliminar todas las tareas archivadas?</string>
+
+	<!-- Archive Preferences - Disable -->
+	<string name='dialog_deleteArchivedTasks'>¿Desea eliminar las tareas archivadas?</string>
+	<string name='dialog_areYouSureYouWantToDeleteAllArchivedTaskAndDisableTheArchive'>¿Está seguro que que desea eliminar todas las tareas archivadas y deshabilitar el archivo?</string>
+
+	
+	<!-- EditNumberPreference -->
+	<string name='toast_noValueSpecifiedNothingChanged'>No se ha especificado ningún valor, no hay cambios.</string>
+	
+	<!-- Label Preferences - Disable -->
+	<string name='dialog_whenDisablingLabelsAllExistingLabelsAreDeleted'>Al desactivar las etiquetas, todas las existentes serán eliminadas.\n¿Está seguro que desea deshabilitar el uso de etiquetas y eliminar todas las existentes?</string>
+	<string name='toast_noLabelsWereDeleted'>No se ha eliminado ninguna etiqueta.</string>
+	<string name='toast_allLabelsDeleted'>Se han eliminado todas las etiquetas.</string>
+    
+	<!-- FeedbackPart.java -->
+    <string name='chooser_selectEmailClient'>Seleccionar cliente de correo electrónico</string>	
+
+	<!-- About -->
+    <string name='about'>Acerca de FlingTap Done</string>
+    <string name='copyright2009LeanAndKeenLLC'>Copyright ©2009 Lean &amp; Keen, LLC.</string>
+    <string name='allRightsReserved'>Todos los derechos reservados.</string>
+    <string name='attributionNotices'><u>Derechos de autor</u>:\n<li><b>Veecheck</b>\nCopyright ©2008 Tom Gibara\nLicense: http://www.apache.org/licenses/LICENSE-2.0.html\nSite: http://www.tomgibara.com/android/veecheck</li>\n<li><b>Android</b>\nCopyright ©2007 The Android Open Source Project\nLicense: http://www.apache.org/licenses/LICENSE-2.0.html</li></string>
+    <string name='versionX'>Version ^1</string>
+    <string name='trialDaysRemainingX'>Días de prueba restantes: ^1</string>
+    <string name='tellUsHowWeAreDoing'>Díganos qué le parece FlingTap Done.</string>
+
+	<!-- **************** Feature Introduction *************** -->
+	<string name='intro_introduction'>Presentación de funciones\n\n\nPor favor tómese un momento para conocer las funciones que le ofrecemos.\n\nAlgunas funciones están disponibles como complementos que deben descargarse por separado. Algunos complementos no son gratuitos. Consulte el menú de complementos para obtener más información.</string>      
+	<string name='intro_attachments'><font fgcolor='#ffffffff'><b>Archivos adjuntos</b></font> le permite añadir detalles como contactos, imágenes y sitios web a sus tareas, para que todo esté en el mismo lugar.</string>      
+	<string name='intro_nearminders'>Los <font fgcolor='#ffffffff'><b>Nearminders</b></font> le avisarán cuando esté cerca de una ubicación. Cree un Nearminder para la frutería, la peluquería, un restaurante o para cualquier lugar en el que quiera detenerse al pasar. Los Nearminders pueden agregarse a cualquier tarea. Es suficiente hacer clic en la pestaña de <font fgcolor='#ffffffff'><b>Adjuntos</b></font>. <font fgcolor='#ffffffff'><b>Esta función es complementaria.</b></font></string>      
+	<string name='intro_callminders'>Los <font fgcolor='#ffffffff'><b>Callminders</b></font> le recuerdan tareas importantes cuando realiza o recibe una llamada. Agregue los contactos necesarios a una tarea y recibirá un aviso cada vez que se comunique con ellos. <font fgcolor='#ffffffff'><b>Esta función es complementaria.</b></font></string>      
+	<string name='intro_labels'>Las <font fgcolor='#ffffffff'><b>etiquetas</b></font> son palabras clave aplicadas a las tareas. Puede buscar en su lista de tareas filtrando por una o varias etiquetas. <font fgcolor='#ffffffff'><b>Esta función es complementaria.</b></font></string>      
+	<string name='intro_archive'>El <font fgcolor='#ffffffff'><b>Archivo</b></font> es una carptera separada donde puede guardar las tareas completadas sin que se mezclen con la lista de tareas actuales. Puede buscar y filtrar el archivo del mismo modo que la lista principal de tareas. <font fgcolor='#ffffffff'><b>Esta función es complementaria.</b></font></string>      
+	<string name='intro_tips'>No olvide explorar el <font fgcolor='#ffffffff'><b>menú de opciones</b></font>. En él puede habilitar  <font fgcolor='#ffffffff'><b>funciones</b></font>, modificar la <font fgcolor='#ffffffff'><b>configuración</b></font>, navegar por <font fgcolor='#ffffffff'><b>tutoriales</b></font>, y hallar rápidas respuestas en laas páginas de <font fgcolor='#ffffffff'><b>ayuda</b></font>.</string>
+	<string name='intro_conclusion'><font fgcolor='#ffffffff'><b>Gracias</b></font></string>      
+
+	<string name='availableFromTheAddonsMenu'>Disponible en el menú de complementos</string>      
+	<string name='leaveFeatureIntroduction'>¿Desea abandonar la presentación de funciones?\n\nPara volver más adelante, seleccione <font fgcolor='#ffffffff'><b>Presentación de funciones</b></font> en el <font fgcolor='#ffffffff'><b>menú de opciones</b></font>.</string>
+	<string name='button_getStarted'>¡Póngase en marcha!</string>
+	<!-- ****************************************************** -->
+    
+	<!-- Help / Task List -->
+    <string name='help_task_List'>Lista de tareas / Ayuda</string>	
+    <string name='help_task_list_fast_add_box'>Recuadro rápido de adición de texto. Escriba un título de tarea en este recuadro y pulse Enter (o  "Añadir") para crear rápidamente una nueva tarea.</string>	
+    <string name='help_task_list_fast_add_button'>Botón rápido de adición de texto. Al pulsar este botón, el texto del recuadro rápido de adición de texto se utilizará para crear una nueva tarea.</string>	
+    <string name='help_task_list_fast_add_speech_recognition_button'>Botón de reconocimiento de habla. Permite que el usuario diga el nombre de una tarea en voz alta, y convierte sus palabras en texto.</string>	
+    <string name='help_task_list_task_priority_indicator'>Facilitador de prioridades. Muestra la prioridad de las tareas.</string>	
+    <string name='help_task_list_task_title'>Título de la tarea. Al pulsar sobre esta área se abrirá la tarea en el editor. Mantenga el botón presionado para abrir el menú contextual. Consulte los puntos nº17, nº18 y nº19 siguientes para obtener más información.</string>	
+    <string name='help_task_list_task_title_all'>Título de la tarea. Al pulsar sobre esta área se abre la tarea en el editor. Manténgala presionada para ver el menú contextual. Consulte los puntos nº17, nº18, nº19, nº20 y nº21 para obtener más información.</string>	
+    <string name='help_task_list_task_due_date'>Fecha de vencimiento de la tarea.</string>	
+    <string name='help_task_list_options_menu_new_task'>Opción del menú Nueva tarea. Crea una nueva tarea y la abre en el editor.</string>
+    <string name='help_task_list_options_menu_filter'>Opción del menú Filtro. Abre una pantalla para filtrar las tareas.</string>	
+    <string name='help_task_list_options_menu_delete_completed'>Opción del menú Eliminar tareas completadas. Elimina todas las tareas completadas.</string> <!-- Note: some completed tasks may not be displayed because of the filter settings. -->	
+    <string name='help_task_list_options_menu_archive_completed'>Opción del menú Archivar tareas completadas. Archiva todas las tareas completadas.</string>	
+    <string name='help_task_list_options_menu_settings'>Opción del menú Configuración. Abre la pantalla de opciones de configuración. Permite habilitar y deshabilitar funciones y configurar el comportamiento general de la aplicación.</string>	
+    <string name='help_task_list_options_menu_more'>Opción del menú Más. Muestra elementos adicionales del menú. Vea los puntos del nº12 al nº16 a continuación.</string>	
+    <string name='help_task_list_options_menu_about'>Opción del menú Acerca de FlingTap Done. Muestra características sobre esta aplicación.</string>	
+    <string name='help_task_list_options_menu_feedback'>Opción del menú Feedback. Abre nuestra página web y le permite sugerir y votar nuevas funciones.</string>	
+    
+    <string name='help_task_list_ctx_menu_mark_complete'>Opción del menú contextual Marcar tareas como completadas. Marca las tareas como completadas (o como pendientes si ya figuran como completada.).</string>	
+    <string name='help_task_list_ctx_menu_edit_task'>Opción del menú contextual Editar tarea. Abre la tarea seleccionada en el editor de tareas.</string>	
+    <string name='help_task_list_ctx_menu_delete_task'>Opción del menú contextual Eliminar tarea. Elimina la tarea seleccionada.</string>	
+    <string name='help_task_list_ctx_menu_archive_task'>Opción del menú contextual Archivar tarea (opcional). Mueve la tarea seleccionada al archivo.</string>	
+    <string name='help_task_list_ctx_menu_label_task'>Menú contextual de etiquetas de tarea (opcional). Abre una ventana con la lista de etiquetas existentes que pueden aplicarse a la tarea seleccionada. </string>	
+
+    <string name='help_task_list_ctx_menu_feature_introduction'>Presentación de funciones. Permite volver a ver la presentación que se muestra al ejecutar FlingTap Done por primera vez. </string>	
+    <string name='help_task_list_ctx_menu_tutorials'>Tutoriales. Le llevará a los tutoriales de nuestro sitio web donde encontrará intrucciones más detalladas para utilizar las múltiples funciones de FlingTap Done.</string>	
+    <string name='help_task_list_ctx_menu_addons'>Complementos. Le llevará al sitio web de complementos donde encontrará nuevas características para FlingTap Done.</string>	
+
+
+    
+	<!-- Help / Filter -->
+    <string name='help_filter'>Filtro / Ayuda</string>	
+    <string name='help_filter_due_date'>Filtro de fecha de vencimiento. Seleccione un intervalo de fechas para el vencimiento de las tareas. Sólo se mostrarán las tareas cuya fecha de vencimiento esté dentro de ese intervalo. Si la opción \"Tareas sin fecha de vencimiento\" está habilitada, también se mostrarán dichas tareas.</string>	
+    <string name='help_filter_priority'>Filtro de prioridad. Seleccione la prioridad de tarea mínima. Las tareas cuya prioridad sea menor que esta prioridad no se mostrarán.</string>	
+    <string name='help_filter_status'>Filtro de estado. Seleccione si desea ver las tareas completadas, las pendientes, o ambss. También puede optar por ver las tareas realizadas dentro de un intervalo de fechas. Esto permite ver las tareas realizadas el mes pasado, por ejemplo. Nota: Mostrar el Archivo para óptimos resultados.</string>	
+    <string name='help_filter_repository'>Filtro de carpetas (opcional). Seleccione la carpeta que desea ver. Hay dos carpetas\n (1) La \"Principal\" contiene tareas no archivadas.\n(2) El \"Archivo\" contiene tareas archivadas.</string>	
+    <string name='help_filter_unlabeled'>Filtro Sin etiquetas (opcional). Al activarlo se muestran en la pantalla las tareas sin etiquetas aplicadas. Nota: no puede cambiar el nombre de este filtro ni eliminarlo.</string>	
+    <string name='help_filter_label'>Filtro Etiquetas (opcional). Al activarlo se muestran en la pantalla las tareas con la etiqueta especificada. Mantenga una etiqueta presionada para abrir el siguiente menú contextual:</string>	
+    <string name='help_filter_menu_add_label'>Añadir nueva etiqueta (opcional). Abre un diálogo para crear una nueva etiqueta.</string>	
+    <string name='help_filter_label_note'>Nota: Trabajo y Personal son sólo etiquetas por defecto. Puede agregar, eliminar o cambiar el nombre de cualquier etiqueta.</string>	
+    
+    
+	<!-- Help / Task Edtor Main -->
+    <string name='help_task_editor'>Editar tarea / Ayuda</string>	
+    <string name='help_task_editor_details_tab'>Pestaña de detalles.</string>	
+    <string name='help_task_editor_title'>Título de la tarea.</string>	
+    <string name='help_task_editor_priority'>Prioridad de la tarea.</string>	
+    <string name='help_task_editor_due_date'>Fecha de vencimiento de la tarea.</string>	
+    <string name='help_task_editor_alarm'>Aviso de la tarea.</string>	
+    <string name='help_task_editor_details'>Detalles de la tarea. Espacio adicional para obtener información más detallada.</string>	
+    <string name='help_task_editor_label_text_entry'>Recuadro de texto Añadir etiqueta. Escriba un nombre de etiqueta nuevo o preexistente y pulse Enter (o "Añadir") para etiquetar la tarea. Pulsando * puede ver todas las etiquetas existentes.</string>	
+    <string name='help_task_editor_label_add_button'>Botón Añadir etiqueta. Tras escribir el nombre de la etiqueta en el recuadro de texto Añadir etiqueta, pulse este botón para agregarla. </string>	
+    <string name='help_task_editor_label_list_item'>Etiquetas de la tarea actual. Si la tarea ya ha sido etiquetada sus etiquetas aparecerán en esta lista.</string>	
+    <string name='help_task_editor_label_remove_item'>Botón Eliminar etiqueta. Pulse aquí para eliminar una etiqueta perteneciente a la tarea actual. Nota: La etiqueta no se borrará, y esta acción no eliminará la etiqueta de las otras tareas. Para eliminar definitivamente la etiqueta, vaya a la opción del menú Filtro en la lista principal de tareas y mantenga presionada la etiqueta que desea eliminar.</string>	
+    
+    <string name='help_task_editor_complete_button'>Botón Completar. Marca la tarea como completada y regresa a la lista de tareas. Guardará los cambios realizados.</string>	
+    <string name='help_task_editor_revert'>Botón Deshacer. Deshace los cambios realizados y vuelve a la lista de tareas.</string>	
+    <string name='help_task_editor_complete_menu_item'>Opción del menú Completar. Marca la tarea como completada y regresa a la lista de tareas. Guarda los cambios realizados.</string>	
+    <string name='help_task_editor_revert_menu_item'>Opción del menú Deshacer. Deshace los cambios realizados y regresa a la lista de tareas.</string>	
+    <string name='help_task_editor_delete_menu_item'>Opción del menú Eliminar tarea. Elimina la tarea actual y regresa a la lista de tareas.</string>	
+
+    <string name='help_task_editor_options_menu_attachment'>Opción del menú Adjuntar. Inicia la herramienta de selección de adjuntos. Esto le permite adjuntar contenido, como contactos, páginas web, grabaciones de audio y fotos.</string>	
+    <string name='help_task_editor_options_menu_archive'>Opción del menú Archivar (Opcional). Archiva la tarea actual.</string>	
+    
+	<!-- Help / Task Edtor Attach -->
+    <string name='help_task_editor_attach'>Adjuntos / Ayuda del editor de tareas</string>	
+    <string name='help_task_editor_attach_tab'>Pestaña Adjuntos. Puede adjuntar importantes contenidos como contactos, grabaciones, sitios web e imágenes a una tarea. Esta pestaña muestra los adjuntos agregados.</string>	
+    <string name='help_task_editor_attach_tab_item'>Adjunto. Un adjunto. Mantenga el adjunto presionado para abrir el menú contextual con opciones adicionales.</string>	
+    
+	<!-- Help / Select Area -->
+    <string name='help_select_area'>Configurar Nearminder / Ayuda</string>	
+    <string name='help_select_area_select_position_bulls_eye'>Ojo de buey. Indica el centro del área que cubrirá su Nearminder.</string>	
+    <string name='help_select_area_select_position_next'>Botón Siguiente. Le lleva al siguiente paso para establecer el tamaño del Nearminder.</string>	
+    <string name='help_select_area_options_menu_map_mode'>Modo de mapa. Abre un cuadro de diálogo en el que puede establecer el modo de mapa (mapa, satélite, o tráfico) a mostrar.</string>	
+    <string name='help_select_area_options_menu_zoom'>Zoom. Muestra los controles de zoom en el mapa.</string>	
+    <string name='help_select_area_options_menu_help'>Ayuda. Muestra esta página de ayuda.</string>	
+    <string name='help_select_area_select_area_slider'>Slider. Deslice el puntero para reducir o agrandar el área del Nearminder.</string>	
+    <string name='help_select_area_select_area_back'>Botón Atrás. Le devuelve al paso anterior, donde puede establecer el centro del área del Nearminder.</string>	
+    <string name='help_select_area_select_area_cancel'>Botón Cancelar. Cancela la creación del Nearminder. No se añadirá ningúna entrada.</string>	
+    <string name='help_select_area_select_area_next'>Botón Siguiente. Le lleva al siguiente paso, donde podrá asignar un nombre al Nearminder. Si está editando un Nearminder preexistente, entonces se guardarán los cambios realizados.</string>	
+    <string name='help_select_area_select_area_border'>Borde exterior. El borde exterior de la zona Nearminder.</string>	
+    <string name='help_select_area_edit_name_text'>Recuadro de texto Nombre del Nearminder. Es el nombre con el que se mostrará el Nearminder.</string>	
+    <string name='help_select_area_edit_name_ok'>Botón OK. Crea el Nearminder y le asigna el nombre del recuadro de texto.</string>	
+    <string name='help_select_area_edit_name_cancel'>Botón Cancelar. Cancela la creación del Nearminder. No se añadirá ningúna entrada.</string>	
+    
+    	<!-- Help / Filter List -->
+    <string name='help_filter_list'>Filtros / Ayuda</string>	
+    <string name='help_filter_list_active_filter'>Selector de filtro activo. Utilice esta opción para seleccionar el filtro que desee activar. El filtro activo controla las tareas que se muestran en la Lista de tareas.</string>	
+    <string name='help_filter_list_filter_all'>Filtro Todos. Al seleccionarlo en el selector de filtro, el filtro Todos mostrará todas las tareas que no están en el Archivo. Nota: Si no ha activado la función Archivo, el filtro Todos muestra todas las teras. Este filtro no puede ser editado.</string>	
+    <string name='help_filter_list_filter_archive'>Filtro Archivo. Al seleccionarlo en el selector de filtro, el filtro Archivo mostrará todas las tareas que están en el Archivo. Nota: Si no ha activado la función Archivo, el filtro Archivo no se muestra. Este filtro no puede ser editado.</string>	
+    <string name='help_filter_list_filter_sample'>Filtros creados por el usuario. Un borrador de filtro que se puede configurar. Haga clic en el filtro para abrir el editor de filtros. Este tipo de filtro sólo existirá si lo crea (ver detalles a continuación). Puede cambiar el nombre o eliminar el filtro manteníéndolo presionado y seleccionando la operación deseada en el menú contextual.</string>	
+    <string name='help_filter_list_new_filter'>Opción del menú Nuevo filtro. Permite crear un nuevo filtro. Después de asignar un nombre al nuevo filtro, haga clic en la fila del filtro para abrir el editor que le permitirá configurarlo.</string>	
+    
+	<!-- Help / Settings -->
+    <string name='help_settings'>Configuración / Ayuda</string>	
+    <string name='help_settings_enable_labels'>Activa y desactiva el uso de etiquetas en de las aplicaciones.</string>	
+    <string name='help_settings_enable_archive'>Activa y desactiva el uso del archivo dentro de la aplicación.</string>	
+    <string name='help_settings_clear_archive'>Elimina todas las tareas del archivo.</string>	
+    <string name='help_settings_automatic_removal'>Configurar la cantidad de tiempo que las tareas permanecerán en el archivo antes de ser eliminadas.</string>	
+    <string name='help_settings_completed_tasks_delete'>Decida si las tareas completadas deben eliminarse automáticamente diariamente después de medianoche.</string>	
+    <string name='help_settings_completed_tasks_archive'>Decida si las tareas completadas deben archivarse automáticamente diariamente después de medianoche.</string>	
+    <string name='help_settings_check_for_update'>Comprueba si hay alguna actualización disponible para la aplicación. Recibirá una notificación en caso de que haya una actualización disponible.</string>	
+
+    <string name='help_settings_alarm_sound'>Sonido de alertas. ¿Qué sonido deben utilizar las alertas? Acceda a la configuración aquí.</string>	
+    <string name='help_settings_alarm_vibrate'>Vibración de alertas. ¿Desea que las alertas vibren? Acceda a la configuración aquí.</string>	
+    <string name='help_settings_alarm_flash'>Parpadeo de alertas. ¿Desea que las alertas hagan parpadear una luz (si está disponible)? Acceda a la configuración aquí.</string>	
+    
+    <string name='help_settings_callminder_enable'>Habilitar Callminders. Si están activados, recibirá avisos de Callminder acerca de las tareas relevantes al realizar o recibir llamadas telefónicas.</string>	
+    <string name='help_settings_callminder_sound'>Sonido de Callminder. ¿Qué sonido deben utilizar los avisos de Callminder? Acceda a la configuración aquí.</string>	
+    <string name='help_settings_callminder_vibrate'>Vibración de Callminder. ¿Desea que los avisos de Callminder vibren? Acceda a la configuración aquí.</string>	
+    <string name='help_settings_callminder_flash'>Parpadeo de Callminder. ¿Desea que los avisos de Callminder hagan parpadear una luz (si está disponible)? Acceda a la configuración aquí.</string>	
+    
+    <string name='help_settings_nearminder_sound'>Sonido de Nearminder. ¿Qué sonido deben emitir los avisos de Nearminder? Acceda a la configuración aquí.</string>	
+    <string name='help_settings_nearminder_vibrate'>Vibración de Nearminder. ¿Desea que los avisos de Nearminder vibren? Acceda a la configuración aquí.</string>	
+    <string name='help_settings_nearminder_flash'>Parpadeo de Nearminder. ¿Desea que los avisos de Nearminder hagan parpadear una luz (si está disponible)? Acceda a la configuración aquí.</string>	
+ 		
+	<!-- Initial Tasks -->
+    <string name='task_tellUsWhatYouThink'>¡Háganos saber su opinión!</string>
+    <string name='task_weWantToKnowAboutYourFlingTapDoneExperience'>Queremos conocer su experiencia con FlingTap Done. Envíenos sus comentarios, peticiones y quejas. Visite http://forum.flingtap.com desde su ordenador personal. También puede enviarnos un mensaje rápido a través del elemento \"Feedback\" del menú de la lista de tareas.</string>
+    
+    <!-- searchable.xml -->
+	<string name='search_tasks'>Tareas</string>
+	<string name='search_taskTitleWords'>Palabras del título de la tarea</string>
+
+    <!-- Backup/Restore -->
+	<string name='application_preferences_category_backup'>Configuración de copia de seguridad</string>
+	<string name='app_pref_enable_backup_title'>Habilitar copias de seguridad</string>
+	<string name='app_pref_enable_backup_summary'>¿Deben realizarse copias de seguridad?</string>
+	<string name='app_pref_status_backup_title__on'>Estado: Activo</string>
+	<string name='app_pref_status_backup_summary__on'>Las copias de seguridad funcionan correctamente</string>
+	<string name='app_pref_status_backup_title__off'>Estado: Inactivo</string>
+	<string name='app_pref_status_backup_summary__off'>Copias de seguridad deshabilitadas</string>
+	<string name='app_pref_status_backup_title__waiting'>Estado: En espera</string>
+	<string name='app_pref_status_backup_summary__waiting'>Estado desconocido</string>
+	<string name='app_pref_status_backup_title__unsupported'>Estado: Dispositivo no compatible</string>
+	<string name='app_pref_status_backup_summary__unsupported'>Su dispositivo no es compatible con las copias de seguridad</string>
+	<string name='app_pref_status_backup_title__out_of_date'>Estado: Caducado</string>
+	<string name='app_pref_status_backup_summary__out_of_date'>No se ha realizado una copia de seguridad durante un período de tiempo razonable.</string>
+	<string name='app_pref_status_backup_title__privacy_settings'>Estado: Deshabilitado</string>
+	<string name='app_pref_status_backup_summary__privacy_settings'>Deshabilitado en \"Configuración de privacidad\".</string>
+
+	<string name='dialog_backup_not_supported_title'>Dispositivo no compatible</string>
+	<string name='dialog_backup_not_supported_message'>Las copias de seguridad no son compatibles con este dispositivo.</string>
+	<string name='dialog_backup_not_enabled_in_settings_title'>Compruebe la configuración de privacidad</string>
+	<string name='dialog_backup_not_enabled_in_settings_message'>La copia de seguridad está deshabilitada en la configuración de privacidad. Para habilitar las copias de seguridad de FlingTap Done vaya a la configuración de privacidad y habilite \"Realizar una copia de seguridad de mis datos\"</string>
+	<string name='dialog_backup_not_enabled_in_settings_btn_positive'>Configuración</string>
+	<string name='dialog_backup_not_enabled_in_settings_btn_negative'>Descartar</string>
+	<string name='dialog_backup_not_supported_btn_positive'>Android Market</string>
+	<string name='dialog_backup_not_supported_btn_negative'>Descartar</string>
+
+	<string name='toast_backup_enabled'>Copias de seguridad habilitadas</string>
+	<string name='notify_backup_enabled_title'>Copias de seguridad habilitadas</string>
+	<string name='notify_backup_enabled_description'>Copias de seguridad de FlingTap Done habilitadas</string>
+	<string name='notify_backup_not_enabled_in_privacy_settings_title'>Compruebe la configuración de privacidad</string>
+	<string name='notify_backup_not_enabled_in_privacy_settings_message'>La copia de seguridad de FlingTap Done requiere que el servicio de copia de seguridad esté habilitado en la Configuración de privacidad.</string>
+	<string name='notify_backup_not_supported_title'>El dispositivo no admite copias de seguridad</string>
+	<string name='notify_backup_not_supported_message'>La copia de seguridad de FlingTap Done no es compatible con su dispositivo.</string>
+
+    <!--  ************************************************************** -->
+    <!--  ****                         Common                       **** -->
+    <!--  ************************************************************** -->
+    
+    <!--  ErrorUtil -->
+    <string name='toast_sorryAnErrorOccurred'>Lo sentimos, ha ocurrido un error</string>	
+<!-- 
+    <string name="leanAndKeenEULA">Lean &amp; Keen EULA</string>	
+ -->	
+    <string name='agreement'>Acuerdo</string>	
+    <string name='button_accept'>Aceptar</string>	
+    <string name='button_decline'>Rechazar</string>	
+	
+    <string name='notify_updateAvailable'>Actualización disponible</string>
+    <string name='notify_newVersionOfFlingTapDoneFound'>Nueva versión de FlingTap Done disponible.</string>
+    <string name='activity_confirmFlingTapDoneUpdate'>Confirmar actualización de FlingTap Done</string>
+    <string name='wouldYouLikeToUpdateThisApplicationToTheLatestVersion'>¿Desea actualizar esta aplicación a la versión más reciente?</string>
+    <string name='dontNotifyMeOfThisUpdateAgain'>No deseo recibir notificaciones acerca de esta actualización</string>    
+    
+</resources>

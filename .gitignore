@@ -1,0 +1,50 @@
+# Maven 3rd party repo
+maven-repo-3rd-party/repository/
+
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# Temp and backup files
+*.*~
+*.swp
+*.swo
+
+# generated files
+bin/
+gen/
+antgen/
+dist/
+target/
+
+# Intellij Idea personal project settings
+.idea/workspace.xml
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# API key build information
+api_keys_test.sh
+api_keys_release.sh
+
+.settings
+.project
+.classpath
+eclipsebin
+build
+out
+lib
+pom.xml.*
+.idea
+*.iml
+classes
+tmp
+obj
+.DS_Store
+

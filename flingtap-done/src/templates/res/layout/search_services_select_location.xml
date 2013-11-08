@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/map_view_layout" android:layout_width="fill_parent"
+             android:layout_height="fill_parent">
+
+    <com.google.android.maps.MapView
+            android:id="@+id/map_view"
+            android:apiKey="${command.line.googleMapsApiKey}"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:enabled="true"
+            android:clickable="true"
+            />
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            >
+        <ImageView
+                android:id="@+id/search_services_push_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/push_pin"
+                />
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/map_zoom"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="bottom|center_horizontal"
+            />
+
+    <RelativeLayout
+            android:id="@+id/search_services_select_location_dialog"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+    </RelativeLayout>
+
+
+    <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+        <LinearLayout
+                android:background="@drawable/grey_button_background_focus_blue_custom"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:padding="8dp"
+                >
+            <TextView
+                    android:text="@string/selectCenterForServices"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:paddingTop="5dip"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip" />
+            <Button
+                    android:id="@+id/search_services_select_location_button_ok"
+                    android:text="@string/button_next"
+                    android:background="@android:drawable/btn_default_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:paddingRight="16dip"
+                    android:paddingBottom="8dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/labelSettings" >
+        <CheckBoxPreference
+                android:key="enable_labels"
+                android:title="@string/enableLabels"
+                android:defaultValue="false"
+                >
+        </CheckBoxPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/archiveSettings" >
+        <CheckBoxPreference
+                android:key="enable_archive"
+                android:title="@string/enableArchive"
+                android:summary="@string/archiveCompletedOrAbandonedTasks"
+                android:defaultValue="false"
+                >
+            <!--
+        <intent android:action="com.flingtap.done.action.ARCHIVE_DISABLE" />
+         -->
+        </CheckBoxPreference>
+        <PreferenceScreen
+                android:key="clear_archive"
+                android:dependency="enable_archive"
+                android:layout="?android:attr/preferenceLayoutChild"
+                android:title="@string/clearArchiveNow">
+            <!--
+                        <intent android:action="com.flingtap.done.action.ARCHIVE_DELETE_ALL" />
+             -->
+        </PreferenceScreen>
+        <com.flingtap.done.EditNumberPreference
+                android:key="archive_retain_days"
+                android:title="@string/automaticRemoval"
+                android:summary="@string/howLongShouldArchivedTasksBeKept"
+                android:dialogTitle="@string/archiveHousekeeping"
+                android:positiveButtonText="@string/button_ok"
+                android:negativeButtonText="@string/button_cancel"
+                android:dialogLayout="@layout/archive_preference_retention_policy"
+                android:layout="?android:attr/preferenceLayoutChild"
+                android:defaultValue="30"
+                android:dependency="enable_archive" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:key="completed_tasks"
+            android:title="@string/completedTasks" >
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/alarmSettings" >
+        <RingtonePreference
+                android:id="@+id/alarm_ringtone"
+                android:key="alarm_ringtone"
+                android:title="@string/sound"
+                android:summary="@string/whichAlarmRingtoneWillBePlayed"
+                android:ringtoneType="notification"
+                android:showSilent="true"
+                android:showDefault="true"
+                android:defaultValue="content://settings/system/notification_sound"
+                />
+        <CheckBoxPreference
+                android:key="alarm_vibrate"
+                android:title="@string/vibrate"
+                android:summary="@string/vibratePhoneWhenAlarmOccurs"
+                android:defaultValue="true"
+                >
+        </CheckBoxPreference>
+        <CheckBoxPreference
+                android:key="alarm_flash"
+                android:title="@string/flash"
+                android:summary="@string/flashLEDWhenAlarmOccurs"
+                android:defaultValue="true"
+                >
+        </CheckBoxPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/nearminderSettings" >
+        <RingtonePreference
+                android:id="@+id/nearminder_ringtone"
+                android:key="nearminder_ringtone"
+                android:title="@string/sound"
+                android:summary="@string/whichNotificationSoundWillBePlayed"
+                android:ringtoneType="notification"
+                android:showSilent="true"
+                android:showDefault="true"
+                android:defaultValue="content://settings/system/notification_sound"
+                />
+        <CheckBoxPreference
+                android:key="nearminder_vibrate"
+                android:title="@string/vibrate"
+                android:summary="@string/vibratePhoneWhenNearminderOccurs"
+                android:defaultValue="true"
+                >
+        </CheckBoxPreference>
+        <CheckBoxPreference
+                android:key="nearminder_flash"
+                android:title="@string/flash"
+                android:summary="@string/flashLEDWhenNearminderOccurs"
+                android:defaultValue="true"
+                >
+        </CheckBoxPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/callmindeSettings" >
+        <CheckBoxPreference
+                android:key="callminder_enabled"
+                android:title="@string/enableCallminders"
+                android:summary="@string/notifyMeAboutRelevantTasksWhenImOnThePhone"
+                android:defaultValue="false"
+                >
+        </CheckBoxPreference>
+        <RingtonePreference
+                android:id="@+id/callminder_ringtone"
+                android:key="callminder_ringtone"
+                android:title="@string/sound"
+                android:summary="@string/whichNotificationSoundWillBePlayed"
+                android:ringtoneType="notification"
+                android:showSilent="true"
+                android:showDefault="true"
+                android:defaultValue="content://settings/system/notification_sound"
+                android:dependency="callminder_enabled"
+                />
+        <CheckBoxPreference
+                android:key="callminder_vibrate"
+                android:title="@string/vibrate"
+                android:summary="@string/vibratePhoneWhenCallminderOccurs"
+                android:defaultValue="true"
+                android:dependency="callminder_enabled"
+                >
+        </CheckBoxPreference>
+
+
+        <CheckBoxPreference
+                android:key="callminder_flash"
+                android:title="@string/flash"
+                android:summary="@string/flashLEDWhenCallminderOccurs"
+                android:defaultValue="true"
+                android:dependency="callminder_enabled"
+                >
+        </CheckBoxPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/updateSettings" >
+        <PreferenceScreen
+                android:key="update_required_uri"
+                android:layout="?android:attr/preferenceLayoutChild"
+                android:title="@string/checkForUpdateNow">
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title="@string/advancedSettings" >
+        <ListPreference
+                android:key="default_editor_tab"
+                android:title="@string/defaultEditorTab"
+                android:entries="@array/defaultEditorTabEntries"
+                android:entryValues="@array/defaultEditorTabValues"
+                android:defaultValue="details"
+                >
+        </ListPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:key="backup_group" android:title="@string/application_preferences_category_backup" >
+        <CheckBoxPreference
+                android:key="backup_enabled"
+                android:title="@string/app_pref_enable_backup_title"
+                android:summary="@string/app_pref_enable_backup_summary"
+                android:defaultValue="false"
+                >
+        </CheckBoxPreference>
+        <com.flingtap.done.backup.BackupStatusPreference
+                android:key="backup_status"
+                android:dependency="backup_enabled"
+                android:widgetLayout="@layout/preference_widget_backup"
+                android:title="@string/app_pref_status_backup_title__waiting"
+                android:summary="@string/app_pref_status_backup_summary__waiting">
+        </com.flingtap.done.backup.BackupStatusPreference>
+    </PreferenceCategory>
+</PreferenceScreen>

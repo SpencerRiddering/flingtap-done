@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/about_copyright"
+                android:layout_alignParentTop="true"
+                android:text="@string/copyright2009LeanAndKeenLLC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:padding="4dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dip"
+                />
+        <TextView
+                android:id="@+id/about_reserved"
+                android:layout_below="@id/about_copyright"
+                android:text="@string/allRightsReserved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:padding="4dip"
+                android:layout_centerHorizontal="true"
+                />
+        <TextView
+                android:id="@+id/about_version"
+                android:layout_below="@id/about_reserved"
+                android:text="@string/versionX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:padding="4dip"
+                android:layout_centerHorizontal="true"
+                />
+        <TextView
+                android:id="@+id/trialDaysRemainingX"
+                android:layout_below="@id/about_version"
+                android:text="@string/trialDaysRemainingX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:padding="4dip"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                />
+        <!-- This code worked, but latest version of GMail breaks the attachement code for email
+               so I'm disabling this until I have time to fix it. See the code this invokes for
+               more details.
+                <Button
+                    android:id="@+id/about_feedback_button"
+                    android:layout_below="@id/trialDaysRemainingX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tellUsHowWeAreDoing"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_centerHorizontal="true"
+                />
+         -->
+
+        <TextView
+                android:id="@+id/about_attribution_notices"
+                android:layout_below="@id/trialDaysRemainingX"
+                android:text="@string/attributionNotices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:padding="4dip"
+                />
+        <!--
+                <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/about_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/about_feedback"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/tellUsHowWeAreDoing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:padding="4dip"
+                    />
+                    <Button
+                        android:layout_toRightOf="@id/about_feedback"
+                        android:id="@+id/about_feedback_button"
+                        android:layout_alignParentTop="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tellUsHowWeAreDoing_button"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                    />
+                </RelativeLayout>
+         -->
+    </RelativeLayout>
+
+</ScrollView>

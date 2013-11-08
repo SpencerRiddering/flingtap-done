@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory 
+    		android:key="the_cagetory"
+    		android:title="@string/preferences_category_quick_launch" >
+        <CheckBoxPreference
+                android:key="enable_quick_launch"
+                android:title="@string/preferences_enable_quick_launch_title" 
+                android:summary="@string/preferences_enable_quick_launch_summary"
+                android:defaultValue="false"
+                >
+        </CheckBoxPreference>
+	</PreferenceCategory>
+
+</PreferenceScreen>

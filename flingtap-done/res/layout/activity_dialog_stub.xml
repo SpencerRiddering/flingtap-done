@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/dialog_panel"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <LinearLayout android:id="@+id/title_panel"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:minHeight="54dip"
+                  android:layout_alignParentTop="true"
+                  android:orientation="vertical"
+                  android:layout_weight="0">
+        <LinearLayout android:id="@+id/title_template"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:gravity="center_vertical"
+                      android:layout_marginTop="6dip"
+                      android:layout_marginBottom="9dip"
+                      android:layout_marginLeft="10dip"
+                      android:layout_marginRight="10dip">
+            <ImageView android:id="@+id/icon"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="top"
+                       android:paddingTop="6dip"
+                       android:paddingRight="10dip"
+                       android:src="@android:drawable/ic_dialog_info" />
+            <TextView android:id="@+id/dialog_title"
+                      style="?android:attr/textAppearanceLarge"
+                      android:singleLine="true"
+                      android:ellipsize="end"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content" />
+        </LinearLayout>
+        <ImageView android:id="@+id/title_divider"
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dip"
+                   android:scaleType="fitXY"
+                   android:gravity="fill_horizontal"
+                   android:src="@android:drawable/divider_horizontal_dark"
+                   android:layout_marginLeft="10dip"
+                   android:layout_marginRight="10dip"/>
+
+    </LinearLayout>
+
+
+    <ViewStub
+            android:id="@+id/stub_import"
+            android:inflatedId="@+id/imported_stub"
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+    <LinearLayout android:id="@+id/button_bar"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/imported_stub"
+                  style="@android:style/ButtonBar"
+                  android:layout_weight="0">
+
+        <Button android:id="@+id/positive_button"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+        <Button android:id="@+id/neutral_button"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_complete"
+                android:visibility="gone"
+                />
+        <Button android:id="@+id/negative_button"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<!-- Search -->
+    <string name="task_titles">"Task titles"</string>
+
+    <string name="dialog_addOnNeeded">"Add-on needed"</string>
+    <string name="dialog_thisFeatureIsPartOfTheOrganizerAddOnAndMustBeDownloadedSeparately">"This feature is part of the \"Organizer\" add-on and must be downloaded separately."</string>
+    <string name="dialog_thisFeatureIsPartOfTheMindersAddOnAndMustBeDownloadedSeparately">This feature is part of the \"Minders\" add-on and must be downloaded separately.</string>
+    <string name="dialog_thisFeatureIsPartOfTheBackupAddOnAndMustBeDownloadedSeparately">This feature is part of the \"Backup\" add-on and must be downloaded separately.</string>
+    <string name="button_tellMeMore">"Tell me more!"</string>
+    
+    <string name="enableThisFeature">Enable this feature?</string>
+    
+    <!-- Preference Group - Advanced -->
+    <string name="advancedSettings">Advanced settings</string>
+    <!-- Preferences - Default Editor Tab -->
+    <string name="defaultEditorTab">Default Editor Tab</string>
+    <string-array name="defaultEditorTabEntries">
+        <item>Details</item>
+        <item>Attachments</item>
+    </string-array>
+    <string name="defaultTab_NAME">Default tab: ^1</string>
+    <string name="app_widget_label_2x2">Task list - small</string>
+    <string name="app_widget_label_3x3">Task list - large</string>
+    <string name="select_a_theme">Select a theme:</string>
+    <string name="light_theme">Light theme</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="select_a_font_size">Select a font size:</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="jumbo">Jumbo</string>
+    <string name="create_widget">Create widget</string>
+    <string name="create_task_list_widget">Create task list widget</string>
+    
+    
+    
+
+
+	<!-- Option Menu -->
+    <string name="option_edit">Edit</string>
+    <string name="option_delete">Delete</string>
+    <string name="option_save">Save</string>
+    <string name="option_revert">Revert</string>
+    <string name="option_discard">Discard</string>
+    <string name="option_help">Help</string>
+    <string name="option_feedback">Feedback</string>
+    <string name="option_archive">Archive</string>
+    <string name="option_unarchive">Unarchive</string>
+        
+	<!-- Toasts -->
+    <string name="toast_pleaseEnterAName">Please enter a name.</string>
+    <string name="toast_noTasksDeleted">No tasks deleted</string>
+    <string name="toast_deletedNTask">Deleted ^1 task</string>
+
+	<!-- Buttons -->
+	<string name="button_ok">OK</string>  
+	<string name="button_cancel">Cancel</string>  
+    <string name="button_add">Add</string>
+	<string name="button_save">Save</string>
+	<string name="button_revert">Revert</string>
+	<string name="button_discard">Discard</string>
+	<string name="button_yes">Yes</string>
+	<string name="button_no">No</string>
+    <string name="button_next">Next</string>
+    <string name="button_back">Back</string>
+    <string name="button_remove">Remove</string>	
+    <string name="button_set">Set</string>	
+	<string name="button_skip">Skip</string>
+	<string name="button_delete">Delete</string>
+    		
+	<!-- Dialog -->		
+	<string name="dialog_confirmDelete">Confirm delete</string>
+	<string name="dialog_confirmRemoval">Confirm removal</string>
+	<string name="dialog_areYouSure">Are you sure?</string>
+			
+	<!-- Activity/Intents -->
+	<string name="activity_flingtapDone">FlingTap Done</string>  
+    <string name="intent_taskAttachment">Task attachment</string>
+	<string name="activity_taskList">Task list</string>   
+	<string name="activity_taskListCOLONX">Task list: ^1</string>   
+	<string name="intent_contactEQUALSX">Contact = ^1</string>   
+	<string name="intent_task">Task</string>  
+	<string name="activity_taskEditor">Task editor</string>  
+	<string name="activity_filters">Filters</string>   		    
+	<string name="activity_completable">Sub-task</string> 
+    <string name="activity_viewNearminder">View Nearminder</string>
+		    
+	<!--  Task List -->
+    <string name="option_newTask">New task</string>
+    <string name="option_filter">Filter</string>
+    <string name="option_tutorials">Tutorials</string>
+    <string name="option_featuresIntroduction">Feature introduction</string>
+    <string name="option_addOns">Add-ons</string>
+    <string name="option_blog">Blog</string>
+    <string name="option_discussAndSupport">Discuss &amp; Support</string>
+    <string name="option_donate">Donate</string>
+    <string name="toast_youAreLeavingFlingTapDone">You are\nleaving FlingTap Done</string>
+
+	<!--  Task List Item -->
+    <string name="context_editTask">Edit task</string>
+    <string name="context_deleteTask">Delete task</string>
+    <string name="context_markComplete">Mark complete</string><!-- See Email application for example of how to dynamically change this String in the context menu. -->
+    <string name="context_markIncomplete">Mark pending</string>
+    <string name="context_archiveTask">Archive task</string>
+    <string name="context_unarchiveTask">Unarchive task</string>
+    <string name="context_labelTask">Label task</string>
+    <string name="context_setAs">Set as</string>	
+    <string name="chooser_setAs">Set task as ...</string>	
+    
+    <!-- Edit Task -->
+    <string name="option_complete">Complete</string>
+    <string name="option_incomplete">Pending</string>
+    
+    <!-- DefaultFilterElementDelegate -->
+    <string name="error">Error</string> 
+    
+    <!-- CompletableUtil -->
+    <string name="toast_completableDeleted">Sub-task deleted</string> 
+    
+    <!-- CompletableAttachHandler -->
+    <string name="context_editCompletable">Edit Sub-task</string>
+    <string name="context_deleteCompletable">Delete Sub-task</string>
+    
+    
+	<!-- FilterUtil -->
+    <string name="toast_filtersMayNotHaveTheSameName">Filters may not have the same name</string>
+    
+    <!-- LabelUtil -->
+    <string name="toast_failedToAddNewLabel">Failed to add new label</string>
+    <string name="toast_failedToRemoveLabel">Failed to remove label</string>
+
+    <!-- LabelFilterElementDelegate -->
+    <string name="tasksWithNoLabel">Tasks with no label</string>
+
+	<!-- Nearminder -->
+    <string name="nearminderDeleted">Nearminder deleted</string>
+
+	<!-- PickAttachmentPart -->
+    <string name="applications">Applications</string>
+
+	<!--  TrialPeriodUtil  -->
+    <string name="button_noThanks">No thanks</string>
+    <string name="button_updateNow">Update now</string>
+    <string name="dialog_yourTrialVersionHasExpired_">Your trial version has expired.</string>
+    <string name="dialog_pleaseUpdate">Please update</string>
+
+	<!-- PostalContactMethodGeocoderPart -->
+    <string name="toast_communicationError">Communication error</string>
+
+
+	<!-- TaskEditorTabActivity  -->
+    <string name="toast_canceled">Canceled</string>
+
+
+    <!-- Displayed full screen when the user has no attachments and they are displaying the attachments list view -->
+    <string name="noFilterElements">"When this filter is selected <font fgcolor="#ffffffff"><b>all tasks will be displayed</b></font>."</string>
+    <string name="allNonArchivedTasks">All non-archived tasks.</string>
+    <string name="allTasksInTheArchive">All tasks in the archive.</string>
+
+    <!-- TaskList -->
+    <string name="dialog_filterNotEditableNow">Filter not editable now</string>
+    <string name="dialog_taskListWarnCustomFilter">The current filter is custom built to display only tasks that involve the contact who just called you.\n\nTo return to your previously selected filter choose \"Clear\" or choose \"Continue\" to continue using this filter.</string>
+    <string name="button_clear">Clear</string>
+    <string name="button_continue">Continue</string>
+    <string name="toast_nothingRecognized">Nothing recognized</string>
+    <string name="dialog_whatDidYouMeanToSay">What did you mean to say?</string>
+    <string name="hint_buyGroceries">Buy Groceries</string>
+	
+
+
+    <!-- Callminder something.. -->
+    <string name="notify_tasksRelatedToThisContact">Tasks related to this contact.</string>
+    <string name="notify_contextTasksExist">Context tasks exist</string>
+    
+    
+    <!-- Filter List -->
+	<string name="filterList">Filter list</string>
+	<string name="chooseActiveFilter">Choose active filter</string>
+	<string name="activeFilter">Active filter</string>
+	<string name="availableFilters">Available filters</string>
+    <string name="option_newFilter">New filter</string>
+	<string name="dialog_setFilterName">Set filter name</string>
+	<string name="append_restored">(Restored)</string>
+	
+	
+    <!-- Filter -->
+    <string name="context_deleteFilter">Delete filter</string>
+    <string name="context_renameFilter">Rename filter</string>
+    <string name="context_editFilter">Edit filter</string>
+        
+	<!-- Label -->
+	<string name="option_addLabel">New label</string>
+	<string name="dialog_setLabelName">Set label name</string>
+	<string name="dialog_editLabelName">Edit label name</string>
+	<string name="context_deleteLabel">Delete label</string>
+	<string name="context_renameLabel">Rename label</string>
+    
+    <!-- FilterElements -->
+    <string name="dialog_selectDueDateFilter">Select due date filter</string>
+    <string name="dialog_tasksWithoutDueDates">Tasks without due dates?</string> <!-- Include no due date tasks? -->
+    <string name="dialog_lowestDisplayedPriority">Lowest Displayed Priority</string>
+    <string name="dialog_selectFolder">Select folder</string>
+    <string name="unlabeled">Unlabeled</string> 
+    <string name="dueDateX">Due Date: ^1</string>
+    <string-array name="array_dueDateFilter">        
+	    <item>Anytime</item>	 <!-- 0 -->
+	    <item>Next 30 days</item><!-- 1 -->
+	    <item>Next week</item>	 <!-- 2 -->        
+	    <item>This week</item>	 <!-- 3 -->
+	    <item>Tomorrow</item>	 <!-- 4 -->
+	    <item>Today</item> 		 <!-- 5 -->
+	    <item>In the past</item>     <!-- 6 -->
+	    <item>Off</item>         <!-- 7 -->
+    </string-array>
+    <string name="priorityX">Priority: ^1</string>
+    <string name="tasksWithLowerPriorityWillNotBeDisplayed">Tasks with lower priority will not be displayed</string>
+    <string name="folderX">Folder: ^1</string>
+    <string-array name="array_repository">
+	    <item>Main</item>    <!-- 0 -->
+	    <item>Archive</item> <!-- 1 -->
+    </string-array>    
+    <string name="statusX">Status: ^1</string>
+    <string-array name="array_statusFilter">
+	    <item>All</item>          <!-- 0 -->
+	    <item>Completed</item>    <!-- 1 -->
+	    <item>Pending</item>   <!-- 2 -->
+	    <item>Date Range</item>   <!-- 3 -->
+    </string-array>    
+    <string name="areTheTasksCompletedOrNot">Are the tasks completed or not?</string>
+    <string-array name="array_stockFilters">        
+	    <item>All tasks</item>      <!-- 0 -->
+	    <item>Archive</item>        <!-- 1 -->
+	    <item>Basic</item>          <!-- 2 -->
+    </string-array>
+    
+	<!-- status_filter_element_options_list_item -->
+    <string name="dialog_from">From:</string>
+    <string name="dialog_to">To:</string>
+    <string name="dialog_all">All</string>
+    <string name="dialog_bothCompletedAndIncompleteTasks">Both Completed and Pending tasks</string>
+    <string name="dialog_completed">Completed</string>
+    <string name="dialog_onlyCompletedTasks">Only Completed tasks</string>
+    <string name="dialog_incomplete">Pending</string>
+    <string name="dialog_onlyIncompleteTasks">Only Pending tasks</string>
+    <string name="dialog_dateRange">Date range</string>
+    <string name="dialog_tasksCompletedWithinADateRange">Tasks completed within a date range</string>
+    <string name="dialog_taskStatus">Task status</string>
+
+
+    <string name="filterCOLONX">Filter: ^1</string>
+    <string name="filterCOLON">Filter:</string>
+    <string name="dialog_addRemoveLabels">Add/remove labels</string>
+
+	<!-- ArchiveMenuPart -->
+	<string name="toast_taskArchived">Task archived</string>
+	<string name="toast_nothingArchived">Nothing archived</string>
+	<string name="toast_unarchivedTask">Unarchived task</string>
+	<string name="toast_noTasksUnarchived">No tasks unarchived</string>
+	<string name="toast_archivedNTasks">Archived ^1 task(s)</string>
+	<string name="toast_noTasksArchived">No tasks Archived</string>
+
+	<!-- AttachmentPart -->
+	<string name="toast_operationCanceled">Operation canceled</string>
+    <string name="dialog_setAttachmentName">Set attachment name</string>
+
+
+
+    <!-- PickAttachmentPart -->
+    <string name="option_attach">Attach</string>
+    <string name="context_removeAttachment">Remove attachment</string>
+    <string name="context_renameAttachment">Rename attachment</string>
+    <string name="context_viewAttachment">View attachment</string>
+
+	<!-- ContactAttachmentHandler -->
+    <string name="context_viewContact">View contact</string>
+    <string name="context_removeContact">Remove contact</string>
+    <string name="context_addNearminder">Add Nearminder</string>
+    <string name="toast_nearminderAlreadyExists">"Nearminder already exists.\nEditing existing Nearminder."</string>	
+
+	<!-- Task Editor -->
+	<string name="title">Title</string>
+	<string name="hint_taskTitle">Short task description</string>
+	<string name="details">Details</string>
+    <string name="attachments">Attachments</string>	
+	<string name="hint_taskDetails">Detailed task description</string>
+	<string name="labels">Labels</string>
+	<string name="hint_taskLabels">School</string>	
+	<string name="dueDate">Due</string>
+	<string name="alarm">Alarm</string>
+	<string name="priority">Priority</string>
+	<string name="dialog_selectAPriority">Select a priority</string>
+    <string-array name="array_priority">        
+	   	<item>None</item>	<!-- 0 -->
+		<item>Low</item>	<!-- 1 -->
+		<item>Medium</item> <!-- 2 -->
+		<item>High</item>	<!-- 3 -->
+    </string-array>	
+	<string name="dialog_attachmentType">Attachment type</string>	
+    <string name="typingSTARWillShowAllLabels">Typing * will show all labels.</string>
+    <string name="toast_labelNameXNotAllowed">Label name \"^1\" not allowed.</string>
+    <string name="toast_labelApplied">Label applied</string>
+    <string name="toast_duplicateLabel">Duplicate label</string>
+    <string name="toast_labelCreatedAndApplied">Label created and applied</string>
+	<string name="toast_alarmIsAfterDueDate">\nAlarm is after due date\n</string>
+    <string name="toast_alarmIsInThePast">\nAlarm is in the past\n</string>
+    <string name="toast_alarmHasNotChanged">\nAlarm has not changed\n</string>
+    <string name="toast_dueDateIsInThePast">\nDue date is in the past\n</string>
+    <string name="toast_dueDateIsBeforeAlarm">\nDue date is before alarm\n</string>
+    <string name="toast_dueDateMayNotBeAfterTheAlarm">\nDue date may not be after the alarm\n</string>
+	<string name="notSet">None</string>
+	<string name="button_complete">Complete</string>
+    <string name="button_incomplete">Pending</string> 
+    
+	<!-- Task Attachments -->
+    <!-- Displayed full screen when the user has no attachments and they are displaying the attachments list view -->
+    <string name="thisTaskHasNoAttachments">"This task has no attachments.\n\nAttachments let you add details like contacts and maps to your task so everything is in one spot.\n\nTo add attachments, press <font fgcolor="#ffffffff"><b>Menu</b></font>, select <font fgcolor="#ffffffff"><b>Attach</b></font>, and then select the type of attachment."</string>
+    <string name="hint_vacuumTheTug">Vacuum the rug</string>
+
+
+ 	<!-- CompletableEditor -->
+	<string name="dialog_completableEditor">Sub-task editor</string>
+	
+	<!-- PickAttachmentPart -->
+	<string name="type_contact">Contact</string>
+	<string name="type_image">Image</string>
+	<string name="type_audio">Audio</string>
+	<string name="type_video">Video</string>
+	<string name="type_nearminder">Nearminder</string>
+	
+	<!-- BasicMapActivity -->
+    <string name="option_zoom">Zoom</string>
+    <string name="option_mapMode">Map mode</string>
+    <string name="dialog_mapMode">Map mode</string>
+    <string name="option_myLocation">My Location</string>
+    <string-array name="basic_map_map_modes">
+        <item>Map</item>
+        <item>Satellite</item>
+        <item>Traffic</item>
+    </string-array> 
+    
+	<!-- Nearminder notification -->
+    <string name="notify_snooze">Snooze</string>
+    <string name="notify_or">or</string>
+    <string name="notify_chooseAction">Choose action</string>    
+    <string-array name="options_nearminderNotification">
+        <item>Open task</item>
+        <item>Get directions</item>
+        <item>Delete Nearminder</item>
+    </string-array> 
+    
+	<!-- Nearminder Activity -->
+    <string name="toast_unableToDetermineYourLocation">Unable to determine your location</string>
+    <string name="notifyMeWhenImThisClose">Notify me when I\'m this close</string>
+    <string name="selectTheCenter">Select the center</string>
+    <string name="activity_configureNearminder">Configure Nearminder</string>
+    <string name="dialog_chooseAddress">Choose address</string>
+
+	<!-- NearminderAttachmentHandler -->
+    <string name="context_viewNearminder">View Nearminder</string>
+    <string name="context_editNearminder">Edit Nearminder</string>
+    <string name="context_deleteNearminder">Delete Nearminder</string>
+    <string name="dialog_setNearminderName">Set Nearminder name</string>
+    
+	<!-- Nearminder Viewer -->
+    <string name="option_directions">Directions</string>
+
+    
+    <string name="toast_removedBrokenAttachmentLink">Removed broken attachment link</string>
+    
+    <string name="dialog_theAddressXWasNotUnderstood">The address \n\"^1\"\nwas not understood.\nYou may have meant:</string>
+    
+    <string name="toast_attachmentAdded">Attachment added</string>	
+    <string name="toast_taskAdded">Task added</string>	
+    <string name="toast_taskAddedButNotVisibleWithCurrentFilterSettings">Task added but not visible with current filter settings</string>	
+    <string name="toast_taskDeleted">Task deleted</string>	
+    <string name="toast_taskDiscarded">Task discarded</string>	
+    <string name="toast_taskSaved">Task saved</string>	
+    	
+    <!-- LicenseModifiedReceiver -->
+    <string name="notify_watchMindersTutorial">Watch Minders tutorial</string>	
+    <string name="notify_watchLabelsTutorial">Watch Labels tutorial</string>	
+    <string name="notify_watchArchiveTutorial">Watch Archive tutorial</string>	
+    <string name="notify_flingTapDoneMenuTutorials">FlingTap Done (Menu-->Tutorials)</string>	
+
+    	
+    <!-- Preferences - application_preferences.xml --> 
+    <string name="activity_settings">Settings</string>	
+    <string name="option_settings">Settings</string>	
+    
+    <!-- ApplicationPreferenceActivity  -->
+    <string name="toast_checkingForUpdate">Checking for update</string>	
+    
+    <string name="archiveSettings">Archive settings</string>	
+    <string name="enableArchive">Enable archive</string>	
+    <string name="archiveCompletedOrAbandonedTasks">Archive completed or abandoned tasks?</string>	
+
+    <string name="alarmSettings">Alarm settings</string>	
+    <string name="sound">Sound</string>	
+    <string name="whichAlarmRingtoneWillBePlayed">Which alarm ringtone will be played?</string>	
+    <string name="vibrate">Vibrate</string>	
+    <string name="vibratePhoneWhenAlarmOccurs">Vibrate phone when alarm occurs?</string>	
+    <string name="flash">Flash</string>	
+    <string name="flashLEDWhenAlarmOccurs">Flash LED when alarm occurs?</string>	
+
+    <string name="nearminderSettings">Nearminder settings</string>	
+    <string name="whichNotificationSoundWillBePlayed">Which notification sound will be played?</string>	
+    <string name="vibratePhoneWhenNearminderOccurs">Vibrate phone when Nearminder occurs?</string>	
+    <string name="flashLEDWhenNearminderOccurs">Flash LED when Nearminder occurs?</string>	
+
+    <string name="callmindeSettings">Callminder settings</string>	
+    <string name="enableCallminders">Enable Callminders</string>	
+    <string name="notifyMeAboutRelevantTasksWhenImOnThePhone">Notify me about relevant tasks when I\'m on the phone?</string>	
+    <string name="vibratePhoneWhenCallminderOccurs">Vibrate phone when Callminder occurs?</string>	
+    <string name="flashLEDWhenCallminderOccurs">Flash LED when Callminder occurs?</string>	
+
+    <string name="labelSettings">Label settings</string>	
+    <string name="enableLabels">Enable labels</string>	
+     
+    <string name="updateSettings">Update settings</string>	
+    <string name="checkForUpdateNow">Check for update now!</string>	
+
+    <string name="completedTasks">Completed tasks</string>	
+    <string name="automaticallyArchive">Automatically archive</string>	
+    <string name="completedTasksWillBeArchivedAfterMidnightEachDay">Completed tasks will be archived after midnight each day</string>	
+    <string name="automaticallyDelete">Automatically delete</string>	
+    <string name="completedTasksWillBeDeletedAfterMidnightEachDay">Completed tasks will be deleted after midnight each day</string>	
+    
+	<!-- Archive Preferences -->
+	<string name="toast_noArchivedTasksWereDeleted">No archived tasks were deleted.</string>
+	<string name="toast_allArchivedTasksDeleted">All archived tasks deleted.</string>
+	
+	<!-- Archive Preferences - Retention -->
+	<string name="deleteArchivedTasksAfterHowManyDays">Delete archived tasks after how many days?</string>
+	<string name="automaticRemoval">Automatic removal</string>
+	<string name="howLongShouldArchivedTasksBeKept">How long should archived tasks be kept?</string>
+	<string name="archiveHousekeeping">Archive housekeeping</string>
+
+	<!-- Archive Preferences - Clear now -->
+	<string name="clearArchiveNow">Clear archive now!</string>
+	<string name="dialog_confirmDeletion">Confirm deletion</string>
+	<string name="dialog_deleteAllArchivedTasks">Delete all archived tasks?</string>
+
+	<!-- Archive Preferences - Disable -->
+	<string name="dialog_deleteArchivedTasks">Delete archived tasks?</string>
+	<string name="dialog_areYouSureYouWantToDeleteAllArchivedTaskAndDisableTheArchive">Are you sure you want to delete all archived task and disable the archive?</string>
+
+	
+	<!-- EditNumberPreference -->
+	<string name="toast_noValueSpecifiedNothingChanged">No value specified, nothing changed.</string>
+	
+	<!-- Label Preferences - Disable -->
+	<string name="dialog_whenDisablingLabelsAllExistingLabelsAreDeleted">When disabling labels all existing labels are deleted.\nAre you sure that you want to disable the use of labels and delete all existing labels?</string>
+	<string name="toast_noLabelsWereDeleted">No labels were deleted.</string>
+	<string name="toast_allLabelsDeleted">All labels deleted.</string>
+    
+	<!-- FeedbackPart.java -->
+    <string name="chooser_selectEmailClient">Select Email Client</string>	
+
+	<!-- About -->
+    <string name="about">About</string>
+    <string name="copyright2009LeanAndKeenLLC">Copyright ©2009 Lean &amp; Keen, LLC.</string>
+    <string name="allRightsReserved">All rights reserved.</string>
+    <string name="attributionNotices"><u>Attribution notices</u>:\n<li><b>Veecheck</b>\nCopyright ©2008 Tom Gibara\nLicense: http://www.apache.org/licenses/LICENSE-2.0.html\nSite: http://www.tomgibara.com/android/veecheck</li>\n<li><b>Android</b>\nCopyright ©2007 The Android Open Source Project\nLicense: http://www.apache.org/licenses/LICENSE-2.0.html</li></string>
+    <string name="versionX">Version ^1</string>
+    <string name="trialDaysRemainingX">Trial days remaining: ^1</string>
+    <string name="tellUsHowWeAreDoing">Tell us how we are doing.</string>
+
+	<!-- **************** Feature Introduction *************** -->
+	<string name="intro_introduction">Feature Introduction\n\n\nPlease take a moment to learn about our features.\n\nSome features are available in add-on packages that must be downloaded separately. Some add-ons are not free. See the add-on menu for details.</string>      
+	<string name="intro_attachments"><font fgcolor="#ffffffff"><b>Attachments</b></font> let you add details like contacts, images and web sites to your task so everything is in one spot. </string>      
+	<string name="intro_nearminders"><font fgcolor="#ffffffff"><b>Nearminders</b></font> remind you when you are near a location. Create a Nearminder for the grocery store, your barber, a restaurant, or anyplace you want to stop by as you pass by. Nearminders can be attached to any task. Just click the <font fgcolor="#ffffffff"><b>Attachments</b></font> tab. <font fgcolor="#ffffffff"><b>This is an add-on feature.</b></font></string>      
+	<string name="intro_callminders"><font fgcolor="#ffffffff"><b>Callminders</b></font> remind you about relevant tasks when you receive or make a phone call. Just attach the contacts needed to complete a task and you\'ll receive a reminder each time you are on the phone with them. <font fgcolor="#ffffffff"><b>This is an add-on feature.</b></font></string>      
+	<string name="intro_labels"><font fgcolor="#ffffffff"><b>Labels</b></font> are keywords applied to tasks. You can focus your list of tasks by filtering for one or more labels. <font fgcolor="#ffffffff"><b>This is an add-on feature.</b></font></string>      
+	<string name="intro_archive">The <font fgcolor="#ffffffff"><b>Archive</b></font> is a separate folder where you can put completed tasks so they don\'t clutter your current task list. The archive can be filtered and searched just like the main task list. <font fgcolor="#ffffffff"><b>This is an add-on feature.</b></font></string>      
+	<string name="intro_tips">Don\'t forget to explore the <font fgcolor="#ffffffff"><b>options menu</b></font>. From there you can enable <font fgcolor="#ffffffff"><b>features</b></font>, configure <font fgcolor="#ffffffff"><b>settings</b></font>, browse <font fgcolor="#ffffffff"><b>tutorials</b></font>, and find quick answers in the <font fgcolor="#ffffffff"><b>help</b></font> pages.</string>
+	<string name="intro_conclusion"><font fgcolor="#ffffffff"><b>Thank you</b></font></string>      
+
+	<string name="availableFromTheAddonsMenu">Available from the add-ons menu</string>      
+	<string name="leaveFeatureIntroduction">Leave feature introduction?\n\nTo return later choose <font fgcolor="#ffffffff"><b>Feature Introduction</b></font> from the <font fgcolor="#ffffffff"><b>options menu</b></font>.</string>
+	<string name="button_getStarted">Get started!</string>
+	<!-- ****************************************************** -->
+    
+	<!-- Help / Task List -->
+    <string name="help_task_List">Task List / Help</string>	
+    <string name="help_task_list_fast_add_box">Fast-add text box. Type a task title into this box and press the enter key (or tap the "Add" button) to quickly add a new task. </string>	
+    <string name="help_task_list_fast_add_button">Fast-add add button. When this button is tapped any text in the fast-add text box will be used to create a new task.</string>	
+    <string name="help_task_list_fast_add_speech_recognition_button">Speech recognition button. Prompts user to say the name of a task and then converts their spoken words to text.</string>	
+    <string name="help_task_list_task_priority_indicator">Priority speedometer. Displays the task\'s priority.</string>	
+    <string name="help_task_list_task_title">Task title. Tapping this area will open the task in the editor. Long press to view context menu. See #17, #18 and #19 below for more details.</string>	
+    <string name="help_task_list_task_title_all">Task title. Tapping this area will open the task in the editor. Long press to view context menu. See #17, #18, #19, #20 and #21 below for more details.</string>	
+    <string name="help_task_list_task_due_date">Task due date.</string>	
+    <string name="help_task_list_options_menu_new_task">New task menu item. Creates a new task and opens it in the editor.</string>
+    <string name="help_task_list_options_menu_filter">Filter menu item. Opens a screen for filtering your tasks.</string>	
+    <string name="help_task_list_options_menu_delete_completed">Delete completed tasks menu item. Deletes all completed tasks.</string> <!-- Note: some completed tasks may not be displayed because of the filter settings. -->	
+    <string name="help_task_list_options_menu_archive_completed">Archive completed tasks menu item. Archives all completed tasks.</string>	
+    <string name="help_task_list_options_menu_settings">Settings menu item. Opens the settings configuration screen. Here you can enable and disable application features and generally configure the application\'s behavior.</string>	
+    <string name="help_task_list_options_menu_more">More menu item. Displays additional menu items. See #12 through #16 below.</string>	
+    <string name="help_task_list_options_menu_about">About menu item. Displays details about this application.</string>	
+    <string name="help_task_list_options_menu_feedback">Feedback menu item. Opens a our feedback website where you can suggest and vote for new features.</string>	
+    
+    <string name="help_task_list_ctx_menu_mark_complete">Mark task complete context menu item. Marks the task complete (or pending if the task is already complete).</string>	
+    <string name="help_task_list_ctx_menu_edit_task">Edit task context menu item. Opens the selected task in the task editor.</string>	
+    <string name="help_task_list_ctx_menu_delete_task">Delete task context menu item. Deletes the selected task.</string>	
+    <string name="help_task_list_ctx_menu_archive_task">Archive task context menu item (optional). Moves the selected task to the archive.</string>	
+    <string name="help_task_list_ctx_menu_label_task">Label task context menu item (optional). Opens a dialog containing a list of existing labels that can be applied to the selected task.</string>	
+
+    <string name="help_task_list_ctx_menu_feature_introduction">Feature introduction. Allows you to revisit the feature introduction that is normally viewed when running FlingTap Done for the first time. </string>	
+    <string name="help_task_list_ctx_menu_tutorials">Tutorials. Will take you to the tutorials website where you can find more in-depth instructions for using FlingTap Done\'s many features.</string>	
+    <string name="help_task_list_ctx_menu_addons">Add-ons. Will take you to the Add-ons website where you can find new features for FlingTap Done.</string>	
+
+
+    
+	<!-- Help / Filter -->
+    <string name="help_filter">Filter / Help</string>	
+    <string name="help_filter_due_date">Due date filter. Select a date range for the task\'s due date. Only tasks whose due date is within this range will be displayed. If the \"Tasks without due dates?\" option is enabled then tasks which have no due date will also be included.</string>	
+    <string name="help_filter_priority">Priority filter. Select the lowest task priority. Tasks whose priority is lower than this priority will not be displayed.</string>	
+    <string name="help_filter_status">Status filter. Select whether you want to see completed tasks, pending tasks, or both. You may also choose to view tasks which were completed within a date range. This makes it possible see what tasks were completed last month for example. Note: This works best when viewing the Archive.</string>	
+    <string name="help_filter_repository">Folder filter (Optional). Select which folder you want to view. There are two folders\n(1) \"Main\" holds task that have not been archived.\n(2) \"Archive\" holds tasks that have been archived.</string>	
+    <string name="help_filter_unlabeled">Unlabeled filter (Optional). When enabled, tasks which have no labels applied will be displayed. Note: you cannot rename or remove this filter.</string>	
+    <string name="help_filter_label">Label filter (Optional). When enabled, tasks with the given label will be displayed. Long pressing a label will produce the following context menu:</string>	
+    <string name="help_filter_menu_add_label">Add new label (Optional). Opens a dialog for creating a new label.</string>	
+    <string name="help_filter_label_note">Note: Work and Personal are just default labels. You can add, remove, or rename any label.</string>	
+    
+    
+	<!-- Help / Task Edtor Main -->
+    <string name="help_task_editor">Edit task / Help</string>	
+    <string name="help_task_editor_details_tab">Details tab.</string>	
+    <string name="help_task_editor_title">Task title.</string>	
+    <string name="help_task_editor_priority">Task priority.</string>	
+    <string name="help_task_editor_due_date">Task due date.</string>	
+    <string name="help_task_editor_alarm">Task alarm.</string>	
+    <string name="help_task_editor_details">Task details. Additional space for more detailed information.</string>	
+    <string name="help_task_editor_label_text_entry">Add label text box. Type a new or existing label name here and press enter (or tap the "Add" button) to label the task. Typing * will display all existing labels. </string>	
+    <string name="help_task_editor_label_add_button">Add label button. After typing the label name in the Add label text box tap on this button to add it.</string>	
+    <string name="help_task_editor_label_list_item">Current task labels. If the task already has been labeled then those labels are listed here.</string>	
+    <string name="help_task_editor_label_remove_item">Remove label button. Tap here to remove an existing label from the current task. Note: The label will continue to exist and this action will not remove the label from other tasks. To permanently delete the label, go to the Filter menu option in the main task list and long press the label you want to delete.</string>	
+    
+    <string name="help_task_editor_complete_button">Complete button. Marks the task complete and returns to the task list. Will save any changes that you have made.</string>	
+    <string name="help_task_editor_revert">Revert button. Reverts any changes you have made and returns to the task list.</string>	
+    <string name="help_task_editor_complete_menu_item">Complete menu item. Marks the task complete and returns to the task list. Will save any changes that you have made.</string>	
+    <string name="help_task_editor_revert_menu_item">Revert menu item. Reverts any changes you have made and returns to the task list.</string>	
+    <string name="help_task_editor_delete_menu_item">Delete task menu item. Deletes the current task and returns the user to the task list.</string>	
+
+    <string name="help_task_editor_options_menu_attachment">Attach menu item. Launches the attachment selection tool. This enables you to attach content such as contacts, web sites, audio recordings, and photos. </string>	
+    <string name="help_task_editor_options_menu_archive">Archive menu item (Optional). Archives the current task.</string>	
+    
+	<!-- Help / Task Edtor Attach -->
+    <string name="help_task_editor_attach">Task Editor Attachments / Help</string>	
+    <string name="help_task_editor_attach_tab">Attachments tab. You can attach any important content such as contacts, recordings, websites, or images to a task. This tab displays any attachments that have been added.</string>	
+    <string name="help_task_editor_attach_tab_item">Attachment. An attachment. Long pressing on the attachment will bring up a context menu with additional options.</string>	
+    
+	<!-- Help / Select Area -->
+    <string name="help_select_area">Configure Nearminder / Help</string>	
+    <string name="help_select_area_select_position_bulls_eye">Bullseye. Indicates the center of the area that your Nearminder will cover.</string>	
+    <string name="help_select_area_select_position_next">Next button. Takes you to the next step so you can set the size of the Nearminder.</string>	
+    <string name="help_select_area_options_menu_map_mode">Map mode. Opens a dialog box where you can set which map mode (Map, Satellite, or Traffic) is displayed.</string>	
+    <string name="help_select_area_options_menu_zoom">Zoom. Displays the zoom controls on the map.</string>	
+    <string name="help_select_area_options_menu_help">Help. Displays this help page.</string>	
+    <string name="help_select_area_select_area_slider">Slider. Slide to make the Nearminder area larger or smaller.</string>	
+    <string name="help_select_area_select_area_back">Back button. Moves you back to the previous step where you set the center of the Nearminder area.</string>	
+    <string name="help_select_area_select_area_cancel">Cancel button. Cancels the Nearminder creation activity. No attachment will be added.</string>	
+    <string name="help_select_area_select_area_next">Next button. Takes you to the next step where you give the Nearminder a name. If you editing an existing Nearminder then your changes are saved.</string>	
+    <string name="help_select_area_select_area_border">Outer edge. The outer edge of the Nearminder area.</string>	
+    <string name="help_select_area_edit_name_text">Nearminder name text box. Will be the displayed name of the Nearminder.</string>	
+    <string name="help_select_area_edit_name_ok">OK button. Adds the Nearminder attachment and assigns it the name from the text box.</string>	
+    <string name="help_select_area_edit_name_cancel">Cancel button. Cancels the Nearminder creation activity. No attachment will be added.</string>	
+    
+    	<!-- Help / Filter List -->
+    <string name="help_filter_list">Filters / Help</string>	
+    <string name="help_filter_list_active_filter">Active filter selector. Use this to select which filter you want to be active. The active filter will control which tasks are displayed in the Task List page.</string>	
+    <string name="help_filter_list_filter_all">All filter. When selected by the filter selector, the All filter will display all tasks that are not in the Archive. Note: If you have not enabled the Archive feature then the All filter displays all tasks. This filter can not be edited.</string>	
+    <string name="help_filter_list_filter_archive">Archive filter. When selected by the filter selector, the Archive filter will display all tasks that are in the Archive. Note: If you have not enabled the Archive feature then the Archive filter will not be displayed. This filter can not be edited.</string>	
+    <string name="help_filter_list_filter_sample">User created filters. An example filter which you can configure. Click on the filter to open the filter editor. This type of filter will only exist if you create it (see below for details). You can rename or delete the filter by long clicking on it and choosing the desired operation from the context menu.</string>	
+    <string name="help_filter_list_new_filter">New filter menu item. Enables you to create a new filter. After giving the new filter a name, click the filter row to open an editor where you can configure its filtering behavior. </string>	
+    
+	<!-- Help / Settings -->
+    <string name="help_settings">Settings / Help</string>	
+    <string name="help_settings_enable_labels">Enables/Disables the use of labels within the applications.</string>	
+    <string name="help_settings_enable_archive">Enables/Disables the use of archiving within the application.</string>	
+    <string name="help_settings_clear_archive">Deletes all tasks in the archive.</string>	
+    <string name="help_settings_automatic_removal">Configure the amount of time tasks will remain in the archive before being deleted.</string>	
+    <string name="help_settings_completed_tasks_delete">Decide whether completed tasks should be automatically deleted after mid-night each day.</string>	
+    <string name="help_settings_completed_tasks_archive">Decide whether completed tasks should be automatically archived after mid-night each day.</string>	
+    <string name="help_settings_check_for_update">Checks for any available application updates. You will receive a notification if an update is found.</string>	
+
+    <string name="help_settings_alarm_sound">Alarm sound. Which sound should Alarm play? click here to configure.</string>	
+    <string name="help_settings_alarm_vibrate">Alarm vibrate. Should Alarm vibrate? click here to configure.</string>	
+    <string name="help_settings_alarm_flash">Alarm flash. Should Alarm flash a light (if available)? click here to configure.</string>	
+    
+    <string name="help_settings_callminder_enable">Enable Callminders. If checked you will receive Callminder alerts about relevant tasks when you place or receive phone calls.</string>	
+    <string name="help_settings_callminder_sound">Callminder sound. Which sound should Callminder alerts play? click here to configure.</string>	
+    <string name="help_settings_callminder_vibrate">Callminder vibrate. Should Callminder alerts vibrate? click here to configure.</string>	
+    <string name="help_settings_callminder_flash">Callminder flash. Should Callminder alerts flash a light (if available)? click here to configure.</string>	
+    
+    <string name="help_settings_nearminder_sound">Nearminder sound. Which sound should Nearminder alerts play? click here to configure.</string>	
+    <string name="help_settings_nearminder_vibrate">Nearminder vibrate. Should Nearminder alerts vibrate? click here to configure.</string>	
+    <string name="help_settings_nearminder_flash">Nearminder flash. Should Nearminder alerts flash a light (if available)? click here to configure.</string>	
+ 		
+	<!-- Initial Tasks -->
+    <string name="task_tellUsWhatYouThink">Tell us what you think!</string>
+    <string name="task_weWantToKnowAboutYourFlingTapDoneExperience">We want to know about your FlingTap Done experience. Send us your comments, feature requests, and complaints. Just go to http://forum.flingtap.com from your home computer. You can also send us a quick message by choosing the \"Feedback\" menu item from the Task List.</string>
+    
+    <!-- searchable.xml -->
+	<string name="search_tasks">Tasks</string>
+	<string name="search_taskTitleWords">Task title words</string>
+
+    <!-- Backup/Restore -->
+	<string name="application_preferences_category_backup">Backup settings</string>
+	<string name="app_pref_enable_backup_title">Enable Backups</string>
+	<string name="app_pref_enable_backup_summary">Should backups be performed?</string>
+	<string name="app_pref_status_backup_title__on">Status: On</string>
+	<string name="app_pref_status_backup_summary__on">Backups functioning correctly</string>
+	<string name="app_pref_status_backup_title__off">Status: Off</string>
+	<string name="app_pref_status_backup_summary__off">Backups disabled</string>
+	<string name="app_pref_status_backup_title__waiting">Status: Waiting</string>
+	<string name="app_pref_status_backup_summary__waiting">Status unknown</string>
+	<string name="app_pref_status_backup_title__unsupported">Status: Device unsupported</string>
+	<string name="app_pref_status_backup_summary__unsupported">Your device does not support backups</string>
+	<string name="app_pref_status_backup_title__out_of_date">Status: Out of date</string>
+	<string name="app_pref_status_backup_summary__out_of_date">Your data was not backed up in a reasonable amount of time.</string>
+	<string name="app_pref_status_backup_title__privacy_settings">Status: Disabled</string>
+	<string name="app_pref_status_backup_summary__privacy_settings">Disabled in \"Privacy Settings\".</string>
+
+	<string name="dialog_backup_not_supported_title">Device not supported</string>
+	<string name="dialog_backup_not_supported_message">Backups are not supported on this device.</string>
+	<string name="dialog_backup_not_enabled_in_settings_title">Check privacy settings</string>
+	<string name="dialog_backup_not_enabled_in_settings_message">Backup is disabled in privacy settings. To enable backups for FlingTap Done go to Privacy settings and enable \"Back up my data\"</string>
+	<string name="dialog_backup_not_enabled_in_settings_btn_positive">Settings</string>
+	<string name="dialog_backup_not_enabled_in_settings_btn_negative">Dismiss</string>
+	<string name="dialog_backup_not_supported_btn_positive">Android Market</string>
+	<string name="dialog_backup_not_supported_btn_negative">Dismiss</string>
+
+	<string name="toast_backup_enabled">Backups enabled</string>
+	<string name="notify_backup_enabled_title">Backups enabled</string>
+	<string name="notify_backup_enabled_description">FlingTap Done backup enabled</string>
+	<string name="notify_backup_not_enabled_in_privacy_settings_title">Check privacy settings</string>
+	<string name="notify_backup_not_enabled_in_privacy_settings_message">FlingTap Done Backup requires that backup service in Privacy Settings is enabled.</string>
+	<string name="notify_backup_not_supported_title">Backups not supported</string>
+	<string name="notify_backup_not_supported_message">FlingTap Done Backup is not supported on your device.</string>
+
+    <!--  ************************************************************** -->
+    <!--  ****                         Common                       **** -->
+    <!--  ************************************************************** -->
+    
+    <!--  ErrorUtil -->
+    <string name="toast_sorryAnErrorOccurred">Sorry, an error occurred</string>	
+<!-- 
+    <string name="leanAndKeenEULA">Lean &amp; Keen EULA</string>	
+ -->	
+    <string name="agreement">Agreement</string>	
+    <string name="button_accept">Accept</string>	
+    <string name="button_decline">Decline</string>	
+	
+    <string name="notify_updateAvailable">Update Available</string>
+    <string name="notify_newVersionOfFlingTapDoneFound">New version of FlingTap Done found.</string>
+    <string name="activity_confirmFlingTapDoneUpdate">Confirm FlingTap Done Update</string>
+    <string name="wouldYouLikeToUpdateThisApplicationToTheLatestVersion">Would you like to update this application to the latest version?</string>
+    <string name="dontNotifyMeOfThisUpdateAgain">Don\'t notify me about this update again</string>    
+    
+</resources>

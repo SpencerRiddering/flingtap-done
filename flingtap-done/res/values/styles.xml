@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ * Copyright (C) 2007 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ -->
+
+<resources>
+	<!-- This code is not complete, I don't think it's possible to animate between activities in 1.0r1 -->
+    <!-- Base application theme is the default theme. -->
+    <!-- 
+    <style name="WindowAnimationsTasksList">
+	    <item name="android:windowHideAnimation">@anim/slide_0_to_100_right</item>
+	</style>
+    <style name="WindowAnimationsLabelListActivity">
+	    <item name="android:windowShowAnimation">@anim/slide_n100_to_0_right</item>
+	</style>
+     -->
+
+    <!-- Variation on our application theme that has a transparent
+         background; this example completely removes the background,
+         allowing the activity to decide how to composite. -->
+<!--          
+    <style name="Theme.Transparent">
+ -->
+ <!-- Not used. 
+    <style name="Transparent">
+        <item name="android:windowBackground">@drawable/transparent_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorForeground">#fff</item>
+    </style>
+  -->    
+    <style name="Theme.NoBackground" parent="android:Theme">
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+<!-- 
+    <style name="Theme.TaskList" parent="android:Theme">
+        <item name="android:windowBackground">@drawable/startup_background_draw</item>
+    </style>
+ -->    
+
+    <style name="Widget.TabWidget" parent="android:Theme">
+        <item name="android:textAppearance">@style/TextAppearance.Widget.TabWidget</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="TextAppearance.Widget.TabWidget" parent="android:Theme">
+        <item name="android:textSize">14sp</item> <!-- Is this text size not automatically scalled? -->
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@android:color/tab_indicator_text</item> <!--  @android:color/tab_indicator_text -->
+    </style>
+
+    
+    
+</resources>

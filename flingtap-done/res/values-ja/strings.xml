@@ -1,0 +1,662 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources xmlns:android='http://schemas.android.com/apk/res/android'>
+	
+	<!-- Search -->
+    <string name='task_titles'>タスク タイトル</string>
+
+    <string name='dialog_addOnNeeded'>アドオンが必要です</string>
+    <string name='dialog_thisFeatureIsPartOfTheOrganizerAddOnAndMustBeDownloadedSeparately'>この機能は\"オーガナイザ\"のアドオンの一部で、別々にダウンロードする必要があります。</string>
+    <string name='dialog_thisFeatureIsPartOfTheMindersAddOnAndMustBeDownloadedSeparately'>この機能は\"マインダーズ\"のアドオンの一部で、別々にダウンロードする必要があります。</string>
+    <string name='dialog_thisFeatureIsPartOfTheBackupAddOnAndMustBeDownloadedSeparately'>この機能は\"バックアップ\"アドオンの一部で、別々にダウンロードする必要があります</string>
+    <string name='button_tellMeMore'>詳細情報</string>
+    
+    <string name='enableThisFeature'>この機能を有効にしますか？</string>
+    
+    <!-- Preference Group - Advanced -->
+    <string name='advancedSettings'>詳細設定</string>
+    <!-- Preferences - Default Editor Tab -->
+    <string name='defaultEditorTab'>デフォルト エディタ タブ</string>
+    <string-array name='defaultEditorTabEntries'>
+        
+        
+    <item>詳細</item><item>添付ファイル</item></string-array>
+    <string name='defaultTab_NAME'>デフォルトタブ: ^1</string>
+    <string name='app_widget_label_2x2'>タスクリスト - 小</string>
+    <string name='app_widget_label_3x3'>タスクリスト - 大</string>
+    <string name='select_a_theme'>テーマを選択:</string>
+    <string name='light_theme'>明るい背景</string>
+    <string name='dark_theme'>暗い背景</string>
+    <string name='select_a_font_size'>フォントサイズを選択:</string>
+    <string name='small'>小</string>
+    <string name='medium'>中</string>
+    <string name='large'>大</string>
+    <string name='jumbo'>特大</string>
+    <string name='create_widget'>ウィジェットを作成</string>
+    <string name='create_task_list_widget'>タスク リスト ウィジェットを作成</string>
+    
+    
+    
+
+
+	<!-- Option Menu -->
+    <string name='option_edit'>編集</string>
+    <string name='option_delete'>削除</string>
+    <string name='option_save'>保存</string>
+    <string name='option_revert'>変更を取り消す</string>
+    <string name='option_discard'>破棄</string>
+    <string name='option_help'>ヘルプ</string>
+    <string name='option_feedback'>フィードバック</string>
+    <string name='option_archive'>アーカイブ</string>
+    <string name='option_unarchive'>解凍する</string>
+        
+	<!-- Toasts -->
+    <string name='toast_pleaseEnterAName'>名前を入力して下さい</string>
+    <string name='toast_noTasksDeleted'>タスクは何も削除されていません</string>
+    <string name='toast_deletedNTask'>タスク^1が削除されました</string>
+
+	<!-- Buttons -->
+	<string name='button_ok'>OK</string>  
+	<string name='button_cancel'>キャンセル</string>  
+    <string name='button_add'>追加</string>
+	<string name='button_save'>保存</string>
+	<string name='button_revert'>変更を取り消す</string>
+	<string name='button_discard'>破棄</string>
+	<string name='button_yes'>はい</string>
+	<string name='button_no'>いいえ</string>
+    <string name='button_next'>次へ</string>
+    <string name='button_back'>戻る</string>
+    <string name='button_remove'>消去</string>	
+    <string name='button_set'>設定</string>	
+	<string name='button_skip'>スキップ</string>
+	<string name='button_delete'>削除</string>
+    		
+	<!-- Dialog -->		
+	<string name='dialog_confirmDelete'>削除を確認</string>
+	<string name='dialog_confirmRemoval'>消去を確認</string>
+	<string name='dialog_areYouSure'>よろしいですか？</string>
+			
+	<!-- Activity/Intents -->
+	<string name='activity_flingtapDone'>FlingTap Done</string>  
+    <string name='intent_taskAttachment'>タスクの添付ファイル</string>
+	<string name='activity_taskList'>タスクリスト</string>   
+	<string name='activity_taskListCOLONX'>タスクリスト: ^1</string>   
+	<string name='intent_contactEQUALSX'>連絡先 = ^1</string>   
+	<string name='intent_task'>タスク</string>  
+	<string name='activity_taskEditor'>タスク エディタ</string>  
+	<string name='activity_filters'>フィルタ</string>   		    
+	<string name='activity_completable'>サブタスク</string> 
+    <string name='activity_viewNearminder'>Nearminderを表示</string>
+		    
+	<!--  Task List -->
+    <string name='option_newTask'>新規タスク</string>
+    <string name='option_filter'>フィルタ</string>
+    <string name='option_tutorials'>チュートリアル</string>
+    <string name='option_featuresIntroduction'>機能紹介</string>
+    <string name='option_addOns'>アドオン</string>
+    <string name='option_blog'>ブログ</string>
+    <string name='option_discussAndSupport'>討論 &amp; サポート</string>
+    <string name='option_donate'>寄付</string>
+    <string name='toast_youAreLeavingFlingTapDone'>FlingTap Doneから退室します</string>
+
+	<!--  Task List Item -->
+    <string name='context_editTask'>タスクを編集</string>
+    <string name='context_deleteTask'>タスクを削除</string>
+    <string name='context_markComplete'>完了済とマークする</string><!-- See Email application for example of how to dynamically change this String in the context menu. -->
+    <string name='context_markIncomplete'>保留中とマークする</string>
+    <string name='context_archiveTask'>タスクをアーカイブ</string>
+    <string name='context_unarchiveTask'>タスクを解凍</string>
+    <string name='context_labelTask'>タスクにラベルを付ける</string>
+    <string name='context_setAs'>としてセットする</string>	
+    <string name='chooser_setAs'>...としてタスクをセットする</string>	
+    
+    <!-- Edit Task -->
+    <string name='option_complete'>完了</string>
+    <string name='option_incomplete'>保留中</string>
+    
+    <!-- DefaultFilterElementDelegate -->
+    <string name='error'>エラー</string> 
+    
+    <!-- CompletableUtil -->
+    <string name='toast_completableDeleted'>サブタスクが削除されました</string> 
+    
+    <!-- CompletableAttachHandler -->
+    <string name='context_editCompletable'>サブタスクを編集</string>
+    <string name='context_deleteCompletable'>サブタスクを削除</string>
+    
+    
+	<!-- FilterUtil -->
+    <string name='toast_filtersMayNotHaveTheSameName'>フィルタに同じ名前がありません</string>
+    
+    <!-- LabelUtil -->
+    <string name='toast_failedToAddNewLabel'>新規ラベルの追加に失敗しました</string>
+    <string name='toast_failedToRemoveLabel'>ラベルの消去に失敗しました</string>
+
+    <!-- LabelFilterElementDelegate -->
+    <string name='tasksWithNoLabel'>ラベルなしのタスク</string>
+
+	<!-- Nearminder -->
+    <string name='nearminderDeleted'>Nearminderが削除されました</string>
+
+	<!-- PickAttachmentPart -->
+    <string name='applications'>アプリケーション</string>
+
+	<!--  TrialPeriodUtil  -->
+    <string name='button_noThanks'>結構です</string>
+    <string name='button_updateNow'>今アップデートする</string>
+    <string name='dialog_yourTrialVersionHasExpired_'>試用期間が終わりました</string>
+    <string name='dialog_pleaseUpdate'>アップデートして下さい</string>
+
+	<!-- PostalContactMethodGeocoderPart -->
+    <string name='toast_communicationError'>コミュニケーション エラー</string>
+
+
+	<!-- TaskEditorTabActivity  -->
+    <string name='toast_canceled'>キャンセルされました</string>
+
+
+    <!-- Displayed full screen when the user has no attachments and they are displaying the attachments list view -->
+    <string name='noFilterElements'>"このフィルタが選択されると、 <font fgcolor='#ffffffff'><b>すべてのタスクが表示されます</b></font>."</string>
+    <string name='allNonArchivedTasks'>すべてアーカイブされていないタスク</string>
+    <string name='allTasksInTheArchive'>アーカイブのすべてのタスク</string>
+
+    <!-- TaskList -->
+    <string name='dialog_filterNotEditableNow'>現在フィルタは編集できません</string>
+    <string name='dialog_taskListWarnCustomFilter'>現在のフィルタは、今電話をかけてきた人に関わるタスクのみを表示するカスタムビルトです。\n\n前に選択したフィルタに戻るには、\"消去\"を選択、もしくはこのフィルタを使い続けるのなら\"継続\"を選択して下さい。</string>
+    <string name='button_clear'>消去</string>
+    <string name='button_continue'>継続</string>
+    <string name='toast_nothingRecognized'>何も認識されませんでした</string>
+    <string name='dialog_whatDidYouMeanToSay'>もう一度言い直して下さい</string>
+    <string name='hint_buyGroceries'>食料品を買う</string>
+	
+
+
+    <!-- Callminder something.. -->
+    <string name='notify_tasksRelatedToThisContact'>この連絡先に関するタスク</string>
+    <string name='notify_contextTasksExist'>コンテキストのタスクが存在します</string>
+    
+    
+    <!-- Filter List -->
+	<string name='filterList'>フィルタリスト</string>
+	<string name='chooseActiveFilter'>作動中のフィルタを選択</string>
+	<string name='activeFilter'>作動中のフィルタ</string>
+	<string name='availableFilters'>利用可能なフィルタ</string>
+    <string name='option_newFilter'>新規フィルタ</string>
+	<string name='dialog_setFilterName'>フィルタ名を設定</string>
+	<string name='append_restored'>(修復済)</string>
+	
+	
+    <!-- Filter -->
+    <string name='context_deleteFilter'>フィルタを削除</string>
+    <string name='context_renameFilter'>フィルタ名を変更</string>
+    <string name='context_editFilter'>フィルタを編集</string>
+        
+	<!-- Label -->
+	<string name='option_addLabel'>新規ラベル</string>
+	<string name='dialog_setLabelName'>ラベル名を設定</string>
+	<string name='dialog_editLabelName'>ラベル名を編集</string>
+	<string name='context_deleteLabel'>ラベルを削除</string>
+	<string name='context_renameLabel'>ラベル名を変更</string>
+    
+    <!-- FilterElements -->
+    <string name='dialog_selectDueDateFilter'>期限フィルタを選択</string>
+    <string name='dialog_tasksWithoutDueDates'>期限なしのタスク?</string> <!-- Include no due date tasks? -->
+    <string name='dialog_lowestDisplayedPriority'>表示する最も低い優先順位</string>
+    <string name='dialog_selectFolder'>フォルダを選択</string>
+    <string name='unlabeled'>ラベルなし</string> 
+    <string name='dueDateX'>期限: ^1</string>
+    <string-array name='array_dueDateFilter'>        
+	    	 <!-- 0 -->
+	    <!-- 1 -->
+	    	 <!-- 2 -->        
+	    	 <!-- 3 -->
+	    	 <!-- 4 -->
+	     		 <!-- 5 -->
+	         <!-- 6 -->
+	             <!-- 7 -->
+    <item>いつでも</item><item>30日間</item><item>来週</item><item>今週</item><item>明日</item><item>今日</item><item>過去</item><item>オフ</item></string-array>
+    <string name='priorityX'>優先順位: ^1</string>
+    <string name='tasksWithLowerPriorityWillNotBeDisplayed'>優先順位の低いタスクは表示されません</string>
+    <string name='folderX'>フォルダ: ^1</string>
+    <string-array name='array_repository'>
+	        <!-- 0 -->
+	     <!-- 1 -->
+    <item>メイン</item><item>アーカイブ</item></string-array>    
+    <string name='statusX'>ステータス: ^1</string>
+    <string-array name='array_statusFilter'>
+	              <!-- 0 -->
+	        <!-- 1 -->
+	       <!-- 2 -->
+	       <!-- 3 -->
+    <item>すべて</item><item>完了済</item><item>保留中</item><item>日付範囲</item></string-array>    
+    <string name='areTheTasksCompletedOrNot'>タスクは完了しましたか?</string>
+    <string-array name='array_stockFilters'>        
+	          <!-- 0 -->
+	            <!-- 1 -->
+	              <!-- 2 -->
+    <item>すべてのタスク</item><item>アーカイブ</item><item>ベーシック</item></string-array>
+    
+	<!-- status_filter_element_options_list_item -->
+    <string name='dialog_from'>From:</string>
+    <string name='dialog_to'>To:</string>
+    <string name='dialog_all'>すべて</string>
+    <string name='dialog_bothCompletedAndIncompleteTasks'>完了済と保留中両方のタスク</string>
+    <string name='dialog_completed'>完了</string>
+    <string name='dialog_onlyCompletedTasks'>完了したタスクのみ</string>
+    <string name='dialog_incomplete'>保留中</string>
+    <string name='dialog_onlyIncompleteTasks'>保留中のタスクのみ</string>
+    <string name='dialog_dateRange'>日付範囲</string>
+    <string name='dialog_tasksCompletedWithinADateRange'>日付範囲以内で完了したタスク</string>
+    <string name='dialog_taskStatus'>タスク ステータス</string>
+
+
+    <string name='filterCOLONX'>フィルタ: ^1</string>
+    <string name='filterCOLON'>フィルタ:</string>
+    <string name='dialog_addRemoveLabels'>ラベルを追加/消去　 </string>
+
+	<!-- ArchiveMenuPart -->
+	<string name='toast_taskArchived'>タスクがアーカイブされました</string>
+	<string name='toast_nothingArchived'>何もアーカイブされていません</string>
+	<string name='toast_unarchivedTask'>解凍されたタスク</string>
+	<string name='toast_noTasksUnarchived'>解凍されたタスクはありません</string>
+	<string name='toast_archivedNTasks'>アーカイブされた ^1のタスク</string>
+	<string name='toast_noTasksArchived'>アーカイブされたタスクはありません</string>
+
+	<!-- AttachmentPart -->
+	<string name='toast_operationCanceled'>操作がキャンセルされました</string>
+    <string name='dialog_setAttachmentName'>添付ファイル名を設定</string>
+
+
+
+    <!-- PickAttachmentPart -->
+    <string name='option_attach'>添付</string>
+    <string name='context_removeAttachment'>添付ファイルを削除</string>
+    <string name='context_renameAttachment'>添付ファイル名を変更</string>
+    <string name='context_viewAttachment'>添付ファイルを表示</string>
+
+	<!-- ContactAttachmentHandler -->
+    <string name='context_viewContact'>連絡先を表示</string>
+    <string name='context_removeContact'>連絡先を消去</string>
+    <string name='context_addNearminder'>Nearminderを追加</string>
+    <string name='toast_nearminderAlreadyExists'>"Nearminderはすでに存在します。\n既存のNearminderを編集しています"</string>	
+
+	<!-- Task Editor -->
+	<string name='title'>タイトル</string>
+	<string name='hint_taskTitle'>簡単なタスク説明</string>
+	<string name='details'>詳細</string>
+    <string name='attachments'>添付ファイル</string>	
+	<string name='hint_taskDetails'>タスクの詳細情報</string>
+	<string name='labels'>ラベル</string>
+	<string name='hint_taskLabels'>学校</string>	
+	<string name='dueDate'>期限</string>
+	<string name='alarm'>アラーム</string>
+	<string name='priority'>優先順位</string>
+	<string name='dialog_selectAPriority'>優先順位を選択</string>
+    <string-array name='array_priority'>        
+	   		<!-- 0 -->
+			<!-- 1 -->
+		 <!-- 2 -->
+			<!-- 3 -->
+    <item>なし</item><item>低</item><item>中</item><item>高</item></string-array>	
+	<string name='dialog_attachmentType'>添付ファイルタイプ</string>	
+    <string name='typingSTARWillShowAllLabels'>*の入力ですべてのラベルが表示されます</string>
+    <string name='toast_labelNameXNotAllowed'>ラベル名\"^1\"は許可されません</string>
+    <string name='toast_labelApplied'>ラベルが使用されました</string>
+    <string name='toast_duplicateLabel'>ラベルを複写</string>
+    <string name='toast_labelCreatedAndApplied'>ラベルが作成され、使用されました</string>
+	<string name='toast_alarmIsAfterDueDate'>\n期限後にアラームが作動します\n</string>
+    <string name='toast_alarmIsInThePast'>\nアラームは過去に設定されています\n</string>
+    <string name='toast_alarmHasNotChanged'>\nアラームは変更していません\n</string>
+    <string name='toast_dueDateIsInThePast'>\n期日が過ぎています\n</string>
+    <string name='toast_dueDateIsBeforeAlarm'>\nアラームが鳴る前に期日になります\n</string>
+    <string name='toast_dueDateMayNotBeAfterTheAlarm'>\n期限がアラームの後ではない可能性があります\n</string>
+	<string name='notSet'>なし</string>
+	<string name='button_complete'>完了</string>
+    <string name='button_incomplete'>保留中</string> 
+    
+	<!-- Task Attachments -->
+    <!-- Displayed full screen when the user has no attachments and they are displaying the attachments list view -->
+    <string name='thisTaskHasNoAttachments'>"このタスクには添付ファイルがありません。\n\n添付ファイルに連絡先や地図などの詳細情報を入れて、一つの場所にすべて保管するできます。\n\n添付を追加するには、 <font fgcolor='#ffffffff'><b>メニュー</b></font>を押し、<font fgcolor='#ffffffff'><b>添付</b></font>を選択、それから添付タイプを選択して下さい。"</string>
+    <string name='hint_vacuumTheTug'>絨毯に掃除機をかける</string>
+
+
+ 	<!-- CompletableEditor -->
+	<string name='dialog_completableEditor'>サブタスク エディタ</string>
+	
+	<!-- PickAttachmentPart -->
+	<string name='type_contact'>連絡先</string>
+	<string name='type_image'>画像</string>
+	<string name='type_audio'>オーディオ</string>
+	<string name='type_video'>動画</string>
+	<string name='type_nearminder'>Nearminder</string>
+	
+	<!-- BasicMapActivity -->
+    <string name='option_zoom'>ズーム</string>
+    <string name='option_mapMode'>地図モード</string>
+    <string name='dialog_mapMode'>地図モード</string>
+    <string name='option_myLocation'>Myロケーション</string>
+    <string-array name='basic_map_map_modes'>
+        
+        
+        
+    <item>地図</item><item>衛星</item><item>交通</item></string-array> 
+    
+	<!-- Nearminder notification -->
+    <string name='notify_snooze'>スヌーズ</string>
+    <string name='notify_or'>or</string>
+    <string name='notify_chooseAction'>操作を選択</string>    
+    <string-array name='options_nearminderNotification'>
+        
+        
+        
+    <item>タスクを開く</item><item>道案内を使う</item><item>Nearminderを削除</item></string-array> 
+    
+	<!-- Nearminder Activity -->
+    <string name='toast_unableToDetermineYourLocation'>現在地が確認できません</string>
+    <string name='notifyMeWhenImThisClose'>これくらい近くになったら通知する</string>
+    <string name='selectTheCenter'>中心を選択</string>
+    <string name='activity_configureNearminder'>Nearminderを設定</string>
+    <string name='dialog_chooseAddress'>住所を選択</string>
+
+	<!-- NearminderAttachmentHandler -->
+    <string name='context_viewNearminder'>Nearminderを表示</string>
+    <string name='context_editNearminder'>Nearminderを編集</string>
+    <string name='context_deleteNearminder'>Nearminderを削除</string>
+    <string name='dialog_setNearminderName'>Nearminder名を設定</string>
+    
+	<!-- Nearminder Viewer -->
+    <string name='option_directions'>道案内</string>
+
+    
+    <string name='toast_removedBrokenAttachmentLink'>破損した添付ファイルのリンクを消去しました</string>
+    
+    <string name='dialog_theAddressXWasNotUnderstood'>住所 \n\"^1\"\nは理解されませんでした。\n:という意味ですか？</string>
+    
+    <string name='toast_attachmentAdded'>添付ファイルが追加されました</string>	
+    <string name='toast_taskAdded'>タスクが追加されました</string>	
+    <string name='toast_taskAddedButNotVisibleWithCurrentFilterSettings'>タスクは追加されましたが、現在のフィルタ設定では表示されません</string>	
+    <string name='toast_taskDeleted'>タスクが削除されました</string>	
+    <string name='toast_taskDiscarded'>タスクが破棄されました</string>	
+    <string name='toast_taskSaved'>タスクが保存されました</string>	
+    	
+    <!-- LicenseModifiedReceiver -->
+    <string name='notify_watchMindersTutorial'>マインダーズのチュートリアルを見る</string>	
+    <string name='notify_watchLabelsTutorial'>ラベルのチュートリアルを見る</string>	
+    <string name='notify_watchArchiveTutorial'>アーカイブのチュートリアルを見る</string>	
+    <string name='notify_flingTapDoneMenuTutorials'>FlingTap Done (メニュー-->チュートリアル)</string>	
+
+    	
+    <!-- Preferences - application_preferences.xml --> 
+    <string name='activity_settings'>設定</string>	
+    <string name='option_settings'>設定</string>	
+    
+    <!-- ApplicationPreferenceActivity  -->
+    <string name='toast_checkingForUpdate'>アップデートを確認中</string>	
+    
+    <string name='archiveSettings'>アーカイブ設定</string>	
+    <string name='enableArchive'>アーカイブを有効にする</string>	
+    <string name='archiveCompletedOrAbandonedTasks'>アーカイブは完了しましたか？もしくは放棄されたタスクですか？</string>	
+
+    <string name='alarmSettings'>アラーム設定</string>	
+    <string name='sound'>音</string>	
+    <string name='whichAlarmRingtoneWillBePlayed'>アラームの音はどれを流しますか？</string>	
+    <string name='vibrate'>バイブレート</string>	
+    <string name='vibratePhoneWhenAlarmOccurs'>アラームの時、電話をバイブレートさせますか？</string>	
+    <string name='flash'>フラッシュ</string>	
+    <string name='flashLEDWhenAlarmOccurs'>アラームの時、LEDをフラッシュさせますか？</string>	
+
+    <string name='nearminderSettings'>Nearminder設定</string>	
+    <string name='whichNotificationSoundWillBePlayed'>どの通知音を流しますか？</string>	
+    <string name='vibratePhoneWhenNearminderOccurs'>Nearminderが作動する時、電話をバイブレートさせますか？</string>	
+    <string name='flashLEDWhenNearminderOccurs'>Nearminderが作動する時、LEDをフラッシュさせますか？</string>	
+
+    <string name='callmindeSettings'>Callminder設定</string>	
+    <string name='enableCallminders'>Callminderを有効にする</string>	
+    <string name='notifyMeAboutRelevantTasksWhenImOnThePhone'>電話中に、関連のあるタスクを通知しますか？</string>	
+    <string name='vibratePhoneWhenCallminderOccurs'>Callminderが作動する時、電話をバイブレートさせますか？</string>	
+    <string name='flashLEDWhenCallminderOccurs'>Callmindeが作動する時、LEDをフラッシュさせますか？</string>	
+
+    <string name='labelSettings'>ラベル設定</string>	
+    <string name='enableLabels'>ラベルを有効にする</string>	
+     
+    <string name='updateSettings'>アップデート設定</string>	
+    <string name='checkForUpdateNow'>今アップデートを確認して下さい</string>	
+
+    <string name='completedTasks'>完了済みのタスク</string>	
+    <string name='automaticallyArchive'>自動アーカイブ</string>	
+    <string name='completedTasksWillBeArchivedAfterMidnightEachDay'>午前12時を過ぎると、毎日完了タスクがアーカイブされます</string>	
+    <string name='automaticallyDelete'>自動削除</string>	
+    <string name='completedTasksWillBeDeletedAfterMidnightEachDay'>午前12時を過ぎると、毎日完了タスクが削除されます</string>	
+    
+	<!-- Archive Preferences -->
+	<string name='toast_noArchivedTasksWereDeleted'>アーカイブされたタスクは何も削除されていません</string>
+	<string name='toast_allArchivedTasksDeleted'>すべてのアーカイブされたタスクが削除されました</string>
+	
+	<!-- Archive Preferences - Retention -->
+	<string name='deleteArchivedTasksAfterHowManyDays'>何日以降にアーカイブされたタスクを削除しますか？</string>
+	<string name='automaticRemoval'>自動消去</string>
+	<string name='howLongShouldArchivedTasksBeKept'>アーカイブされたタスクをどのくらい保管しますか？</string>
+	<string name='archiveHousekeeping'>家事をアーカイブする</string>
+
+	<!-- Archive Preferences - Clear now -->
+	<string name='clearArchiveNow'>アーカイブを今消去！</string>
+	<string name='dialog_confirmDeletion'>削除を確認</string>
+	<string name='dialog_deleteAllArchivedTasks'>アーカイブされたタスクをすべて削除しますか？</string>
+
+	<!-- Archive Preferences - Disable -->
+	<string name='dialog_deleteArchivedTasks'>アーカイブされたタスクを削除しますか？</string>
+	<string name='dialog_areYouSureYouWantToDeleteAllArchivedTaskAndDisableTheArchive'>アーカイブされたタスクをすべて削除して、アーカイブを無効にしても本当に宜しいですか？</string>
+
+	
+	<!-- EditNumberPreference -->
+	<string name='toast_noValueSpecifiedNothingChanged'>何の値も指定されていません,何も変更されていません。</string>
+	
+	<!-- Label Preferences - Disable -->
+	<string name='dialog_whenDisablingLabelsAllExistingLabelsAreDeleted'>ラベルを無効にすると、すべての既存ラベルが削除されます。ラベルの使用を無効にして既存ラベルをすべて削除しても本当に宜しいですか？</string>
+	<string name='toast_noLabelsWereDeleted'>何のラベルも削除されていません</string>
+	<string name='toast_allLabelsDeleted'>ラベルがすべて削除されました</string>
+    
+	<!-- FeedbackPart.java -->
+    <string name='chooser_selectEmailClient'>イーメール クライアントを選択</string>	
+
+	<!-- About -->
+    <string name='about'>About</string>
+    <string name='copyright2009LeanAndKeenLLC'>Copyright ©2009 Lean &amp; Keen, LLC.</string>
+    <string name='allRightsReserved'>無断複写・転載を禁じます</string>
+    <string name='attributionNotices'><u>法的通告</u>:\n<li><b>Veecheck</b>\nCopyright ©2008 Tom Gibara\nLicense: http://www.apache.org/licenses/LICENSE-2.0.html\nSite: http://www.tomgibara.com/android/veecheck</li>\n<li><b>Android</b>\nCopyright ©2007 The Android Open Source Project\nLicense: http://www.apache.org/licenses/LICENSE-2.0.html</li></string>
+    <string name='versionX'>バージョン ^1</string>
+    <string name='trialDaysRemainingX'>試用期間残り: ^1日</string>
+    <string name='tellUsHowWeAreDoing'>ご意見・ご感想をお待ちしております</string>
+
+	<!-- **************** Feature Introduction *************** -->
+	<string name='intro_introduction'>機能紹介n\n\n\n当社の機能について、お読み下さい。\n\nアドオン パッケージには別途ダウンロードしなければならない機能もございます。アドオンの中には有料のものもございます。詳細はアドオン メニューをご覧下さい。</string>      
+	<string name='intro_attachments'><font fgcolor='#ffffffff'><b>添付ファイル</b></font> は、連絡先、画像、ウエブサイトなどの詳細をタスクに追加して、すべてをひとつの場所に保管することができます。</string>      
+	<string name='intro_nearminders'><font fgcolor='#ffffffff'><b>Nearminders</b></font>は、近くにいる時に知らせてくれます。スーパー、美容院、レストランなど、通りがかりに立ち寄りたいお好きな場所をNearminderで作成して下さい。Nearmindersはどんなタスクにも対応可能です。 <font fgcolor='#ffffffff'><b>添付</b></font> タブをクリックするだけです。 <font fgcolor='#ffffffff'><b>これは、アドオン機能です。</b></font></string>      
+	<string name='intro_callminders'><font fgcolor='#ffffffff'><b>Callminders</b></font>は、電話の発信や送信時に、関連したタスクを知らせてくれます。完了しなくてはならないタスクの連絡先を添付するだけで、その連絡先と電話中に毎回教えてくれます。 <font fgcolor='#ffffffff'><b>これは、アドオン機能です。</b></font></string>      
+	<string name='intro_labels'><font fgcolor='#ffffffff'><b>ラベル</b></font>はタスクに使用されたキーワードです。一つもしくはいくつかののラベルをフィルタしてタスクを集めることができます。<font fgcolor='#ffffffff'><b>これはアドオン機能です。</b></font></string>      
+	<string name='intro_archive'><font fgcolor='#ffffffff'><b>アーカイブ</b></font> は、タスクリストがごちゃごちゃにならないように完了タスクを入れる別のフォルダーです。アーカイブは、メインのタスクリストと同じようにフィルタしたり検索できたりします。 <font fgcolor='#ffffffff'><b>これは、アドオン機能です。</b></font></string>      
+	<string name='intro_tips'><font fgcolor='#ffffffff'><b>オプション メニュー</b></font>を使ってみるのも忘れないで下さい。 <font fgcolor='#ffffffff'><b>機能</b></font>を有効にしたり、<font fgcolor='#ffffffff'><b>設定</b></font>を行ったり、<font fgcolor='#ffffffff'><b>チュートリアル</b></font>を閲覧したり、<font fgcolor='#ffffffff'><b>ヘルプ</b></font>ページで素早く回答を見つけたりすることができます。</string>
+	<string name='intro_conclusion'><font fgcolor='#ffffffff'><b>ありがとうございます</b></font></string>      
+
+	<string name='availableFromTheAddonsMenu'>アドオンメニューよりご利用になれます</string>      
+	<string name='leaveFeatureIntroduction'>機能紹介から出ますか？\n\n後で戻るには、 <font fgcolor='#ffffffff'><b>オプション メニュー</b></font>から<font fgcolor='#ffffffff'><b>機能紹介</b></font>を選択して下さい。</string>
+	<string name='button_getStarted'>さぁ、始めよう！</string>
+	<!-- ****************************************************** -->
+    
+	<!-- Help / Task List -->
+    <string name='help_task_List'>タスクリスト/ヘルプ</string>	
+    <string name='help_task_list_fast_add_box'>スピード追加テキスト ボックス。速く新規タスクを追加するには、タスクタイトルをこのボックスに入力して、エンターキーを押して下さい（もしくは“追加”ボタンをタップする）。</string>	
+    <string name='help_task_list_fast_add_button'>スピード追加追加ボタン。このボタンをタップすると、スピード追加テキストボックスのテキストが新規タスク作成に使われる。</string>	
+    <string name='help_task_list_fast_add_speech_recognition_button'>音声認識ボタン。ユーザーにタスク名を言わせ、発話言葉をテキストに変換する。</string>	
+    <string name='help_task_list_task_priority_indicator'>優先順位スピードメーター。タスクの優先順位を表示する。</string>	
+    <string name='help_task_list_task_title'>タスクタイトル。ここをタップすると、エディタのタスクが開く。コンテキストメニューの表示は長押しする。詳細は下記17番, 18番, 19番をご覧になって下さい。</string>	
+    <string name='help_task_list_task_title_all'>タスクタイトル。ここをタップすると、エディタのタスクが開く。コンテキスト メニュー表示は長押しする。 詳細は下記17番, 18番, 19番, 20番, 21番をご覧になって下さい。</string>	
+    <string name='help_task_list_task_due_date'>タスクの期限</string>	
+    <string name='help_task_list_options_menu_new_task'>新規タスクメニュー項目。新しいタスクを作成し、エディタでそれを開く。</string>
+    <string name='help_task_list_options_menu_filter'>フィルタメニュー項目。タスクをフィルタするために画面を開く。</string>	
+    <string name='help_task_list_options_menu_delete_completed'>完了タスク削除メニュー項目。すべての完了タスクを削除する。</string> <!-- Note: some completed tasks may not be displayed because of the filter settings. -->	
+    <string name='help_task_list_options_menu_archive_completed'>完了タスク アーカイブ メニュー項目。すべての完了タスクをアーカイブする。</string>	
+    <string name='help_task_list_options_menu_settings'>設定メニュー項目。設定画面が開く。ここでアプリケーション機能を有効にしたり無効にしたりできる。通常、アプリケーションの動作を設定する。</string>	
+    <string name='help_task_list_options_menu_more'>Moreメニュー項目。他のメニュー項目を表示する。下記、12番から16番を参照して下さい。</string>	
+    <string name='help_task_list_options_menu_about'>Aboutメニュー項目。このアプリケーションの詳細を表示する。</string>	
+    <string name='help_task_list_options_menu_feedback'>フィードバック メニュー項目。フィードバックのウエブサイトが開き、新しい機能に関するご提案や投票を受け付けております。</string>	
+    
+    <string name='help_task_list_ctx_menu_mark_complete'>タスク完了をマークするコンテキストメニュー。タスク完了をマークする（もしくは、完了済みであれば保留中にする）</string>	
+    <string name='help_task_list_ctx_menu_edit_task'>タスク編集コンテキストメニュー項目。タスクエディタの選択されたタスクを開く。</string>	
+    <string name='help_task_list_ctx_menu_delete_task'>タスク削除コンテキストメニュー項目。選択されたタスクを削除する。</string>	
+    <string name='help_task_list_ctx_menu_archive_task'>タスクアーカイブ コンテキストメニュー項目(オプショナル）。選択されたタスクをアーカイブに移動する。</string>	
+    <string name='help_task_list_ctx_menu_label_task'>タスクにラベルを付けるコンテキストメニュー項目（オプショナル)。選択されたタスクに使われる既存ラベルリストのダイアログが開く。</string>	
+
+    <string name='help_task_list_ctx_menu_feature_introduction'>機能紹介。FlingTap Doneを初めて使った時に通常表示される機能紹介にもう一度行ける。</string>	
+    <string name='help_task_list_ctx_menu_tutorials'>チュートリアル。FlingTap Doneのさまざまな機能を使うために、さらに掘り下げたインストラクションのあるチュートリアルのウエブサイトに行く。</string>	
+    <string name='help_task_list_ctx_menu_addons'>アドオン。FlingTap Doneの新しい機能があるアドオンのウエブサイトへ行く。</string>	
+
+
+    
+	<!-- Help / Filter -->
+    <string name='help_filter'>フィルタ/ヘルプ</string>	
+    <string name='help_filter_due_date'>期限フィルタ。タスクの期限の日付範囲を選択する。期限がこの範囲内のタスクのみ表示される。もし\"期限なしのタスク?\"オプションが有効になっていれば、期限なしのタスクも表示される。</string>	
+    <string name='help_filter_priority'>優先順位フィルタ。最も低い優先順位を選択する。これもよりも低い優先順位のタスクは表示されない。</string>	
+    <string name='help_filter_status'>ステータスフィルタ。完了タスク、保留中タスク、もしくは両方を表示するか選択する。日付範囲内で完了したタスクを表示することもできる。これを使えば、例えば先月どのタスクを完了したのかを見ることができる。注:これはアーカイブを表示する時に最適です。</string>	
+    <string name='help_filter_repository'>フォルダフィルタ(オプショナル)。どのフォルダを表示したいか選択する。二つのフォルダがあり、「\n(1) \"メイン\" にはアーカイブされていない、\n(2) \"アーカイブ\" にはアーカイブされたタスクがあります。</string>	
+    <string name='help_filter_unlabeled'>ラベルなしフィルタ（オプショナル）。有効になっている時、ラベルのないタスクが表示されます。注：このフィルタの名前の変更や消去はできません。</string>	
+    <string name='help_filter_label'>ラベルフィルタ（オプショナル）。有効になっている時、ラベルのあるタスクが表示されます。ラベルの長押しで次のコンテキストメニューが作成されます。:</string>	
+    <string name='help_filter_menu_add_label'>新規ラベルの追加（オプショナル）。新規ラベル作成のダイアログが開く。</string>	
+    <string name='help_filter_label_note'>注:仕事とプライベートはデフォルトのラベルです。お好きなラベルの追加、削除、名前の変更ができます。</string>	
+    
+    
+	<!-- Help / Task Edtor Main -->
+    <string name='help_task_editor'>タスクの編集/ヘルプ</string>	
+    <string name='help_task_editor_details_tab'>詳細タブ</string>	
+    <string name='help_task_editor_title'>タスクタイトル</string>	
+    <string name='help_task_editor_priority'>タスクの優先順位</string>	
+    <string name='help_task_editor_due_date'>タスクの期限</string>	
+    <string name='help_task_editor_alarm'>タスクのアラーム</string>	
+    <string name='help_task_editor_details'>タスク詳細。詳細情報用の追加スペース</string>	
+    <string name='help_task_editor_label_text_entry'>ラベルテキストボックス追加。タスクにラベルを付けるには、新しいもしくは既存のラベル名をここに入力してエンターを押す（もしくは"追加"ボタンをタップする）。*の入力ですべての既存ラベルを表示します。 </string>	
+    <string name='help_task_editor_label_add_button'>ラベル追加ボタン。ラベルテキストボックス追加でラベル名を入力後、このボタンをタップして追加する。</string>	
+    <string name='help_task_editor_label_list_item'>現在のタスクラベル。タスクにすでにラベルがついていれば、そのラベルがここに表示される。</string>	
+    <string name='help_task_editor_label_remove_item'>ラベル消去ボタン。現在のタスクから既存ラベルを消去するには、ここをタップする。注:ラベル自体は消えず、この操作で他のタスクのラベルが消去されることはない。ラベルを恒久的に削除するには、メインのタスクリストのフィルタメニューのオプションへ行き、削除したいラベルを長押して下さい。</string>	
+    
+    <string name='help_task_editor_complete_button'>完了ボタン。タスク完了をマークし、タスクリストへ戻る。行った変更は保存される。</string>	
+    <string name='help_task_editor_revert'>変更取り消しボタン。行った変更を取り消し、タスクリストに戻る。</string>	
+    <string name='help_task_editor_complete_menu_item'>完了メニュー項目。タスク完了をマークし、タスクリストへ戻る。行った変更は保存される。</string>	
+    <string name='help_task_editor_revert_menu_item'>変更取り消しメニュー項目。行った変更を取り消し、タスクリストへ戻る。</string>	
+    <string name='help_task_editor_delete_menu_item'>タスク削除メニュー項目。現在のタスクを削除し、ユーザーをタスクリストへ戻す。</string>	
+
+    <string name='help_task_editor_options_menu_attachment'>添付メニュー項目。添付ファイル選択ツールを開始する。連絡先、ウエブサイト、音声録音、写真などの内容の添付ができます。</string>	
+    <string name='help_task_editor_options_menu_archive'>アーカイブメニュー項目（オプショナル）。現在のタスクをアーカイブする。</string>	
+    
+	<!-- Help / Task Edtor Attach -->
+    <string name='help_task_editor_attach'>タスクエディタ添付ファイル/ヘルプ</string>	
+    <string name='help_task_editor_attach_tab'>添付ファイルタブ。連絡先、録音、ウエブサイト、画像などの重要内容をタスクに添付することができます。このタブには追加された添付ファイルが表示されます。</string>	
+    <string name='help_task_editor_attach_tab_item'>添付ファイル。添付ファイル。添付ファイルを長押しすると、他のオプションと共にコンテキストメニューが出てくる。</string>	
+    
+	<!-- Help / Select Area -->
+    <string name='help_select_area'>Nearminderの設定 / ヘルプ</string>	
+    <string name='help_select_area_select_position_bulls_eye'>ブルズアイ。Nearminder圏内の中心を示す。</string>	
+    <string name='help_select_area_select_position_next'>ネクストボタン。Nearminderのサイズを設定できるように、次のステップに行く。</string>	
+    <string name='help_select_area_options_menu_map_mode'>地図モード。どの地図モード（地図,衛星,交通）を表示するか設定できるダイアログボックスが開く。</string>	
+    <string name='help_select_area_options_menu_zoom'>ズーム。地図上のズームコントロールを表示する。</string>	
+    <string name='help_select_area_options_menu_help'>ヘルプ。このヘルプページを表示する。</string>	
+    <string name='help_select_area_select_area_slider'>スライダー。Nearminderエリアを大きくしたり小さくしたりするためにスライドする。</string>	
+    <string name='help_select_area_select_area_back'>バックボタン。Nearminderエリアの中心を設定したステップに戻る。</string>	
+    <string name='help_select_area_select_area_cancel'>キャンセルボタン。Nearminderの作成を中止する。添付は追加されない。</string>	
+    <string name='help_select_area_select_area_next'>ネクストボタン。Nearminderに名前を付ける次のステップに行く。既存のNearminderを編集していれば、その変更は保存される。</string>	
+    <string name='help_select_area_select_area_border'>外縁。Nearminderエリアの外縁。</string>	
+    <string name='help_select_area_edit_name_text'>Nearminder名テキストボックス。Nearminderの表示名になる。</string>	
+    <string name='help_select_area_edit_name_ok'>OKボタン。Nearminderの添付ファイルを追加し、テキストボックスの名前をつける。</string>	
+    <string name='help_select_area_edit_name_cancel'>キャンセルボタン。Nearminderの作成を中止する。添付ファイルは追加されない。</string>	
+    
+    	<!-- Help / Filter List -->
+    <string name='help_filter_list'>フィルタ / ヘルプ</string>	
+    <string name='help_filter_list_active_filter'>アクティブ フィルタ セレクタ。作動させたいフィルタを選択するのに使う。作動しているフィルタが、どのタスクをタスクリストページで表示させるかコントロールする。</string>	
+    <string name='help_filter_list_filter_all'>オールフィルタ。フィルタ セレクタで選択する時、オールフィルタがアーカイブにないすべてのタスクを表示する。注：アーカイブ機能が有効になっていない場合は、オールフィルタはすべてのタスクを表示する。このフィルタは編集できない。</string>	
+    <string name='help_filter_list_filter_archive'>アーカイブ フィルタ。フィルタ セレクタで選択する時、アーカイブ フィルタがアーカイブにあるすべてのタスクを表示する。注: アーカイブ機能が有効になっていない場合は、アーカイブ フィルタは表示されない。このフィルタは編集できない。</string>	
+    <string name='help_filter_list_filter_sample'>ユーザが作成したフィルタ。設定できる実例フィルタ。フィルタをクリックしてフィルタエディタを開く。このタイプのフィルタは作成されない限り存在しない(詳細は下記参照）。そこを長くクリックしたり、コンテキストメニューから好きな操作を選択してフィルタ名の変更や削除ができる。</string>	
+    <string name='help_filter_list_new_filter'>新規フィルタ メニュー項目。新しいフィルタ作成を有効にする。新しいフィルタに名前を付けた後、フィルタの横列をクリックしてフィルタの動作を設定するエディタを開いて下さい。</string>	
+    
+	<!-- Help / Settings -->
+    <string name='help_settings'>設定/ヘルプ</string>	
+    <string name='help_settings_enable_labels'>アプリケーション内で、ラベルの使用を有効/無効にする</string>	
+    <string name='help_settings_enable_archive'>アプリケーション内で、アーカイブの使用を有効/無効にする</string>	
+    <string name='help_settings_clear_archive'>アーカイブのすべてのタスクを削除</string>	
+    <string name='help_settings_automatic_removal'>アーカイブのタスクが削除されるまでの残り時間を設定</string>	
+    <string name='help_settings_completed_tasks_delete'>完了タスクを毎日午前12時を過ぎると自動的に削除するかどうか決定</string>	
+    <string name='help_settings_completed_tasks_archive'>完了タスクを毎日午前12時を過ぎると自動的にアーカイブするかどうか決定</string>	
+    <string name='help_settings_check_for_update'>利用可能なアプリケーションのアップデートを確認する。アップデートが見つかると通知される。</string>	
+
+    <string name='help_settings_alarm_sound'>アラーム音。どのアラーム音を流しますか？ここをクリックして設定して下さい。</string>	
+    <string name='help_settings_alarm_vibrate'>アラーム バイブレーション。アラームの時バイブレーションさせますか？ここをクリックして設定して下さい。</string>	
+    <string name='help_settings_alarm_flash'>アラーム フラッシュ。（利用可能ならば）アラームの時、フラッシュさせますか？ここをクリックして設定して下さい。</string>	
+    
+    <string name='help_settings_callminder_enable'>Callmindersを有効にする。チェックされていれば、発信、受信時に関連タスクをCallminderが警告してくれます。 </string>	
+    <string name='help_settings_callminder_sound'>Callminder音。どの音をCallminders用に流しますか？ここをクリックして設定して下さい。</string>	
+    <string name='help_settings_callminder_vibrate'>Callminderバイブレーション。バイブレーションで警告しますか？ここをクリックして設定して下さい。</string>	
+    <string name='help_settings_callminder_flash'>Callminderフラッシュ。（利用可能ならば）フラッシュで警告しますか？ここをクリックして設定して下さい。</string>	
+    
+    <string name='help_settings_nearminder_sound'>Nearminder音。どの音をNearminder用に流しますか？ここをクリックして設定して下さい。</string>	
+    <string name='help_settings_nearminder_vibrate'>Nearminderバイブレーション。バイブレーションで警告しますか？ここをクリックして設定して下さい。</string>	
+    <string name='help_settings_nearminder_flash'>Nearminderフラッシュ。（利用可能ならば）フラッシュで警告しますか？ここをクリックして設定して下さい。</string>	
+ 		
+	<!-- Initial Tasks -->
+    <string name='task_tellUsWhatYouThink'>ご意見・ご感想をお待ちしております。</string>
+    <string name='task_weWantToKnowAboutYourFlingTapDoneExperience'>当社では、お客様のFlingTap Doneに関するご意見・ご感想を受け付けております。ご感想、機能に関するご要望、苦情などをhttp://forum.flingtap.comからお送り下さい。タスクリストの\"フィードバック\"メニュー項目からのメッセージもご利用いただけます。</string>
+    
+    <!-- searchable.xml -->
+	<string name='search_tasks'>タスク</string>
+	<string name='search_taskTitleWords'>タスク タイトル ワード</string>
+
+    <!-- Backup/Restore -->
+	<string name='application_preferences_category_backup'>バックアップ設定</string>
+	<string name='app_pref_enable_backup_title'>バックアップを有効にする</string>
+	<string name='app_pref_enable_backup_summary'>バックアップを実行しますか？</string>
+	<string name='app_pref_status_backup_title__on'>ステータス:オン</string>
+	<string name='app_pref_status_backup_summary__on'>バックアップが正常に機能しています</string>
+	<string name='app_pref_status_backup_title__off'>ステータス:オフ</string>
+	<string name='app_pref_status_backup_summary__off'>バックアップが無効です</string>
+	<string name='app_pref_status_backup_title__waiting'>ステータス:待機中</string>
+	<string name='app_pref_status_backup_summary__waiting'>ステータス不明</string>
+	<string name='app_pref_status_backup_title__unsupported'>ステータス:デバイス未対応</string>
+	<string name='app_pref_status_backup_summary__unsupported'>このデバイスはバックアップが未対応です</string>
+	<string name='app_pref_status_backup_title__out_of_date'>ステータス:期限切れ</string>
+	<string name='app_pref_status_backup_summary__out_of_date'>データが適当な時間内にバックアップされませんでした</string>
+	<string name='app_pref_status_backup_title__privacy_settings'>ステータス: 無効</string>
+	<string name='app_pref_status_backup_summary__privacy_settings'> \"プライベート設定\"で無効です</string>
+
+	<string name='dialog_backup_not_supported_title'>デバイス未対応</string>
+	<string name='dialog_backup_not_supported_message'>このデバイスはバックアップが未対応です</string>
+	<string name='dialog_backup_not_enabled_in_settings_title'>プライバシー設定を確認して下さい</string>
+	<string name='dialog_backup_not_enabled_in_settings_message'>バックアップがプライベート設定で無効です。FlingTap Doneのバックアップを有効にするには、プライバシー設定に行き、 \"バックアップ　マイデータ\"を有効にして下さい。</string>
+	<string name='dialog_backup_not_enabled_in_settings_btn_positive'>設定</string>
+	<string name='dialog_backup_not_enabled_in_settings_btn_negative'>閉じる</string>
+	<string name='dialog_backup_not_supported_btn_positive'>アンドロイド マーケット</string>
+	<string name='dialog_backup_not_supported_btn_negative'>閉じる</string>
+
+	<string name='toast_backup_enabled'>バックアップが有効</string>
+	<string name='notify_backup_enabled_title'>バックアップが有効</string>
+	<string name='notify_backup_enabled_description'>FlingTap Doneのバックアップが有効</string>
+	<string name='notify_backup_not_enabled_in_privacy_settings_title'>プライバシー設定を確認して下さい</string>
+	<string name='notify_backup_not_enabled_in_privacy_settings_message'>FlingTap Doneのバックアップにはプライバシー設定でバックアップサービスが有効になっていなければなりません </string>
+	<string name='notify_backup_not_supported_title'>バックアップが未対応です</string>
+	<string name='notify_backup_not_supported_message'>お客様のデバイスはFlingTap Doneのバックアップが未対応です</string>
+
+    <!--  ************************************************************** -->
+    <!--  ****                         Common                       **** -->
+    <!--  ************************************************************** -->
+    
+    <!--  ErrorUtil -->
+    <string name='toast_sorryAnErrorOccurred'>エラーです。申し訳ございません。</string>	
+<!-- 
+    <string name="leanAndKeenEULA">Lean &amp; Keen EULA</string>	
+ -->	
+    <string name='agreement'>契約</string>	
+    <string name='button_accept'>受諾</string>	
+    <string name='button_decline'>拒否</string>	
+	
+    <string name='notify_updateAvailable'>アップデートがご利用になれます</string>
+    <string name='notify_newVersionOfFlingTapDoneFound'>新しいバージョンの FlingTap Doneがあります</string>
+    <string name='activity_confirmFlingTapDoneUpdate'>FlingTap Doneのアップデートを確認</string>
+    <string name='wouldYouLikeToUpdateThisApplicationToTheLatestVersion'>このアプリケーションを最新版にアップデートしますか？</string>
+    <string name='dontNotifyMeOfThisUpdateAgain'>この更新について再通知しない</string>    
+    
+</resources>

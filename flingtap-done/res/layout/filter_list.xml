@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <TextView
+            android:id="@+id/selected_filter_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dip"
+            android:paddingBottom="3dip"
+            android:paddingLeft="7dip"
+            android:text="@string/activeFilter"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_alignParentTop="true"
+            />
+    <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/selected_filter_label"
+            android:prompt="@string/chooseActiveFilter"
+            android:layout_margin="5dip"
+            />
+    <TextView
+            android:id="@+id/editable_filterList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dip"
+            android:paddingBottom="3dip"
+            android:paddingLeft="7dip"
+            android:text="@string/availableFilters"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_below="@id/spinner"
+            />
+    <ListView
+            android:id="@android:id/list"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:layout_below="@id/editable_filterList"
+            android:drawSelectorOnTop="false"
+            />
+</RelativeLayout>
+	

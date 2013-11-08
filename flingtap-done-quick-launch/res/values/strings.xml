@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FlingTap Done Quick Launch</string>
+    <string name="quick_launch_name">FlingTap Done</string>
+    <string name="preferences_category_quick_launch">Quick Launch</string>
+    <string name="preferences_enable_quick_launch_title">Enable quick launch</string>
+    <string name="preferences_enable_quick_launch_summary"></string>
+    
+    <string-array name="preferences_quick_launch_shortcut_entries">        
+	    <item>a</item>      
+	    <item>b</item>      
+	    <item>c</item>      
+	    <item>d</item>      
+	    <item>e</item>      
+	    <item>f</item>      
+	    <item>g</item>      
+	    <item>h</item>      
+	    <item>i</item>      
+	    <item>j</item>      
+	    <item>k</item>      
+	    <item>l</item>      
+	    <item>m</item>      
+	    <item>n</item>      
+	    <item>o</item>      
+	    <item>p</item>      
+	    <item>q</item>      
+	    <item>r</item>      
+	    <item>s</item>      
+	    <item>t</item>      
+	    <item>u</item>      
+	    <item>v</item>      
+	    <item>w</item>      
+	    <item>x</item>      
+	    <item>y</item>      
+	    <item>z</item>      
+	    <item>0</item>      
+	    <item>1</item>      
+	    <item>2</item>      
+	    <item>3</item>      
+	    <item>4</item>      
+	    <item>5</item>      
+	    <item>6</item>      
+	    <item>7</item>      
+	    <item>8</item>      
+	    <item>9</item>      
+    </string-array>
+    <string-array name="preferences_quick_launch_shortcut_entry_values">        
+	    <item>a</item>      
+	    <item>b</item>      
+	    <item>c</item>      
+	    <item>d</item>      
+	    <item>e</item>      
+	    <item>f</item>      
+	    <item>g</item>      
+	    <item>h</item>      
+	    <item>i</item>      
+	    <item>j</item>      
+	    <item>k</item>      
+	    <item>l</item>      
+	    <item>m</item>      
+	    <item>n</item>      
+	    <item>o</item>      
+	    <item>p</item>      
+	    <item>q</item>      
+	    <item>r</item>      
+	    <item>s</item>      
+	    <item>t</item>      
+	    <item>u</item>      
+	    <item>v</item>      
+	    <item>w</item>      
+	    <item>x</item>      
+	    <item>y</item>      
+	    <item>z</item>      
+	    <item>0</item>      
+	    <item>1</item>      
+	    <item>2</item>      
+	    <item>3</item>      
+	    <item>4</item>      
+	    <item>5</item>      
+	    <item>6</item>      
+	    <item>7</item>      
+	    <item>8</item>      
+	    <item>9</item>      
+    </string-array>
+    
+    <string name="preferences_quick_launch_shortcut_title">Selected shortcut</string>
+    <string name="preferences_quick_launch_shortcut_summary_key">Search + ^1</string>
+    <string name="preferences_quick_launch_shortcut_summary_not_set">No shortcut</string>
+    <string name="preferences_quick_launch_shortcut_dialog_title">Select shortcut key</string>
+    
+    <string name="preferences_quick_launch_disable_dialog_title">Disable quick launch?</string>
+	<string name="preferences_quick_launch_disable_dialog_message">Are you sure you want to disable quick launch shortcut?</string>
+	<string name="preferences_quick_launch_disable_dialog_button_ok">Yes</string>
+	<string name="preferences_quick_launch_disable_dialog_button_cancel">No</string>
+	<string name="preferences_quick_launch_disable_negative_toast">Quick launch not disabled.</string>
+	<string name="preferences_quick_launch_disable_positive_toast">Quick launch disabled.</string>
+    
+    <string name="preferences_replace_shortcut_dialog_title">Replace?</string>
+	<string name="preferences_replace_shortcut_dialog_message">The \'^1\' shortcut is currently used for ^2. \n\nDo you want to replace it?</string>
+	<string name="preferences_replace_shortcut_dialog_button_ok">Yes</string>
+	<string name="preferences_replace_shortcut_dialog_button_cancel">No</string>
+	<string name="preferences_replace_shortcut_negative_toast">Shortcut not replaced.</string>
+	<string name="preferences_replace_shortcut_positive_toast">Shortcut replaced.</string>
+
+    <string name="preferences_flingtapdone_not_installed_dialog_title">Missing Requirement</string>
+	<string name="preferences_flingtapdone_not_installed_dialog_message">FlingTap Done must be installed for this add-on to work correctly. Please install FlingTap Done and then return here to complete the quick launch setup.</string>
+	<string name="preferences_flingtapdone_not_installed_dialog_button_ok">Ok</string>
+
+    <string name="preferences_bookmarks_not_supported_dialog_title">Not Supported</string>
+	<string name="preferences_bookmarks_not_supported_dialog_message">Quick launch is not available on your device.</string>
+    
+    <!-- Help -->
+    <string name="help_menu">Help</string>	
+	<!-- Help / Quick Launch -->
+    <string name="help_quick_launch_title">Quick Launch / Help</string>	
+    <string name="help_quick_launch_disable">Enable check box. Mark this option to enable the quick launcher.</string>	
+    <string name="help_quick_launch_enable">Shortcut option. Tap to open the shortcut selection dialog. </string>	
+    <string name="help_quick_launch_select">Select shortcut dialog. Configures which shortcut key is used for the quick launch.</string>	
+    <string name="help_quick_launch_keyboard">To use the quick launch, press the search button and the selected shortcut key at the same time. This will immediately take you to the FlingTap Done task list. The quick launch can be used at any time and while using any application.</string>	
+    
+    
+    
+    
+    <!--  ************************************************************** -->
+    <!--  ****                         Common                       **** -->
+    <!--  ************************************************************** -->
+    
+    <!--  ErrorUtil -->
+    <string name="error_util_notify_user_toast_message">Sorry, an error occurred</string>	
+    
+    <string name="eula_prompt_title">Lean &amp; Keen EULA</string>	
+    <string name="eula_prompt_button_accept">Accept</string>	
+    <string name="eula_prompt_button_reject">Decline</string>	
+    
+    <string name="notify_ticker">Update Available</string>
+    <string name="notify_title">Update Available</string>
+    <string name="notify_message">New version of FlingTap Done Quick Launch found.</string>
+    <string name="pref_category">Update Settings</string>
+    <string name="pref_enabled_title">Enabled</string>
+    <string name="pref_enabled_summary">Whether checking is enabled or not.</string>
+    <string name="pref_check_uri_title">Check URI</string>
+    <string name="pref_check_uri_summary">The URI which will be checked for updates.</string>
+    <string name="confirm_title">An update is available</string>
+    <string name="confirm_text">Would you like to update this application to the newest version?</string>
+    <string name="confirm_stop">Don\'t notify me of this update again</string>    
+    
+</resources>

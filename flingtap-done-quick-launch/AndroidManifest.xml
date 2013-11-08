@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:sharedUserId="com.flingtap.done.shared.userid" android:versionCode="8" android:versionName="1.0-SNAPSHOT" package="com.flingtap.done.addon.quicklaunch">
+      
+    <application android:debuggable="true" android:icon="@drawable/ic_launcher_quicklaunch" android:label="@string/app_name" android:name="com.flingtap.done.addon.quicklaunch.ApplicationContext">
+    	
+        <activity android:label="@string/app_name" android:name=".ApplicationPreferenceActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".StaticDisplayActivity"/> 
+        
+   		<!-- ************************ Receivers ***************************** -->
+		<receiver android:enabled="true" android:exported="true" android:name=".StartupBroadcastReceiver">
+        	<intent-filter> 
+            	<action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+		<!-- ************************* VeeCheck ******************************* -->
+		<activity android:enabled="true" android:exported="false" android:label="@string/confirm_title" android:name=".UpdateActivity"/>
+		<receiver android:name=".UpdateRetriever">
+			<intent-filter>
+				<action android:name="com.flingtap.done.addon.quicklaunch.VEECHECK_RESCHEDULE_CHECKS">
+				</action>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="com.flingtap.done.addon.quicklaunch.VEECHECK_CONSIDER_CHECK">
+				</action>
+			</intent-filter>
+		</receiver>
+		<service android:name=".UpdateService">
+			<intent-filter>
+				<action android:name="com.flingtap.done.addon.quicklaunch.VEECHECK_PERFORM_CHECK">
+				</action>
+				<data android:scheme="http"/>
+			</intent-filter> 
+		</service>
+		<!-- ******************************************************************** -->
+
+    </application>
+    
+    <uses-sdk android:minSdkVersion="3"/>
+    <uses-configuration android:reqHardKeyboard="true" android:reqKeyboardType="qwerty"/>
+
+	<uses-feature android:name="android.hardware.telephony"/>
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>  
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>                                    
+
+</manifest>

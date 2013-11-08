@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/flingtap-done/flingtap-done.iml" filepath="$PROJECT_DIR$/flingtap-done/flingtap-done.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flingtap-done-backup/flingtap-done-backup.iml" filepath="$PROJECT_DIR$/flingtap-done-backup/flingtap-done-backup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flingtap-done-common/flingtap-done-common.iml" filepath="$PROJECT_DIR$/flingtap-done-common/flingtap-done-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flingtap-done-it/flingtap-done-it.iml" filepath="$PROJECT_DIR$/flingtap-done-it/flingtap-done-it.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flingtap-done-minders/flingtap-done-minders.iml" filepath="$PROJECT_DIR$/flingtap-done-minders/flingtap-done-minders.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flingtap-done-organizer/flingtap-done-organizer.iml" filepath="$PROJECT_DIR$/flingtap-done-organizer/flingtap-done-organizer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flingtap-done-parent.iml" filepath="$PROJECT_DIR$/flingtap-done-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flingtap-done-quick-launch/flingtap-done-quick-launch.iml" filepath="$PROJECT_DIR$/flingtap-done-quick-launch/flingtap-done-quick-launch.iml" />
+    </modules>
+  </component>
+</project>
+

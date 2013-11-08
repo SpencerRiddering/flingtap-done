@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<!-- **************************************************************** -->
+<!-- ******** Copied directly from the Contacts application ********* -->	
+<!-- **************************************************************** -->
+<!-- Android version 1.6 r1                                           -->
+<!-- http://android.git.kernel.org/?p=platform/packages/apps/Contacts.git;a=tree;f=res;h=bfc081fb3ddecba859fc43f78b4afbf5384bbb3b;hb=d93e35c2bdf5d20ee6f7126d57554f123a36b21c -->
+<!-- **************************************************************** -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	
+    <!-- Title for the activity that shows contacts.  This is the name
+         used in the Launcher icon. -->
+    <string name='contactsList'>"聯絡人"</string>
+
+    <!-- Title for the activity that dials the phone.  This is the name
+         used in the Launcher icon. -->
+    <string name='launcherDialer'>"撥號"</string>
+
+    <!-- Name of activity that allows users to create shortcuts on the home screen to a contact.
+         This shows up in a list of things like bookmark, folder, music playlist, etc -->
+    <string name='shortcutContact'>"聯絡人"</string>
+
+    <!-- Name of activity that allows users to create shortcuts on the home screen to dial a contact.
+         This shows up in a list of things like bookmark, folder, music playlist, etc -->
+    <string name='shortcutDialContact'>"直接撥號"</string>
+
+    <!-- Name of activity that allows users to create shortcuts on the home screen to message (SMS) a contact.
+         This shows up in a list of things like bookmark, folder, music playlist, etc -->
+    <string name='shortcutMessageContact'>"直接傳訊"</string>
+
+    <!-- Activity title when the user is selecting a contact for a shortcut. -->
+    <string name='shortcutActivityTitle'>"選擇聯絡人捷徑"</string>
+    
+    <!-- Activity title when the user is selecting a contact for a direct dial shortcut. -->
+    <string name='callShortcutActivityTitle'>"選擇去電號碼"</string>
+    
+    <!-- Activity title when the user is selecting a contact for a direct message shortcut. -->
+    <string name='messageShortcutActivityTitle'>"選擇傳訊號碼"</string>
+        
+    <!-- Title for the activity that shows only starred contacts -->
+    <string name='starredList'>"已標記星號"</string>
+
+    <!-- Title for the activity that shows only frequently contacted contacts -->
+    <string name='frequentList'>"經常聯絡"</string>
+
+    <!-- Title for the activity that shows a mix of starred contacts and frequently contacted
+         contacts. -->
+    <string name='strequentList'>"我的最愛"</string>
+
+    <!-- The title bar when viewing the contact details activity -->
+    <string name='viewContactTitle'>"聯絡人詳細資料"</string>
+    
+    <!-- The description presented to the user in the Intent choose when there are multiple activities that allow
+         viewing a contact. This string represents the built in way to view the contact. -->
+    <string name='viewContactDesription'>"檢視聯絡人"</string>
+    
+    <!-- The description presented to the user in the Intent choose when there are multiple activities that allow
+         editing a contact. This string represents the built in way to edit the contact. -->
+    <string name='editContactDescription'>"編輯聯絡人"</string>
+
+    <!-- The description presented to the user in the Intent choose when there are multiple activities that allow
+         creating a new contact. This string represents the built in way to create the contact. -->
+    <string name='insertContactDescription'>"建立聯絡人"</string>
+
+    <!-- Hint text in the search box when the user hits the Search key while in the contacts app -->
+    <string name='searchHint'>"搜尋聯絡人"</string>
+
+    <!-- Menu item to search contacts -->
+    <string name='menu_search'>"搜尋"</string>
+
+    <!-- Menu item to create a new contact -->
+    <string name='menu_newContact'>"新增聯絡人"</string>
+
+    <!-- Menu item used to view the details for a specific contact -->
+    <string name='menu_viewContact'>"檢視聯絡人"</string>
+
+    <!-- Menu item used to call a contact, containing the name of the contact to call -->
+    <string name='menu_callNumber'>"撥打電話給 <xliff:g id='NAME'>%s</xliff:g>"</string>
+
+    <!-- Menu item used to add a star to a contact, which makes that contact show up at the top of favorites -->
+    <string name='menu_addStar'>"新增至我的最愛"</string>
+
+    <!-- Menu item used to remove a star from a contact, making the contact no longer show up at the top of favorites -->
+    <string name='menu_removeStar'>"從我的最愛中移除"</string>
+
+    <!-- Optional menu item to encode the current contact as a QR Code using Barcode Scanner. -->
+    <string name='menu_showBarcode'>"顯示條碼"</string>
+
+    <!-- Menu item used to edit a specific contact -->
+    <string name='menu_editContact'>"編輯聯絡人"</string>
+
+    <!-- Menu item used to delete a specific contact -->
+    <string name='menu_deleteContact'>"刪除聯絡人"</string>
+
+    <!-- Menu item used to call a specific contact when viewing the details of that contact. -->
+    <string name='menu_call'>"通話"</string>
+
+    <!-- Menu item used to send an SMS or MMS message to a specific phone number or a contacts default phone number -->
+    <string name='menu_sendSMS'>"傳送 SMS/MMS"</string>
+
+    <!-- Menu item used to send an email message to a specific email address -->
+    <string name='menu_sendEmail'>"傳送電子郵件"</string>
+
+    <!-- Menu item used to view a contact's address on a map -->
+    <string name='menu_viewAddress'>"在地圖上顯示地址"</string>
+
+    <!-- Menu item that makes a phone the default for a contact. The default number used when you
+         try to call a contact without specifying a specific number. -->
+    <string name='menu_makeDefaultNumber'>"設為預設號碼"</string>
+
+    <!-- Confirmation dialog title after users selects to delete a contact. -->
+    <string name='deleteConfirmation_title'>"刪除"</string>
+
+    <!-- Confirmation dialog contents after users selects to delete a contact. -->
+    <string name='deleteConfirmation'>"刪除此聯絡人？"</string>
+
+    <!-- Menu item to indicate you are done editing a contact and want to save the changes you've made -->
+    <string name='menu_done'>"完成"</string>
+
+    <!-- Menu item to indicate you want to stop editing a contact and NOT save the changes you've made -->
+    <string name='menu_doNotSave'>"取消"</string>
+
+    <!-- The title of the activity that edits and existing contact -->
+    <string name='editContact_title_edit'>"編輯聯絡人"</string>
+
+    <!-- The title of the activity that creates a new contact -->
+    <string name='editContact_title_insert'>"新增聯絡人"</string>
+
+    <!-- Button that adds more info to a contact, like a new phone number, email address, or postal address -->
+    <string name='menu_addItem'>"更多資訊"</string>
+
+    <!-- The label describing the phonetic pronunciation/reading of a contact name -->
+    <string name='label_phonetic_name'>"拼音"</string>
+
+    <!-- The label describing the Notes field of a contact. This field allows free form text entry about a contact -->
+    <string name='label_notes'>"附註"</string>
+
+    <!-- The label describing the custom ringtone for a contact -->
+    <string name='label_ringtone'>"鈴聲"</string>
+
+    <!-- Hint text for the contact name when editing -->
+    <string name='ghostData_name'>"姓名"</string>
+
+    <!-- Hint text for the phonetic reading of the contact name when editing -->
+    <string name='ghostData_phonetic_name'>"姓名拼音"</string>
+
+    <!-- Hint text for the organization name when editing -->
+    <string name='ghostData_company'>"公司"</string>
+
+    <!-- Hint text for the organization position when editing -->
+    <string name='ghostData_title'>"職位"</string>
+
+    <!-- Hint text for an IM account when editing -->
+    <string name='ghostData_im'>"即時訊息帳號"</string>
+
+    <!-- Hint text for the notes field when editing -->
+    <string name='ghostData_notes'>"我的附註"</string>
+
+    <!-- Hint text for the phone number field when editing -->
+    <string name='ghostData_phone'>"電話號碼"</string>
+
+    <!-- Hint text for the email address field when editing -->
+    <string name='ghostData_email'>"電子郵件地址"</string>
+
+    <!-- Hint text for the postal address field when editing -->
+    <string name='ghostData_postal'>"郵寄地址"</string>
+
+    <!-- Message displayed in a toast when you try to view the details of a contact that
+         for some reason doesn't exist anymore. -->
+    <string name='invalidContactMessage'>"聯絡人不存在。"</string>
+
+    <!-- When picking a contact from a list of all contacts there is an entry at the top of the
+         list that allows the user to create a new contact, which this string is used for -->
+    <string name='pickerNewContactHeader'>"建立新聯絡人"</string>
+
+    <!-- Dialog title when you select a label when creating or edit a contact -->
+    <string name='selectLabel'>"選取標籤"</string>
+
+    <!-- Header that expands to list all of the types of phone numbers when editing or creating a phone number for a contact -->
+    <string name='phoneLabelsGroup'>"電話"</string>
+
+    <!-- Header that expands to list all of the types of email addresses when editing or creating an email address for a contact -->
+    <string name='emailLabelsGroup'>"電子郵件"</string>
+
+    <!-- Header that expands to list all of the types of IM account when editing or creating an IM account for a contact -->
+    <string name='imLabelsGroup'>"即時訊息"</string>
+
+    <!-- Header that expands to list all of the types of postal addresses when editing or creating an postal address for a contact -->
+    <string name='postalLabelsGroup'>"郵寄地址"</string>
+
+    <!-- Header that expands to list other types of data you can add to a contact, like notes and organizations -->
+    <string name='otherLabelsGroup'>"其他"</string>
+
+    <!-- The order of the items below is important, don't reorder without changing EditContactActivity.java -->
+    <skip/>
+    <!-- The labels that are under the otherLabelsGroup when editing a contact. -->
+    <string-array name='otherLabels'>
+        <!-- An organization associated with a contact -->
+        
+        <!-- A note associated with a contact -->
+        
+    <item>"機構"</item><item>"附註"</item></string-array>
+
+    <!-- Title of the dialog that appears if there are no pictures from which to create an icon for a contact -->
+    <string name='errorDialogTitle'>"沒有相片"</string>
+
+    <!-- Description in the dialog that appears if there are no pictures from which to create an icon for a contact -->
+    <string name='photoPickerNotFoundText'>"手機上沒有相片 。"</string>
+
+    <!-- Description of the activity used to set a photo in the pictures application as the icon for a contact -->
+    <string name='attachToContact'>"聯絡人圖示"</string>
+
+    <!-- Title of the dialog used to set a custom label for a contact detail, like a phone number or email address.
+         For example, this may be used to set a phone number's label to "Vaction house" -->
+    <string name='customLabelPickerTitle'>"自訂標籤名稱"</string>
+
+    <!-- The menu item to open the list of groups to display -->
+    <string name='menu_displayGroup'>"顯示群組"</string>
+
+    <!-- The menu item that leads to the settings for contact syncing -->
+    <string name='syncGroupPreference'>"編輯同步處理群組"</string>
+    
+    <!-- The menu item that launches the SIM card import activity -->
+    <string name='importFromSim'>"匯入聯絡人"</string>
+
+    <!-- Check box label that allows calls to the contact to be sent directly to voicemail -->
+    <string name='send_to_voicemail_checkbox'>"直接將來電轉到語音信箱"</string>
+
+    <!-- String letting the user know that calls from the contact they're viewing will be sent directly to voicemail -->
+    <string name='send_to_voicemail_view'>"來電已直接轉至語音信箱。"</string>
+
+    <!-- String used to indicate that a contact doesn't have a custom ringtone -->
+    <string name='default_ringtone'>"預設值"</string>
+
+    <!-- The button/menu item that allows you to add a picture to a contact -->
+    <string name='addPicture'>"新增圖示"</string>
+
+    <!-- The menu item that allows you to remove a picture from a contact -->
+    <string name='removePicture'>"移除圖示"</string>
+
+    <!-- The text displayed when the contacts list is empty while displaying all contacts -->
+    <string name='noContacts'>"沒有聯絡人。"</string>
+
+    <!-- The text displayed when the contacts list is empty while displaying only contacts that have phone numbers -->
+    <string name='noContactsWithPhoneNumbers'>"沒有包含電話號碼的聯絡人資訊。"</string>
+
+    <!-- The text displayed when the contacts list is empty while displaying favorite contacts -->
+    <string name='noFavorites'>"沒有我的最愛。"</string>
+
+    <!-- Title for group selection dialog. The dialog contains a list of contact groups that the
+         user can pick from, indicating they only want to see the contacts in that group. -->
+    <string name='select_group_title'>"群組"</string>
+    
+    <!-- The text displayed when the contacts list is empty while displaying a single group of contacts -->
+    <string name='groupEmpty'>"您的「<xliff:g id='GROUPNAME'>%s</xliff:g>」群組是空的。"</string>
+
+    <!-- The description of all groups when asking the user what they want to display -->
+    <string name='showAllGroups'>"所有聯絡人"</string>
+
+    <!-- The setting to sync all contacts from the server -->
+    <string name='syncAllGroups'>"同步處理所有聯絡人"</string>
+
+    <!-- The name of the system "My Contacts" group. This should be kept in sync with the web UI -->
+    <string name='groupNameMyContacts'>"我的聯絡人"</string>
+    
+    <!-- The group type that displays only contacts with phone numbers -->
+    <string name='groupNameWithPhones'>"包含電話號碼的聯絡人資訊"</string>
+    
+    <!-- The group type that displays "Starred in Android" contacts -->
+    <string name='starredInAndroid'>"在 Android 中標有星號的聯絡人"</string>
+    
+    <!-- Toast displayed when a contact is created -->
+    <string name='contactCreatedToast'>"已建立聯絡人。"</string>
+    
+    <!-- Toast displayed when a contact is saved -->
+    <string name='contactSavedToast'>"聯絡人已儲存。"</string>
+
+    <!-- Separator in the contact details list describing that the items below it will place a call when clicked -->
+    <string name='listSeparatorCallNumber'>"撥打號碼"</string>
+
+    <!-- Section header in the Edit Contacts screen for phone numbers -->
+    <string name='listSeparatorCallNumber_edit'>"電話號碼"</string>
+
+    <!-- Separator in the contact details list describing that the items below it will send an SMS/MMS to a phone number -->
+    <string name='listSeparatorSendSmsMms'>"傳送  SMS/MMS"</string>
+
+    <!-- Separator in the contact details list describing that the items below it will send an email -->
+    <string name='listSeparatorSendEmail'>"傳送電子郵件"</string>
+
+    <!-- Section header in the Edit Contacts screen for E-mail addresses -->
+    <string name='listSeparatorSendEmail_edit'>"電子郵件地址"</string>
+
+    <!-- Separator in the contact details list describing that the items below it will send an IM -->
+    <string name='listSeparatorSendIm'>"傳送即時訊息"</string>
+
+    <!-- Section header in the Edit Contacts screen for Instant messanger accounts -->
+    <string name='listSeparatorSendIm_edit'>"即時通訊地址"</string>
+
+    <!-- Separator in the contact details list describing that the items below it will open maps with the given address -->
+    <string name='listSeparatorMapAddress'>"在地圖上顯示地址"</string>
+
+    <!-- Section header in the Edit Contacts screen for map addresses -->
+    <string name='listSeparatorMapAddress_edit'>"聯絡地址"</string>
+
+    <!-- Separator in the contact details list describing that the items below are non-actionable organization information -->
+    <string name='listSeparatorOrganizations'>"組織"</string>
+
+    <!-- Separator in the contact details list describing that the items below are random other non-actionable information about a contact -->
+    <string name='listSeparatorOtherInformation'>"其他資訊"</string>
+
+    <!-- Section header in the Edit Contacts screen for other options, such as setting ringtone -->
+    <string name='listSeparatorOtherInformation_edit'>"其他選項"</string>
+
+    <!-- Section header in the Edit Contacts screen for the "Add more items" button -->
+    <string name='listSeparatorMore_edit'>"更多"</string>
+
+    <!-- The description text for the contacts tab. Space is limited for this string, so the shorter the better -->
+    <string name='contactsIconLabel'>"聯絡人"</string>
+
+    <!-- The description text for the favorites tab. Space is limited for this string, so the shorter the better -->
+    <string name='contactsFavoritesLabel'>"我的最愛"</string>
+
+    <!-- The description text for the dialer tab. Space is limited for this string, so the shorter the better -->
+    <string name='dialerIconLabel'>"撥號"</string>
+
+    <!-- The description text for the call log tab. Space is limited for this string, so the shorter the better -->
+    <string name='recentCallsIconLabel'>"通話記錄"</string>
+    <string name='liveFolderAll'>"全部聯絡人"</string>
+    <string name='liveFolderFavorites'>"有星號標記的聯絡人"</string>
+    <string name='liveFolderPhone'>"有電話號碼的聯絡人"</string>
+
+    <!-- Menu item used to send an SMS or MMS message to a phone number  -->
+    <string name='menu_sendTextMessage'>"傳送  SMS 訊息"</string>
+
+    <!-- Menu item used to call a contact from the call log -->
+    <string name='recentCalls_callNumber'>"撥電話給<xliff:g id='NAME'>%s</xliff:g>"</string>
+
+    <!-- Menu item used to copy a number from the call log to the dialer so it can be edited before calling it -->
+    <string name='recentCalls_editNumberBeforeCall'>"撥打電話前編輯號碼"</string>
+
+    <!-- Menu item used to add a number from the call log to contacts -->
+    <string name='recentCalls_addToContact'>"新增至聯絡人"</string>
+
+    <!-- Menu item used to remove a single call from the call log -->
+    <string name='recentCalls_removeFromRecentList'>"從通話記錄中移除"</string>
+
+    <!-- Menu item used to remove all calls from the call log -->
+    <string name='recentCalls_deleteAll'>"清除通話記錄"</string>
+
+    <!-- Text displayed when the call log is empty -->
+    <string name='recentCalls_empty'>"無通話記錄。"</string>
+
+    <!-- The title of a dialog that displays the IMEI of the phone -->
+    <string name='imei'>"IMEI"</string>
+
+    <!-- String used for displaying calls to the voicemail number in the call log -->
+    <string name='voicemail'>"語音留言"</string>
+
+    <!-- String used to display calls from unknown numbers in the call log -->
+    <string name='unknown'>"未知的"</string>
+
+    <!-- String used to display calls from private numbers in the call log -->
+    <string name='private_num'>"私人號碼"</string>
+    
+    <!-- String used to display calls from pay phone in the call log -->
+    <string name='payphone'>"公共電話"</string>
+
+    <!-- Displayed in the text entry box in the dialer when in landscape mode to guide the user
+         to dial using the physical keyboard -->
+    <string name='dialerKeyboardHintText'>"使用鍵盤撥號"</string>
+
+    <!-- Hint text displayed in the "digits" field above the dialer's
+         dialpad, if there's already a call in progress.  (This hint
+         reminds the user that the dialer will add a new call, as opposed
+         to sending DTMF tones over the current call.) -->
+    <string name='dialerDialpadHintText'>"撥號即可新增通話"</string>
+
+    <!-- Dialog text displayed when loading a phone number from the SIM card for speed dial -->
+    <string name='simContacts_emptyLoading'>"從  SIM 卡讀取中…"</string>
+
+    <!-- Dialog title displayed when loading a phone number from the SIM card for speed dial -->
+    <string name='simContacts_title'>"SIM 卡聯絡人"</string>
+
+    <!-- Displayed when a user is prompted to setup a Google account for syncing -->
+    <string name='contactsSyncPlug'><font fgcolor='#ffffffff'>" 同步處理您的 Google 聯絡人！"</font>" "\n" 與手機同步處理後，無論您走到哪，都可存取聯絡人資訊。"</string>
+
+    <!-- Displayed full screen when the user has no contacts and they are displaying the My Contacts group, and contact syncing is disabled -->
+    <string name='noContactsHelpText'>"您沒有聯絡人。"\n\n"如要新增聯絡人，請按 ["<font fgcolor='#ffffffff'><b/>"選單"</font>"] 並選取下列選項："\n\n<li>"["<font fgcolor='#ffffffff'><b/>"新增聯絡人 "</font>"]：建立新聯絡人"\n</li>" "\n<li>"["<font fgcolor='#ffffffff'><b/>"匯入聯絡人"</font>"]：加入 SIM 卡中的聯絡人"\n</li></string>
+    
+    <!-- Displayed full screen when the user has no contacts and they are displaying the My Contacts group, and contact syncing is enabled -->
+    <string name='noContactsHelpTextWithSync'>"您沒有聯絡人。"\n\n"如要新增聯絡人，請按 ["<font fgcolor='#ffffffff'><b/>"選單"</font>"] 並選取下列選項："\n\n" "<li>"["<font fgcolor='#ffffffff'><b/>"編輯同步處理群組"</font>"]：加入新的或既有的 Google 帳戶聯絡人"\n</li>\n" "<li>"["<font fgcolor='#ffffffff'><b/>"新增聯絡人"</font>"]：建立新聯絡人 "\n</li>\n" "<li>"["<font fgcolor='#ffffffff'><b/>"匯入聯絡人"</font>"]：加入 SIM 卡中的聯絡人"\n</li></string>
+
+    <!-- Activity title for the activity that lets the user choose which groups of contacts to sync from the server -->
+    <string name='seclectSyncGroups_title'>"選取要同步處理的群組"</string>
+
+    <!-- Live folder label for all contacts -->
+    <string name='liveFolder_all_label'>"全部聯絡人"</string>
+
+    <!-- Live folder label for only starred contacts -->
+    <string name='liveFolder_favorites_label'>"星號標記"</string>
+
+    <!-- Live folder label for all contacts with phone numbers -->
+    <string name='liveFolder_phones_label'>"電話"</string>    
+
+    <!-- Item label: jump to the in-call DTMF dialpad.
+         (Part of a list of options shown in the dialer when another call
+         is already in progress.) -->
+    <string name='dialer_useDtmfDialpad'>"使用觸控音按鍵"</string>
+
+    <!-- Item label: jump to the in-call UI.
+         (Part of a list of options shown in the dialer when another call
+         is already in progress.) -->
+    <string name='dialer_returnToInCallScreen'>"返回進行中的通話"</string>
+
+    <!-- Item label: use the Dialer's dialpad to add another call.
+         (Part of a list of options shown in the dialer when another call
+         is already in progress.) -->
+    <string name='dialer_addAnotherCall'>"新增通話"</string>
+
+    <!-- Title bar for call detail screen -->
+    <string name='callDetailTitle'>"通話詳細資料"</string>
+
+    <!-- Toast for call detail screen when couldn't read the requested details -->
+    <string name='toast_call_detail_error'>"無法解讀通話要求詳細資訊。"</string>
+
+    <!-- In call detail screen, label for call type -->
+    <string name='call_type'>"類型"</string>
+
+    <!-- Title for incoming call details screen -->
+    <string name='type_incoming'>"來電"</string>
+    
+    <!-- Title for outgoing call details screen -->
+    <string name='type_outgoing'>"撥出電話"</string>
+
+    <!-- Title for missed call details screen -->
+    <string name='type_missed'>"未接來電"</string>
+
+    <!-- In call detail screen, label for call date/time -->
+    <string name='call_time'>"時間"</string>
+
+    <!-- In call detail screen, combine date/time string and relative time to give verbose call date/time -->
+    <string name='datetime_relative'>"<xliff:g id='DATETIME'>%1$s</xliff:g> (<xliff:g id='RELATIVE'>%2$s</xliff:g>)"</string>
+
+    <!-- In call detail screen, label for call duration -->
+    <string name='call_duration'>"持續時間"</string>
+
+    <!-- In call detail screen, header title for actions section -->
+    <string name='header_actions'>"操作"</string>
+
+    <!-- In edit contact screen, combine the actual ringtone name with prefix for placement in spinner -->
+    <string name='ringtone_spinner'>"鈴聲：<xliff:g id='RINGTONE'>%1$s</xliff:g>"</string>
+
+    <!-- In edit contact screen, add more info spinner title -->
+    <string name='add_more_items'>"新增更多項目"</string>
+
+    <!-- Action string for calling a phone number. -->
+    <string name='actionCall'>"撥打 <xliff:g id='TYPE'>%s</xliff:g>"</string>
+
+    <!-- Action string for sending an email to an email address. -->
+    <string name='actionEmail'>"傳送電子郵件至<xliff:g id='TYPE'>%s</xliff:g>"</string>
+
+    <!-- Action string for sending a text message to a phone number. -->
+    <string name='actionText'>"傳送簡訊至 <xliff:g id='TYPE'>%s</xliff:g>"</string>
+
+    <!-- Action string for sending an instant message to a chat buddy. -->
+    <string name='actionChat'>"透過 <xliff:g id='TYPE'>%s</xliff:g> 進行即時通訊"</string>
+
+    <!-- Action string for viewing an address on a map. -->
+    <string name='actionMap'>"檢視<xliff:g id='TYPE'>%s</xliff:g>地址"</string>
+
+    <!-- Description for incoming calls going to voice mail vs. not -->
+    <string name='actionIncomingCall'>"來電"</string>
+    
+    <!-- Detail text for incoming calls going to voice mail -->
+    <string name='detailIncomingCallsGoToVoicemail'>"來電將直接轉到語音信箱"</string>
+
+    <!-- Description of what the contact specific ringtone is set to -->
+    <string name='detailsRingtone'>"設為<xliff:g id='RINGTONE_NAME'>%s</xliff:g>"</string>
+    
+    <!-- Action string for calling back a number in the call log -->
+    <string name='callBack'>"回播電話"</string>
+
+    <!-- Action string for calling a number in the call log again -->
+    <string name='callAgain'>"重撥"</string>
+
+    <!-- Action string for returning a missed call in the call log -->
+    <string name='returnCall'>"回電"</string>
+
+    <!-- A nicely formatted call duration displayed when viewing call details. For example "42 mins 28 secs" -->
+    <string name='callDetailsDurationFormat'>"<xliff:g id='MINUTES'>%s</xliff:g> 分 <xliff:g id='SECONDS'>%s</xliff:g> 秒"</string>
+
+    <!-- A list separator for the Favorites tab indicating that items below it are frequently called contacts rather than starred contacts -->
+    <string name='favoritesFrquentSeparator'>"常用聯絡人"</string>
+
+    <!-- Dialog title when prompting before creating a contact -->
+    <string name='add_contact_dlg_title'>"新增聯絡人"</string>
+    <!-- Dialog message when prompting before creating a contact. Includes
+         the email address, e.g. "Add xyz@foo.com to contacts?" -->
+    <string name='add_contact_dlg_message_fmt'>"要將「<xliff:g id='EMAIL'>%s</xliff:g>」新增為聯絡人嗎？"</string>
+
+    <!-- Content description values -->
+
+    <!-- String describing the image on ImageButton one
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name='description_image_button_one'>"1"</string>
+
+    <!-- String describing the image on ImageButton two
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name='description_image_button_two'>"2"</string>
+
+    <!-- String describing the image on ImageButton three
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name='description_image_button_three'>"3"</string>
+
+    <!-- String describing the image on ImageButton four
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name='description_image_button_four'>"4"</string>
+
+    <!-- String describing the image on ImageButton five
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name='description_image_button_five'>"5"</string>
+
+    <!-- String describing the image on ImageButton six
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name='description_image_button_six'>"6"</string>
+
+    <!-- String describing the image on ImageButton seven
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name='description_image_button_seven'>"7"</string>
+
+    <!-- String describing the image on ImageButton eight
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name='description_image_button_eight'>"8"</string>
+
+    <!-- String describing the image on ImageButton nine
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name='description_image_button_nine'>"9"</string>
+
+    <!-- String describing the image on ImageButton star
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name='description_image_button_star'>"星號"</string>
+
+    <!-- String describing the image on ImageButton zero
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name='description_image_button_zero'>"0"</string>
+
+    <!-- String describing the image on ImageButton pound
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name='description_image_button_pound'>"磅"</string>
+
+    <!-- Dialog title shown when SD Card does not exist -->
+    <string name='no_sdcard_title'>"無 SD 卡"</string>
+
+    <!-- Dialog message shown when SDcard does not exist -->
+    <string name='no_sdcard_message'>"未偵測到 SD 卡"</string>
+
+    <!-- Dialog title shown when searching VCard data from SD Card -->
+    <string name='searching_vcard_title'>"正在搜尋 VCard"</string>
+
+    <!-- Dialog title shown when asking a user whether import contact data from SIM or SD Card -->
+    <string name='select_import_type_title'>"您要從哪裡匯入聯絡人？"</string>
+
+    <!-- Action string for selecting SIM for importing contacts -->
+    <string name='import_from_sim'>"SIM 卡"</string>
+
+    <!-- Action string for selecting SD Card for importing contacts -->
+    <string name='import_from_sdcard'>"SD 卡"</string>
+
+    <!-- "Import all VCard files" -->
+    <string name='import_all_vcard_string'>"匯入所有 VCard 檔案"</string>
+
+    <!-- "Import one VCard file" -->
+    <string name='import_one_vcard_string'>"匯入一個 VCard 檔案"</string>
+
+    <!-- Dialog message shown when searching VCard data from SD Card -->
+    <string name='searching_vcard_message'>"正在搜尋 VCard 資料"</string>
+
+    <!-- Dialog title shown when searching VCard data failed. -->
+    <string name='scanning_sdcard_failed_title'>"無法掃描 SD 卡"</string>
+
+    <!-- Dialog message shown when searching VCard data failed. -->
+    <string name='scanning_sdcard_failed_message'>"無法掃描 SD 卡"</string>
+
+    <!-- The failed reason: "I/O Error" -->
+    <string name='fail_reason_io_error'>"I/O 錯誤"</string>
+
+    <!-- The failed reason: "Failed to parse VCard data" -->
+    <string name='fail_reason_vcard_parse_error'>"無法剖析 VCard"</string>
+
+    <!-- The failed reason: "There is no VCard file" -->
+    <string name='fail_reason_no_vcard_file'>"SD 卡上沒有 VCard 檔案"</string>
+
+    <!-- The failed reason: "There is no valid VCard entry in the file(s)" -->
+    <string name='fail_reason_no_vcard_entry'>"您所選的檔案沒有有效的 VCard 項目"</string>
+
+    <!-- Dialog title shown when a user is asked to select VCard file -->
+    <string name='select_vcard_title'>"選取 VCard 檔案"</string>
+
+    <!-- Dialog message shown when a user is asked to choose VCard file -->
+    <string name='select_vcard_message'>"請選取要匯入的 VCard 檔案"</string>
+
+    <!-- Dialog title shown when reading VCard data -->
+    <string name='reading_vcard_title'>"讀取 VCard"</string>
+
+    <!-- Dialog message shown when reading a VCard file -->
+    <string name='reading_vcard_message'>"正在讀取 VCard 檔案"</string>
+
+    <!-- Dialog message shown when importing VCard data into local database -->
+    <string name='importing_vcard_message'>"正在匯入 VCard 資料"</string>
+
+    <!-- Dialog title shown when reading VCard data failed -->
+    <string name='reading_vcard_failed_title'>"無法讀取 VCard 資料"</string>
+
+    <!-- Dialog message shown when reading VCard data failed -->
+    <string name='reading_vcard_failed_message'>"無法讀取 VCard 資料"\n"失敗原因：「<xliff:g id='FAIL_REASON'>%s</xliff:g>」"</string>
+
+    <!-- Message while reading one vCard file "(current number) of (total number) contacts" The order of "current number" and "total number" cannot be changed (like "total: (total number), current: (current number)")-->
+    <string name='reading_vcard_contacts'>"第 <xliff:g id='CURRENT_NUMBER'>%s</xliff:g> 位聯絡人，共 <xliff:g id='TOTAL_NUMBER'>%s</xliff:g> 位"</string>
+
+    <!-- Message while reading multiple vCard files "(current number) of (total number) files" The order of "current number" and "total number" cannot be changed (like "total: (total number), current: (current number)")-->
+    <string name='reading_vcard_files'>"第 <xliff:g id='CURRENT_NUMBER'>%s</xliff:g> 個檔案，共 <xliff:g id='TOTAL_NUMBER'>%s</xliff:g> 個"</string>
+
+    <!-- The menu item that launches VCard export activity -->
+    <string name='export_contact_list'>"匯出聯絡人"</string>
+    
+    <!-- Dialog title shown when a user confirms whether he/she export Contact data -->
+    <string name='confirm_export_title'>"確認匯出"</string>
+        
+    <!-- Dialog message shown when a user confirms whether he/she export Contact data -->
+    <string name='confirm_export_message'>"可以將聯絡人清單匯出至「<xliff:g id='VCARD_FILENAME'>%s</xliff:g>」嗎？"</string>    
+    
+    <!-- Dialog title shown when exporting Contact data failed -->
+    <string name='exporting_contact_failed_title'>"無法匯出聯絡人資料"</string>
+    
+    <!-- Dialog message shown when exporting Contact data failed -->
+    <string name='exporting_contact_failed_message'>"無法匯出聯絡人資料"\n"失敗原因：「<xliff:g id='FAIL_REASON'>%s</xliff:g>」"</string>
+
+    <!-- The failed reason: "Too many vcard files on the SD Card" -->
+    <string name='fail_reason_too_many_vcard'>"SD 卡上儲存的 VCard 資料過多"</string>
+
+    <!-- The failed reason: "Too long filename". This error usually does not happen. -->
+    <string name='fail_reason_too_long_filename'>"您輸入的檔案名稱過長 (「<xliff:g id='FILENAME'>%s</xliff:g>」)"</string>
+
+    <!-- The failed reason: "Cannot open or create the destination directory" -->
+    <string name='fail_reason_cannot_open_destination_dir'>"無法開啟或建立目標目錄「<xliff:g id='DIR_NAME'>%s</xliff:g>」"</string>
+
+    <!-- Dialog title shown when the application is exporting contact data outside -->
+    <string name='exporting_contact_list_title'>"正在匯出聯絡人資料"</string>
+
+    <!-- Message shown when the application is exporting contact data outside -->
+    <string name='exporting_contact_list_message'>"正在將聯絡人資料匯出至「<xliff:g id='FILE_NAME'>%s</xliff:g>」"</string>
+    
+    <!-- The failed reason: "Could not initialize the exporter" -->
+    <string name='fail_reason_could_not_initialize_exporter'>"無法初始化匯出程式：「<xliff:g id='EXACT_REASON'>%s</xliff:g>」"</string>
+    
+    <!-- The failed reason: "Error occured during export" -->
+    <string name='fail_reason_error_occurred_during_export'>"匯出時發生錯誤：「<xliff:g id='EXACT_REASON'>%s</xliff:g>」"</string>
+    
+    <!-- The failed reason: "Could not open a specific file" -->
+    <string name='fail_reason_could_not_open_file'>"無法開啟「<xliff:g id='FILE_NAME'>%s</xliff:g>」：<xliff:g id='EXACT_REASON'>%s</xliff:g>"</string>
+
+    <!-- Message in progress bar while exporting contact list to a file "(current number) of (total number) contacts" The order of "current number" and "total number" cannot be changed (like "total: (total number), current: (current number)")-->
+    <string name='exporting_contact_list_progress'>"第 <xliff:g id='CURRENT_NUMBER'>%s</xliff:g> 位聯絡人，共 <xliff:g id='TOTAL_NUMBER'>%s</xliff:g> 位"</string>
+    
+    <!-- The string used to describe Contacts as a searchable item within system search settings. -->
+    <string name='search_settings_description'>"您的聯絡人姓名"</string>
+
+</resources>

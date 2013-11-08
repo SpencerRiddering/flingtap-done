@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res/com.flingtap.done.base"
+
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <ImageButton
+            android:id="@+id/task_list_speak_item_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="0dip"
+            android:visibility="gone"
+            android:src="@android:drawable/ic_btn_speak_now"/>
+    <ImageButton
+            android:id="@+id/task_list_add_item_button"
+            android:layout_width="46dip"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/task_list_speak_item_button"
+            android:layout_alignParentTop="true"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_marginLeft="2dip"
+            android:src="@drawable/btn_add"/>
+    <EditText
+            android:id="@+id/task_list_add_item_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/task_list_add_item_button"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:inputType="textCapSentences|textMultiLine|textAutoCorrect"
+            android:hint="@string/hint_buyGroceries"
+            />
+    <!-- Place an AdMob ad at the bottom of the screen. -->
+    <!-- It has white text on a black background. -->
+    <!-- The description of the surrounding context is 'Android game'. -->
+    <!-- We could append app:testing="true" above to always get the test ad back  app:keywords="" -->
+    <!--    <com.admob.android.ads.AdView
+          android:id="@+id/ad"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          app:backgroundColor="#000000"
+          app:textColor="#FFFFFF"
+          app:isGoneWithoutAd="true"
+          android:visibility="gone"
+          app:testing="false"
+        />
+    -->
+
+    <ListView
+            android:id="@android:id/list"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:layout_below="@id/task_list_add_item_text"
+            android:layout_alignParentBottom="true"
+            android:drawSelectorOnTop="false"
+            />
+
+</RelativeLayout>
+	

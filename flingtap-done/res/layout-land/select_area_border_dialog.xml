@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+            android:text="@string/notifyMeWhenImThisClose"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="3dip"
+            android:paddingBottom="5dip"
+            android:paddingLeft="3dip"
+            android:paddingRight="5dip" />
+
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginRight="5dp"
+                  android:layout_marginLeft="6dp"
+                  android:gravity="right">
+        <SeekBar
+                android:id="@+id/select_area_distance_value"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_weight="1"
+                android:layout_marginRight="8dp"
+                android:max="185"
+                android:progress="3"
+                android:secondaryProgress="0" />
+
+        <Button android:id="@+id/select_area_button_back"
+                android:layout_weight="0"
+                android:text="@string/button_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="17dip"
+                android:paddingLeft="17dip"
+                android:background="@android:drawable/btn_default_small"
+                />
+
+        <Button android:id="@+id/select_area_button_cancel"
+                android:layout_weight="0"
+                android:text="@string/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="17dip"
+                android:paddingLeft="17dip"
+                android:background="@android:drawable/btn_default_small"
+                />
+        <Button android:id="@+id/select_area_button_save"
+                android:layout_weight="0"
+                android:text="@string/button_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="17dip"
+                android:paddingLeft="17dip"
+                android:background="@android:drawable/btn_default_small"
+                />
+
+
+    </LinearLayout>
+
+
+</merge>

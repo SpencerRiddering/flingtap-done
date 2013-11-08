@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+TODO: Replace this layout with a dialog_builder_default_title.
+ -->
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center_vertical"
+               android:layout_marginBottom="9dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp"
+               android:layout_marginTop="6dp">
+    <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/address_list_dialog_icon"
+            android:layout_width="42dp"
+            android:layout_height="42dp"/>
+    <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/address_list_dialog_title"
+            android:text="hi"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+    </TextView>
+</LinearLayout>	
+
+

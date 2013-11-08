@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/map_view_layout" android:layout_width="fill_parent"
+             android:layout_height="fill_parent">
+
+
+    <com.google.android.maps.MapView
+            android:id="@+id/map_view"
+            android:apiKey="${command.line.googleMapsApiKey}"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:enabled="true"
+            android:clickable="true"
+            >
+
+        <!-- The pointer box with details for a specific placemark -->
+        <LinearLayout
+                android:id="@+id/select_area_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pointer_box"
+                android:visibility="gone"
+                >
+            <TextView
+                    android:id="@+id/select_area_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="4dip"
+                    android:paddingTop="2dip"
+                    android:paddingBottom="1dip"
+                    android:textStyle="bold"
+                    />
+            <TextView
+                    android:id="@+id/select_area_item_snippet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="4dip"
+                    android:paddingTop="2dip"
+                    android:paddingBottom="1dip"
+                    android:textStyle="bold"
+                    />
+        </LinearLayout>
+    </com.google.android.maps.MapView>
+
+    <!-- Bull's eye and Push pin at the center of the screen. -->
+    <LinearLayout
+            android:id="@+id/select_area_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            >
+        <ImageView
+                android:id="@+id/select_area_bulls_eye"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bulls_eye"
+                />
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+
+        <!-- Select border panel -->
+        <LinearLayout
+                android:id="@+id/select_area_editor_dialog"
+                android:background="@drawable/grey_button_background_focus_blue_custom"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_alignParentTop="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="8dip">
+
+                <include layout="@layout/select_area_border_dialog" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Zoom controls -->
+    <LinearLayout
+            android:id="@+id/map_zoom"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="bottom|center_horizontal"
+            />
+    <!-- Select position panel -->
+    <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+        <LinearLayout
+                android:id="@+id/select_area_select_location_dialog"
+                android:background="@drawable/grey_button_background_focus_blue_custom"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:padding="8dp"
+                android:layout_margin="3dip"
+                >
+            <TextView
+                    android:text="@string/selectTheCenter"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:paddingTop="5dip"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip" />
+            <Button
+                    android:id="@+id/select_area_select_location_button_next"
+                    android:text="@string/button_next"
+                    android:background="@android:drawable/btn_default_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:paddingRight="17dip"
+                    android:paddingLeft="17dip"
+                    android:layout_margin="3dip"
+                    />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

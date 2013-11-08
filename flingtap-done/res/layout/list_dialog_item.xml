@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/selected"
+        android:padding="0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        >
+    <view class="com.flingtap.done.SpecialCheckBox"
+          android:id="@+id/list_dialog_item_checkbox"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:visibility="gone"
+          android:focusableInTouchMode="false" />
+
+    <LinearLayout
+            android:layout_height="64dip"
+            android:layout_width="64dip"
+            android:orientation="vertical"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="0">
+        <ImageView
+                android:id="@+id/list_dialog_item_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                />
+    </LinearLayout>
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="#FF000000"
+              android:gravity="center_vertical"
+              android:id="@+id/list_dialog_item_text1"
+              android:paddingLeft="5px"
+              android:paddingRight="5px"
+              android:layout_width="wrap_content"
+              android:layout_height="?android:attr/listPreferredItemHeight">
+    </TextView>
+
+
+</LinearLayout>

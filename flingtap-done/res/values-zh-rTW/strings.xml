@@ -1,0 +1,662 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources xmlns:android='http://schemas.android.com/apk/res/android'>
+	
+	<!-- Search -->
+    <string name='task_titles'>工作標題</string>
+
+    <string name='dialog_addOnNeeded'>需要安裝外掛程式</string>
+    <string name='dialog_thisFeatureIsPartOfTheOrganizerAddOnAndMustBeDownloadedSeparately'>這功能是\"分類工具\" 外掛程式的一部分，必須另外下載安裝。</string>
+    <string name='dialog_thisFeatureIsPartOfTheMindersAddOnAndMustBeDownloadedSeparately'>這功能是\"提醒小幫手\"外掛程式的一部分，必須另外下載安裝。</string>
+    <string name='dialog_thisFeatureIsPartOfTheBackupAddOnAndMustBeDownloadedSeparately'>\"備份\"為外掛程式，需要另外下載安裝。</string>
+    <string name='button_tellMeMore'>更多資訊</string>
+    
+    <string name='enableThisFeature'>要開啟這個功能嗎?</string>
+    
+    <!-- Preference Group - Advanced -->
+    <string name='advancedSettings'>進階設定</string>
+    <!-- Preferences - Default Editor Tab -->
+    <string name='defaultEditorTab'>原始編輯分頁</string>
+    <string-array name='defaultEditorTabEntries'>
+        
+        
+    <item>詳細資訊</item><item>附件</item></string-array>
+    <string name='defaultTab_NAME'>原始分頁: ^1</string>
+    <string name='app_widget_label_2x2'>待辦清單 - 小型</string>
+    <string name='app_widget_label_3x3'>待辦清單 - 大型</string>
+    <string name='select_a_theme'>選取主題:</string>
+    <string name='light_theme'>淺色主題</string>
+    <string name='dark_theme'>深色主題</string>
+    <string name='select_a_font_size'>選取字體大小:</string>
+    <string name='small'>小</string>
+    <string name='medium'>中</string>
+    <string name='large'>大</string>
+    <string name='jumbo'>特大</string>
+    <string name='create_widget'>新增小工具</string>
+    <string name='create_task_list_widget'>新增工作清單小工具</string>
+    
+    
+    
+
+
+	<!-- Option Menu -->
+    <string name='option_edit'>編輯</string>
+    <string name='option_delete'>刪除</string>
+    <string name='option_save'>儲存</string>
+    <string name='option_revert'>恢復</string>
+    <string name='option_discard'>捨棄</string>
+    <string name='option_help'>說明</string>
+    <string name='option_feedback'>Feedback</string>
+    <string name='option_archive'>封存</string>
+    <string name='option_unarchive'>取消封存</string>
+        
+	<!-- Toasts -->
+    <string name='toast_pleaseEnterAName'>請輸入名稱</string>
+    <string name='toast_noTasksDeleted'>沒有工作被刪除</string>
+    <string name='toast_deletedNTask'>已刪除^1工作</string>
+
+	<!-- Buttons -->
+	<string name='button_ok'>確定</string>  
+	<string name='button_cancel'>取消</string>  
+    <string name='button_add'>新增</string>
+	<string name='button_save'>儲存</string>
+	<string name='button_revert'>恢復</string>
+	<string name='button_discard'>捨棄</string>
+	<string name='button_yes'>Yes</string>
+	<string name='button_no'>No</string>
+    <string name='button_next'>下一步</string>
+    <string name='button_back'>上一步</string>
+    <string name='button_remove'>移除</string>	
+    <string name='button_set'>設定</string>	
+	<string name='button_skip'>略過</string>
+	<string name='button_delete'>刪除</string>
+    		
+	<!-- Dialog -->		
+	<string name='dialog_confirmDelete'>確認刪除</string>
+	<string name='dialog_confirmRemoval'>確認移除</string>
+	<string name='dialog_areYouSure'>確定?</string>
+			
+	<!-- Activity/Intents -->
+	<string name='activity_flingtapDone'>FlingTap Done</string>  
+    <string name='intent_taskAttachment'>工作附件</string>
+	<string name='activity_taskList'>工作清單 </string>   
+	<string name='activity_taskListCOLONX'>工作清單：^1</string>   
+	<string name='intent_contactEQUALSX'>聯絡人=^1</string>   
+	<string name='intent_task'>工作</string>  
+	<string name='activity_taskEditor'>工作編輯頁面</string>  
+	<string name='activity_filters'>篩選器</string>   		    
+	<string name='activity_completable'>子工作</string> 
+    <string name='activity_viewNearminder'>檢視Nearminder</string>
+		    
+	<!--  Task List -->
+    <string name='option_newTask'>新增工作</string>
+    <string name='option_filter'>篩選器</string>
+    <string name='option_tutorials'>使用教學</string>
+    <string name='option_featuresIntroduction'>功能介紹</string>
+    <string name='option_addOns'>外掛程式</string>
+    <string name='option_blog'>部落格</string>
+    <string name='option_discussAndSupport'>討論與支援</string>
+    <string name='option_donate'>贊助</string>
+    <string name='toast_youAreLeavingFlingTapDone'>離開FlingTap Done</string>
+
+	<!--  Task List Item -->
+    <string name='context_editTask'>編輯工作</string>
+    <string name='context_deleteTask'>刪除工作</string>
+    <string name='context_markComplete'>標示為完成</string><!-- See Email application for example of how to dynamically change this String in the context menu. -->
+    <string name='context_markIncomplete'>標示為待辦</string>
+    <string name='context_archiveTask'>封存工作</string>
+    <string name='context_unarchiveTask'>取消封存工作</string>
+    <string name='context_labelTask'>標籤工作</string>
+    <string name='context_setAs'>設為</string>	
+    <string name='chooser_setAs'>將工作設為...</string>	
+    
+    <!-- Edit Task -->
+    <string name='option_complete'>完成</string>
+    <string name='option_incomplete'>待辦</string>
+    
+    <!-- DefaultFilterElementDelegate -->
+    <string name='error'>錯誤</string> 
+    
+    <!-- CompletableUtil -->
+    <string name='toast_completableDeleted'>子工作已刪除</string> 
+    
+    <!-- CompletableAttachHandler -->
+    <string name='context_editCompletable'>編輯子工作</string>
+    <string name='context_deleteCompletable'>刪除子工作</string>
+    
+    
+	<!-- FilterUtil -->
+    <string name='toast_filtersMayNotHaveTheSameName'>篩選器名稱不能重複</string>
+    
+    <!-- LabelUtil -->
+    <string name='toast_failedToAddNewLabel'>新增標籤失敗</string>
+    <string name='toast_failedToRemoveLabel'>移除標籤失敗</string>
+
+    <!-- LabelFilterElementDelegate -->
+    <string name='tasksWithNoLabel'>沒有標籤的工作</string>
+
+	<!-- Nearminder -->
+    <string name='nearminderDeleted'>Nearminder已刪除</string>
+
+	<!-- PickAttachmentPart -->
+    <string name='applications'>應用程式</string>
+
+	<!--  TrialPeriodUtil  -->
+    <string name='button_noThanks'>不需要，謝謝！</string>
+    <string name='button_updateNow'>立即更新</string>
+    <string name='dialog_yourTrialVersionHasExpired_'>你的試用版本已經過期</string>
+    <string name='dialog_pleaseUpdate'>請更新</string>
+
+	<!-- PostalContactMethodGeocoderPart -->
+    <string name='toast_communicationError'>傳輸錯誤</string>
+
+
+	<!-- TaskEditorTabActivity  -->
+    <string name='toast_canceled'>已取消</string>
+
+
+    <!-- Displayed full screen when the user has no attachments and they are displaying the attachments list view -->
+    <string name='noFilterElements'>"選用此篩選器，<font fgcolor='#ffffffff'><b>將會顯示所有的工作</b></font>。"</string>
+    <string name='allNonArchivedTasks'>所有未封存的工作。</string>
+    <string name='allTasksInTheArchive'>所有在封存檔案夾的工作。</string>
+
+    <!-- TaskList -->
+    <string name='dialog_filterNotEditableNow'>無法由此編輯篩選器</string>
+    <string name='dialog_taskListWarnCustomFilter'>目前的篩選器已設定成只顯示與剛來電的聯絡人有關的工作。\n\n請選\"清除\"回到之前所選用的篩選器或是選擇\"繼續\"使用目前的篩選器。</string>
+    <string name='button_clear'>清除</string>
+    <string name='button_continue'>繼續</string>
+    <string name='toast_nothingRecognized'>無法辨識</string>
+    <string name='dialog_whatDidYouMeanToSay'>請問您想說的是？</string>
+    <string name='hint_buyGroceries'>買菜</string>
+	
+
+
+    <!-- Callminder something.. -->
+    <string name='notify_tasksRelatedToThisContact'>與此聯絡人有關的工作</string>
+    <string name='notify_contextTasksExist'>相關工作存在</string>
+    
+    
+    <!-- Filter List -->
+	<string name='filterList'>篩選器清單</string>
+	<string name='chooseActiveFilter'>選取要使用的篩選器</string>
+	<string name='activeFilter'>目前使用的篩選器</string>
+	<string name='availableFilters'>可使用的篩選器</string>
+    <string name='option_newFilter'>新增篩選器</string>
+	<string name='dialog_setFilterName'>設定篩選器名稱</string>
+	<string name='append_restored'>（恢復）</string>
+	
+	
+    <!-- Filter -->
+    <string name='context_deleteFilter'>刪除篩選器</string>
+    <string name='context_renameFilter'>變更篩選器名稱</string>
+    <string name='context_editFilter'>編輯篩選器</string>
+        
+	<!-- Label -->
+	<string name='option_addLabel'>新增標籤</string>
+	<string name='dialog_setLabelName'>設定標籤名稱</string>
+	<string name='dialog_editLabelName'>編輯標籤名稱</string>
+	<string name='context_deleteLabel'>刪除標籤</string>
+	<string name='context_renameLabel'>變更標籤名稱</string>
+    
+    <!-- FilterElements -->
+    <string name='dialog_selectDueDateFilter'>選擇到期日篩選器</string>
+    <string name='dialog_tasksWithoutDueDates'>要包含未設到期日的工作？</string> <!-- Include no due date tasks? -->
+    <string name='dialog_lowestDisplayedPriority'>最低顯示的重要性</string>
+    <string name='dialog_selectFolder'>選擇資料夾</string>
+    <string name='unlabeled'>取消標籤</string> 
+    <string name='dueDateX'>到期日：^1</string>
+    <string-array name='array_dueDateFilter'>        
+	    	 <!-- 0 -->
+	    <!-- 1 -->
+	    	 <!-- 2 -->        
+	    	 <!-- 3 -->
+	    	 <!-- 4 -->
+	     		 <!-- 5 -->
+	         <!-- 6 -->
+	             <!-- 7 -->
+    <item>任何時間</item><item>未來30天</item><item>下週</item><item>本週</item><item>明天</item><item>今天</item><item>已過期</item><item>關閉</item></string-array>
+    <string name='priorityX'>重要性：^1</string>
+    <string name='tasksWithLowerPriorityWillNotBeDisplayed'>工作重要性低於此設定值將不會被顯示</string>
+    <string name='folderX'>資料夾：^1</string>
+    <string-array name='array_repository'>
+	        <!-- 0 -->
+	     <!-- 1 -->
+    <item>主要資料夾</item><item>封存資料夾</item></string-array>    
+    <string name='statusX'>狀態：^1</string>
+    <string-array name='array_statusFilter'>
+	              <!-- 0 -->
+	        <!-- 1 -->
+	       <!-- 2 -->
+	       <!-- 3 -->
+    <item>全部</item><item>已完成</item><item>待辦</item><item>日期範圍</item></string-array>    
+    <string name='areTheTasksCompletedOrNot'>工作已完成了嗎？</string>
+    <string-array name='array_stockFilters'>        
+	          <!-- 0 -->
+	            <!-- 1 -->
+	              <!-- 2 -->
+    <item>全部工作</item><item>封存</item><item>基本</item></string-array>
+    
+	<!-- status_filter_element_options_list_item -->
+    <string name='dialog_from'>自：</string>
+    <string name='dialog_to'>至：</string>
+    <string name='dialog_all'>全部</string>
+    <string name='dialog_bothCompletedAndIncompleteTasks'>已完成及待辦的工作</string>
+    <string name='dialog_completed'>已完成</string>
+    <string name='dialog_onlyCompletedTasks'>只顯示已完成的工作</string>
+    <string name='dialog_incomplete'>待辦</string>
+    <string name='dialog_onlyIncompleteTasks'>只顯示待辦的工作</string>
+    <string name='dialog_dateRange'>日期範圍</string>
+    <string name='dialog_tasksCompletedWithinADateRange'>在此日期範圍內完成的工作</string>
+    <string name='dialog_taskStatus'>工作狀態</string>
+
+
+    <string name='filterCOLONX'>篩選器：^1</string>
+    <string name='filterCOLON'>篩選器：</string>
+    <string name='dialog_addRemoveLabels'>新增/移除標籤</string>
+
+	<!-- ArchiveMenuPart -->
+	<string name='toast_taskArchived'>工作已封存</string>
+	<string name='toast_nothingArchived'>沒有封存</string>
+	<string name='toast_unarchivedTask'>已取消封存的工作</string>
+	<string name='toast_noTasksUnarchived'>沒有工作已取消封存</string>
+	<string name='toast_archivedNTasks'>封存^1工作</string>
+	<string name='toast_noTasksArchived'>沒有工作封存</string>
+
+	<!-- AttachmentPart -->
+	<string name='toast_operationCanceled'>操作已取消</string>
+    <string name='dialog_setAttachmentName'>設定附件名稱</string>
+
+
+
+    <!-- PickAttachmentPart -->
+    <string name='option_attach'>新增附件</string>
+    <string name='context_removeAttachment'>移除附件</string>
+    <string name='context_renameAttachment'>變更附件名稱</string>
+    <string name='context_viewAttachment'>檢視附件</string>
+
+	<!-- ContactAttachmentHandler -->
+    <string name='context_viewContact'>檢視聯絡人</string>
+    <string name='context_removeContact'>移除聯絡人</string>
+    <string name='context_addNearminder'>新增Nearminder</string>
+    <string name='toast_nearminderAlreadyExists'>"Nearminder已經存在。\n編輯已存在的Nearminder。"</string>	
+
+	<!-- Task Editor -->
+	<string name='title'>標題</string>
+	<string name='hint_taskTitle'>簡短工作敘述</string>
+	<string name='details'>詳細資訊</string>
+    <string name='attachments'>附件</string>	
+	<string name='hint_taskDetails'>詳細工作敘述</string>
+	<string name='labels'>標籤</string>
+	<string name='hint_taskLabels'>學校</string>	
+	<string name='dueDate'>到期日</string>
+	<string name='alarm'>鬧鈴</string>
+	<string name='priority'>重要性</string>
+	<string name='dialog_selectAPriority'>選擇重要性</string>
+    <string-array name='array_priority'>        
+	   		<!-- 0 -->
+			<!-- 1 -->
+		 <!-- 2 -->
+			<!-- 3 -->
+    <item>無</item><item>低</item><item>中</item><item>高</item></string-array>	
+	<string name='dialog_attachmentType'>附件類型</string>	
+    <string name='typingSTARWillShowAllLabels'>鍵入*將會顯示所有的標籤。</string>
+    <string name='toast_labelNameXNotAllowed'>標籤名稱 \"^1\" 不允許。</string>
+    <string name='toast_labelApplied'>標籤已使用</string>
+    <string name='toast_duplicateLabel'>標籤名稱已存在</string>
+    <string name='toast_labelCreatedAndApplied'>標籤已新增及使用</string>
+	<string name='toast_alarmIsAfterDueDate'>\n鬧鈴設定在到期日之後\n</string>
+    <string name='toast_alarmIsInThePast'>\n鬧鈴設定過期\n</string>
+    <string name='toast_alarmHasNotChanged'>\n鬧鈴未變更\n</string>
+    <string name='toast_dueDateIsInThePast'>\n到期日已過期\n</string>
+    <string name='toast_dueDateIsBeforeAlarm'>\n到期日設在鬧鈴之前\n</string>
+    <string name='toast_dueDateMayNotBeAfterTheAlarm'>\n到期日不能設在鬧鈴之後\n</string>
+	<string name='notSet'>無</string>
+	<string name='button_complete'>完成</string>
+    <string name='button_incomplete'>待辦</string> 
+    
+	<!-- Task Attachments -->
+    <!-- Displayed full screen when the user has no attachments and they are displaying the attachments list view -->
+    <string name='thisTaskHasNoAttachments'>"這個工作沒有附件。\n\n你可以使用附件功能將更多與工作相關的詳細資訊，如：聯絡人及地圖...等，都集中在同一處。\n\n要新增附件，請按<font fgcolor='#ffffffff'><b>選單</b></font>，然後選擇<font fgcolor='#ffffffff'><b>新增附件</b></font>及附件類型。"</string>
+    <string name='hint_vacuumTheTug'>吸地毯</string>
+
+
+ 	<!-- CompletableEditor -->
+	<string name='dialog_completableEditor'>子工作編輯頁面</string>
+	
+	<!-- PickAttachmentPart -->
+	<string name='type_contact'>聯絡人</string>
+	<string name='type_image'>圖片</string>
+	<string name='type_audio'>聲音</string>
+	<string name='type_video'>影片</string>
+	<string name='type_nearminder'>Nearminder</string>
+	
+	<!-- BasicMapActivity -->
+    <string name='option_zoom'>縮放</string>
+    <string name='option_mapMode'>地圖模式</string>
+    <string name='dialog_mapMode'>地圖模式</string>
+    <string name='option_myLocation'>我的位置</string>
+    <string-array name='basic_map_map_modes'>
+        
+        
+        
+    <item>地圖</item><item>衛星</item><item>交通</item></string-array> 
+    
+	<!-- Nearminder notification -->
+    <string name='notify_snooze'>暫停</string>
+    <string name='notify_or'>或</string>
+    <string name='notify_chooseAction'>選擇其他功能</string>    
+    <string-array name='options_nearminderNotification'>
+        
+        
+        
+    <item>開啟工作</item><item>規劃路線</item><item>刪除Nearminder</item></string-array> 
+    
+	<!-- Nearminder Activity -->
+    <string name='toast_unableToDetermineYourLocation'>無法確認你的位置</string>
+    <string name='notifyMeWhenImThisClose'>在距離這麼近的時候提醒我</string>
+    <string name='selectTheCenter'>選擇中心</string>
+    <string name='activity_configureNearminder'>設定Nearminder</string>
+    <string name='dialog_chooseAddress'>選擇地址</string>
+
+	<!-- NearminderAttachmentHandler -->
+    <string name='context_viewNearminder'>檢視Nearminder</string>
+    <string name='context_editNearminder'>編輯Nearminder</string>
+    <string name='context_deleteNearminder'>刪除Nearminder</string>
+    <string name='dialog_setNearminderName'>設定Nearminder名稱</string>
+    
+	<!-- Nearminder Viewer -->
+    <string name='option_directions'>路線</string>
+
+    
+    <string name='toast_removedBrokenAttachmentLink'>移除損壞的附件連結</string>
+    
+    <string name='dialog_theAddressXWasNotUnderstood'>地址\n\"^1\"\n無法辨識。\n你是指：</string>
+    
+    <string name='toast_attachmentAdded'>附件已新增</string>	
+    <string name='toast_taskAdded'>工作已新增</string>	
+    <string name='toast_taskAddedButNotVisibleWithCurrentFilterSettings'>工作已新增，但因不符合目前所使用的篩選器條件，所以不會顯示在清單中。</string>	
+    <string name='toast_taskDeleted'>工作已刪除</string>	
+    <string name='toast_taskDiscarded'>工作已捨棄</string>	
+    <string name='toast_taskSaved'>工作已儲存</string>	
+    	
+    <!-- LicenseModifiedReceiver -->
+    <string name='notify_watchMindersTutorial'>觀看Minders教學。</string>	
+    <string name='notify_watchLabelsTutorial'>觀看標籤使用教學。</string>	
+    <string name='notify_watchArchiveTutorial'>觀看封存使用教學。</string>	
+    <string name='notify_flingTapDoneMenuTutorials'>FlingTap Done (選單-->教學)</string>	
+
+    	
+    <!-- Preferences - application_preferences.xml --> 
+    <string name='activity_settings'>設定</string>	
+    <string name='option_settings'>設定</string>	
+    
+    <!-- ApplicationPreferenceActivity  -->
+    <string name='toast_checkingForUpdate'>檢查更新</string>	
+    
+    <string name='archiveSettings'>封存設定</string>	
+    <string name='enableArchive'>啟用封存</string>	
+    <string name='archiveCompletedOrAbandonedTasks'>要封存已完成或放棄的工作？</string>	
+
+    <string name='alarmSettings'>鬧鈴設定</string>	
+    <string name='sound'>聲音</string>	
+    <string name='whichAlarmRingtoneWillBePlayed'>要使用哪個鬧鈴鈴聲？</string>	
+    <string name='vibrate'>震動</string>	
+    <string name='vibratePhoneWhenAlarmOccurs'>有鬧鈴時，要震動手機嗎？</string>	
+    <string name='flash'>閃光</string>	
+    <string name='flashLEDWhenAlarmOccurs'>有鬧鈴時，要閃光嗎？</string>	
+
+    <string name='nearminderSettings'>Nearminder設定</string>	
+    <string name='whichNotificationSoundWillBePlayed'>要使用哪個提示鈴聲？</string>	
+    <string name='vibratePhoneWhenNearminderOccurs'>有Nearminder時，要震動手機嗎？</string>	
+    <string name='flashLEDWhenNearminderOccurs'>有Nearminder時，要閃光嗎？</string>	
+
+    <string name='callmindeSettings'>Callminder設定</string>	
+    <string name='enableCallminders'>啟用Callminders</string>	
+    <string name='notifyMeAboutRelevantTasksWhenImOnThePhone'>當打(接)電話時，要提示相關的工作嗎？</string>	
+    <string name='vibratePhoneWhenCallminderOccurs'>有Callminder時，要震動手機嗎？</string>	
+    <string name='flashLEDWhenCallminderOccurs'>有Callminder時，要閃光嗎？</string>	
+
+    <string name='labelSettings'>標籤設定</string>	
+    <string name='enableLabels'>啟用標籤</string>	
+     
+    <string name='updateSettings'>更新設定</string>	
+    <string name='checkForUpdateNow'>立即檢查更新!</string>	
+
+    <string name='completedTasks'>已完成的工作</string>	
+    <string name='automaticallyArchive'>自動封存</string>	
+    <string name='completedTasksWillBeArchivedAfterMidnightEachDay'>所有已完成的工作將在午夜後自動封存</string>	
+    <string name='automaticallyDelete'>自動刪除</string>	
+    <string name='completedTasksWillBeDeletedAfterMidnightEachDay'>所有已完成的工作將在午夜後自動刪除</string>	
+    
+	<!-- Archive Preferences -->
+	<string name='toast_noArchivedTasksWereDeleted'>沒有任何已封存的工作被刪除。</string>
+	<string name='toast_allArchivedTasksDeleted'>已刪除所有封存的工作。</string>
+	
+	<!-- Archive Preferences - Retention -->
+	<string name='deleteArchivedTasksAfterHowManyDays'>要在幾天後刪除已封存的工作？</string>
+	<string name='automaticRemoval'>自動移除</string>
+	<string name='howLongShouldArchivedTasksBeKept'>已封存的工作要被保留多久？</string>
+	<string name='archiveHousekeeping'>封存管理</string>
+
+	<!-- Archive Preferences - Clear now -->
+	<string name='clearArchiveNow'>立即清除封存工作！</string>
+	<string name='dialog_confirmDeletion'>確認刪除</string>
+	<string name='dialog_deleteAllArchivedTasks'>要刪除所有已封存的工作？</string>
+
+	<!-- Archive Preferences - Disable -->
+	<string name='dialog_deleteArchivedTasks'>要刪除已封存的工作？</string>
+	<string name='dialog_areYouSureYouWantToDeleteAllArchivedTaskAndDisableTheArchive'>確定要刪除所有已封存的工作及關閉封存功能嗎？</string>
+
+	
+	<!-- EditNumberPreference -->
+	<string name='toast_noValueSpecifiedNothingChanged'>沒有任何改變</string>
+	
+	<!-- Label Preferences - Disable -->
+	<string name='dialog_whenDisablingLabelsAllExistingLabelsAreDeleted'>關閉標籤功能，所有已建立的標籤也將被刪除。\n確定要關閉標籤功能及刪除所有已設定的標籤嗎？</string>
+	<string name='toast_noLabelsWereDeleted'>沒有任何標籤被刪除。</string>
+	<string name='toast_allLabelsDeleted'>所有標籤都已刪除。</string>
+    
+	<!-- FeedbackPart.java -->
+    <string name='chooser_selectEmailClient'>選擇電子郵件客戶端</string>	
+
+	<!-- About -->
+    <string name='about'>關於我們</string>
+    <string name='copyright2009LeanAndKeenLLC'>版權所有Â© 2009 Lean &amp; Keen, LLC.</string>
+    <string name='allRightsReserved'>版權所有</string>
+    <string name='attributionNotices'><u>署名通知</u>：\n<li><b>Veecheck</b>\n版權所有Â© 2008 Tom Gibara\nLicense: http://www.apache.org/licenses/LICENSE-2.0.html\nSite: http://www.tomgibara.com/android/veecheck</li>\n<li><b>Android</b>\nCopyright (c)2007 The Android Open Source Project\nLicense: http://www.apache.org/licenses/LICENSE-2.0.html</li></string>
+    <string name='versionX'>版本 ^1</string>
+    <string name='trialDaysRemainingX'>試用版本剩餘天數：^1</string>
+    <string name='tellUsHowWeAreDoing'>請告訴我們你的使用感想。</string>
+
+	<!-- **************** Feature Introduction *************** -->
+	<string name='intro_introduction'>功能介紹\n\n\n請花點時間了解一下程式的功能。\n\n有些功能為外掛程式，必須另外下載安裝。有些外掛程式必須付費下載，請由選單進入外掛程式選項了解更多資訊。</string>      
+	<string name='intro_attachments'><font fgcolor='#ffffffff'><b>附件</b></font>功能讓你可以將與工作相關的詳細資訊，如：聯絡人及地圖...等，直接附加在工作上，讓所有與工作相關的資訊都集中在同一處。</string>      
+	<string name='intro_nearminders'><font fgcolor='#ffffffff'><b>Nearminders</b></font>會在你接近設定好的地點時提醒你。你可以將你想去的商店、餐廳、書店或任何地方，在你經過的時候設定成Nearminders。Nearminders可由<font fgcolor='#ffffffff'><b>附件</b></font>分頁進入設定，並將Nearminders設定成工作附件。<font fgcolor='#ffffffff'><b>此為外掛程式功能。</b></font></string>      
+	<string name='intro_callminders'><font fgcolor='#ffffffff'><b>Callminders</b></font>會在你有來電或撥出電話時提醒你有關於該通電話的工作事項。只要你的工作附件中有附上聯絡人資訊，那在每次你有來電或撥出電話時都會收到與該聯絡人相關工作的提醒清單。<font fgcolor='#ffffffff'><b>此為外掛程式功能。</b></font></string>      
+	<string name='intro_labels'><font fgcolor='#ffffffff'><b>標籤</b></font>是分類工作用的關鍵字，可以利用用一個或多個標籤來篩選出你想要的工作清單。<font fgcolor='#ffffffff'><b>此為外掛程式功能。</b></font></string>      
+	<string name='intro_archive'><font fgcolor='#ffffffff'><b>封存</b></font>是一個讓你可以儲存已完成工作的檔案夾，這樣你的工作清單就不會過於擁擠。就如同一般工作清單一樣，你也可以在封存資料夾中使用篩選器及尋找功能。<font fgcolor='#ffffffff'><b>此為外掛程式功能。</b></font></string>      
+	<string name='intro_tips'>別忘了了解一下所有<font fgcolor='#ffffffff'><b>選單</b></font>項目。你可以由選單進入<font fgcolor='#ffffffff'><b>外掛程式</b></font>下載、<font fgcolor='#ffffffff'><b>設定</b></font>、<font fgcolor='#ffffffff'><b>程式教學</b></font>、以及進入<font fgcolor='#ffffffff'><b>說明</b></font>頁面。</string>
+	<string name='intro_conclusion'><font fgcolor='#ffffffff'><b>謝謝！</b></font></string>      
+
+	<string name='availableFromTheAddonsMenu'>可由外掛程式選項取得更多資訊</string>      
+	<string name='leaveFeatureIntroduction'>確定要略過功能介紹嗎？\n\n要重新瀏覽，將來可以從<font fgcolor='#ffffffff'><b>選單</b></font>中選擇<font fgcolor='#ffffffff'><b>功能介紹</b></font>。</string>
+	<string name='button_getStarted'>開始使用!</string>
+	<!-- ****************************************************** -->
+    
+	<!-- Help / Task List -->
+    <string name='help_task_List'>工作清單／說明</string>	
+    <string name='help_task_list_fast_add_box'>快速新增工作文字框。在此鍵入工作標題然後按下Enter(或是“新增“鍵)快速的增加新的工作。</string>	
+    <string name='help_task_list_fast_add_button'>快速新增鍵。輕按此鍵，就可將在快速新增工作文字框中的文字建立成新工作。</string>	
+    <string name='help_task_list_fast_add_speech_recognition_button'>說話辨識鍵。輕按後，將使用者錄音內容轉成文字並新增為工作標題。</string>	
+    <string name='help_task_list_task_priority_indicator'>重要性顯示表。顯示工作的重要性。</string>	
+    <string name='help_task_list_task_title'>工作標題。輕按此處會開啟工作編輯頁面。長按瀏覽長按選單。詳情參閱下列第17、18及19。</string>	
+    <string name='help_task_list_task_title_all'>工作標題。輕按此處會開啟工作編輯頁面。長按瀏覽長按選單。詳情參閱下列第17、18、19、20及21。</string>	
+    <string name='help_task_list_task_due_date'>工作到期日。</string>	
+    <string name='help_task_list_options_menu_new_task'>新增工作選單項目。新增工作並開啟工作編輯頁面。</string>
+    <string name='help_task_list_options_menu_filter'>篩選器選單項目。打開篩選器頁面。</string>	
+    <string name='help_task_list_options_menu_delete_completed'>刪除已完成的工作選單項目。刪除所有已完成的工作。</string> <!-- Note: some completed tasks may not be displayed because of the filter settings. -->	
+    <string name='help_task_list_options_menu_archive_completed'>封存已完成的工作選單項目。封存所有已完成的工作。</string>	
+    <string name='help_task_list_options_menu_settings'>設定選單項目。開啟設定頁面，你可以由此啟用或是關閉及設定程式的功能。</string>	
+    <string name='help_task_list_options_menu_more'>更多選單項目。顯示更多選單項目。參閱下列12至16。</string>	
+    <string name='help_task_list_options_menu_about'>關於我們。顯示有關於這個軟體的詳細資訊。</string>	
+    <string name='help_task_list_options_menu_feedback'>Feedback選單項目。開啟我們的Feedback網頁，你可以給我們建議及為新的功能投票。</string>	
+    
+    <string name='help_task_list_ctx_menu_mark_complete'>標示為完成長按選單項目。將工作標示為完成(或是將標示為已完成的工作還原成待辦狀態)。</string>	
+    <string name='help_task_list_ctx_menu_edit_task'>編輯工作長按選單項目。開啟選取工作的編輯頁面。</string>	
+    <string name='help_task_list_ctx_menu_delete_task'>刪除工作長按選單項目。刪除選取的工作。</string>	
+    <string name='help_task_list_ctx_menu_archive_task'>封存工作長按選單項目(選擇性)。將選取的工作移到封存中。</string>	
+    <string name='help_task_list_ctx_menu_label_task'>標籤工作長按選單項目(選擇性)。開啟已存在並可以使用在選取工作上的標籤選單。</string>	
+
+    <string name='help_task_list_ctx_menu_feature_introduction'>功能介紹。你可以由此重新瀏覽首次安裝FlingTap Done時的功能介紹。</string>	
+    <string name='help_task_list_ctx_menu_tutorials'>程式教學。你可以由此進入 FlingTap Done的教學網站，在那你可以找到更多FlingTap Done功能的詳細介紹。</string>	
+    <string name='help_task_list_ctx_menu_addons'>外掛程式。由此你可以進入 FlingTap Done外掛程式下載網頁。</string>	
+
+
+    
+	<!-- Help / Filter -->
+    <string name='help_filter'>篩選器/說明</string>	
+    <string name='help_filter_due_date'>到期日篩選器。選擇到期日範圍。工作清單中將只會顯示到期日在設定範圍內的工作項目。如果選擇\"沒有設到期日的工作？\" ，那所有未設到期日的工作也會一並顯示於工作清單中。</string>	
+    <string name='help_filter_priority'>重要性篩選器。設定最低重要性。工作重要性設定低於此篩選器設定者，將不會顯示於工作清單中。</string>	
+    <string name='help_filter_status'>狀態篩選器。選取你要瀏覽已完成的工作，待辦的工作或是兩者。你也可以選擇只要顯示在某個日期範圍內完成的工作，例如：前兩天、上週、上個月...等。附註：這項設定，對於瀏覽封存的工作相當便利。</string>	
+    <string name='help_filter_repository'>資料夾篩選器(選擇性)。選擇你想要瀏覽的資料夾。\n(1) \"主要\"資料夾包含了所有未封存的工作。\n(2) \"封存\"資料夾包含了所有已封存的工作。</string>	
+    <string name='help_filter_unlabeled'>未標籤篩選器(選擇性)。啟用後，將會顯示所有未設標籤的工作。附註：此標籤不能移除或是變更名稱。</string>	
+    <string name='help_filter_label'>標籤篩選器(選擇性)。啟用後，將會顯示所有有使用標籤的工作。長按標籤，將會顯示下列長按選單：</string>	
+    <string name='help_filter_menu_add_label'>新增標籤(選擇性)。開啟新增標籤的頁面。</string>	
+    <string name='help_filter_label_note'>附註：工作及私人為程式預設標籤。你可以新增、移除標籤或是變更任何標籤名稱。</string>	
+    
+    
+	<!-- Help / Task Edtor Main -->
+    <string name='help_task_editor'>編輯工作/說明</string>	
+    <string name='help_task_editor_details_tab'>詳細資訊分頁</string>	
+    <string name='help_task_editor_title'>工作標題</string>	
+    <string name='help_task_editor_priority'>工作重要性</string>	
+    <string name='help_task_editor_due_date'>工作到期日</string>	
+    <string name='help_task_editor_alarm'>工作鬧鈴</string>	
+    <string name='help_task_editor_details'>工作詳細資訊 。在此鍵入更多工作的詳細資訊。</string>	
+    <string name='help_task_editor_label_text_entry'>新增標籤文字框。在此鍵入新的或已經存在的標籤名稱，然後按下Enter(或是“新增“鍵)，則可將標籤使用於該工作。鍵入＊將會顯示所有已經存在的標籤。</string>	
+    <string name='help_task_editor_label_add_button'>新增標籤鍵。在文字框中鍵入標籤名稱後，輕點此鍵新增標籤。</string>	
+    <string name='help_task_editor_label_list_item'>工作標籤列表。如果工作已經有使用標籤，會列於此處。</string>	
+    <string name='help_task_editor_label_remove_item'>移除標籤鍵。輕點此處將已存在的標籤由目前的工作中移除。註：由此移除標籤，只是將標籤由目前工作中移除，並不會影響到其他使用同一標籤的工作。如欲將標籤完全刪除，需要到主要工作清單頁面，點選篩選器選項選單，長按要移除的標籤然後選擇刪除。</string>	
+    
+    <string name='help_task_editor_complete_button'>完成鍵。將工作標示為完成並返回工作清單，同時也會將所有變更儲存。</string>	
+    <string name='help_task_editor_revert'>恢復鍵。恢復任何你做的變更並返回工作清單。</string>	
+    <string name='help_task_editor_complete_menu_item'>完成選單項目。將工作標示為完成並返回工作清單，同時也會將所有變更儲存。</string>	
+    <string name='help_task_editor_revert_menu_item'>恢復選單項目。恢復任何你做的變更並返回工作清單。</string>	
+    <string name='help_task_editor_delete_menu_item'>刪除選單項目。刪除目前的工作並返回工作清單。</string>	
+
+    <string name='help_task_editor_options_menu_attachment'>新增附件選單項目。開啟附件選擇清單，由此你可以選擇你想要附加的附件類型，如：聯絡人、網站、聲音及圖片...等。</string>	
+    <string name='help_task_editor_options_menu_archive'>封存選單項目(選擇性)。封存目前的工作。</string>	
+    
+	<!-- Help / Task Edtor Attach -->
+    <string name='help_task_editor_attach'>工作編輯頁面附件/說明</string>	
+    <string name='help_task_editor_attach_tab'>附件分頁。你可以附加任何重要的檔案，如：聯絡人、網站、聲音及圖片...等到你的工作上。所有附件都會顯示在這分頁上。</string>	
+    <string name='help_task_editor_attach_tab_item'>新增附件。長按附件將會開啟更多長按選單選項。</string>	
+    
+	<!-- Help / Select Area -->
+    <string name='help_select_area'>設定Nearminder／說明</string>	
+    <string name='help_select_area_select_position_bulls_eye'>圓心。顯示Nearminder的中心所在。</string>	
+    <string name='help_select_area_select_position_next'>下一步鍵。進入下一步設定Nearminder的範圍。</string>	
+    <string name='help_select_area_options_menu_map_mode'>地圖模式。開啟設定頁面，由此你可以設定地圖的顯示模式(地圖、衛星或交通)。</string>	
+    <string name='help_select_area_options_menu_zoom'>縮放。顯示地圖的縮放控制。</string>	
+    <string name='help_select_area_options_menu_help'>說明。顯示此頁面的說明。</string>	
+    <string name='help_select_area_select_area_slider'>滑桿。拖曳設定Nearminder的範圍大小。</string>	
+    <string name='help_select_area_select_area_back'>上一步鍵。回到上一個步驟，設定Nearminder的中心。</string>	
+    <string name='help_select_area_select_area_cancel'>取消鍵。取消Nearminder設定，不會新增入附件。</string>	
+    <string name='help_select_area_select_area_next'>下一步鍵。進入下一步設定Nearminder名稱。如果你是編輯已存在的Nearminder這將會儲存你所做的變更。</string>	
+    <string name='help_select_area_select_area_border'>外緣。Nearminder範圍設定範圍的外緣。</string>	
+    <string name='help_select_area_edit_name_text'>Nearminder名稱文字框。顯示Nearminder的名稱。</string>	
+    <string name='help_select_area_edit_name_ok'>OK鍵。新增Nearminder附件並將文字框中鍵入的文字設定為Nearminder的名稱。</string>	
+    <string name='help_select_area_edit_name_cancel'>取消鍵。取消Nearminder設定，不會新增入附件。</string>	
+    
+    	<!-- Help / Filter List -->
+    <string name='help_filter_list'>篩選器/說明</string>	
+    <string name='help_filter_list_active_filter'>篩選器選用器。在此選擇要使用的篩選器，工作清單將會以選用的篩選器所設定的條件來決定顯示哪些工作。</string>	
+    <string name='help_filter_list_filter_all'>所有篩選器。選用所有篩選器時，工作清單將會顯示出所有未封存工作。附註：如果你未啟用封存功能，當選用所有篩選器時，將會顯示出所有工作。此為預設篩選器，不能編輯。</string>	
+    <string name='help_filter_list_filter_archive'>封存篩選器。選用封存篩選器時，工作清單將會顯示出所有已封存工作。附註：如果你未啟用封存功能，封存篩選器則不會被顯示。此為預設篩選器，不能編輯。</string>	
+    <string name='help_filter_list_filter_sample'>使用者自訂篩選器。圖為範例，使用者可自己設定篩選器。按下篩選器開啟篩選器的編輯頁面，新增設定的篩選器將會顯示於圖中範例所在位置(設定請見下列細節)。你可以長按，然後由長按選單中變更篩選器名稱或是刪除篩選器。</string>	
+    <string name='help_filter_list_new_filter'>新增篩選器選單項目。你可以新增篩選器。鍵入新的篩選器名稱後，按下篩選器開啟篩選器的編輯頁面，在頁面中設定篩選器的內容。</string>	
+    
+	<!-- Help / Settings -->
+    <string name='help_settings'>設定/說明</string>	
+    <string name='help_settings_enable_labels'>啟用/關閉這個程式的標籤功能。</string>	
+    <string name='help_settings_enable_archive'>啟用/關閉這個程式的封存功能。</string>	
+    <string name='help_settings_clear_archive'>刪除所有封存的工作。</string>	
+    <string name='help_settings_automatic_removal'>設定封存工作的保留天數。</string>	
+    <string name='help_settings_completed_tasks_delete'>決定已完成的工作是否要在每天晚上12點整自動刪除。</string>	
+    <string name='help_settings_completed_tasks_archive'>決定已封存的工作是否要在每天晚上12點整自動刪除。</string>	
+    <string name='help_settings_check_for_update'>檢查軟體更新。你將會在有更新時收到通知。</string>	
+
+    <string name='help_settings_alarm_sound'>鬧鈴聲音。鬧鈴要使用哪個鈴聲?按此進入設定。</string>	
+    <string name='help_settings_alarm_vibrate'>鬧鈴震動。鬧鈴要使用震動嗎?按此進入設定。</string>	
+    <string name='help_settings_alarm_flash'>鬧鈴閃光。鬧鈴要使用閃光嗎(如果使用的手機有此功能)？按此進入設定。</string>	
+    
+    <string name='help_settings_callminder_enable'>啟用Callminders。啟用後，Callminder將會在你有來電或撥出電話時提醒你有關於該通電話的工作事項。</string>	
+    <string name='help_settings_callminder_sound'>Callminder聲音。Callminder要使用哪個鈴聲？按此進入設定。</string>	
+    <string name='help_settings_callminder_vibrate'>Callminder震動。Callminder要使用震動嗎？按此進入設定。</string>	
+    <string name='help_settings_callminder_flash'>Callminder閃光。Callminder要使用閃光嗎(如果使用的手機有此功能)？按此進入設定。</string>	
+    
+    <string name='help_settings_nearminder_sound'>Nearminder聲音。Nearminder要使用哪個鈴聲?按此進入設定。</string>	
+    <string name='help_settings_nearminder_vibrate'>Nearminder震動。Nearminder要使用震動嗎?按此進入設定。</string>	
+    <string name='help_settings_nearminder_flash'>Nearminder閃光。Nearminder要使用閃光嗎(如果使用的手機有此功能)?按此進入設定。</string>	
+ 		
+	<!-- Initial Tasks -->
+    <string name='task_tellUsWhatYouThink'>請告訴我們你的使用感想。</string>
+    <string name='task_weWantToKnowAboutYourFlingTapDoneExperience'>我們想知道你使用FlingTap Done的感想，請寄給我們你的意見、新功能建議或是抱怨。你可以由你的電腦到我們的論壇http://forum.flingtap.com留言。你也可以直接透過選單中的”Feedback”功能寄訊息給我們。</string>
+    
+    <!-- searchable.xml -->
+	<string name='search_tasks'>工作</string>
+	<string name='search_taskTitleWords'>工作標題</string>
+
+    <!-- Backup/Restore -->
+	<string name='application_preferences_category_backup'>備份設定</string>
+	<string name='app_pref_enable_backup_title'>啟用備份</string>
+	<string name='app_pref_enable_backup_summary'>需要執行備份嗎？</string>
+	<string name='app_pref_status_backup_title__on'>狀態：開啟</string>
+	<string name='app_pref_status_backup_summary__on'>備份功能正常</string>
+	<string name='app_pref_status_backup_title__off'>狀態：關閉</string>
+	<string name='app_pref_status_backup_summary__off'>備份功能未啟用</string>
+	<string name='app_pref_status_backup_title__waiting'>狀態：等待</string>
+	<string name='app_pref_status_backup_summary__waiting'>狀態未知</string>
+	<string name='app_pref_status_backup_title__unsupported'>狀態：設備沒有支援</string>
+	<string name='app_pref_status_backup_summary__unsupported'>您的設備不支援備份功能。</string>
+	<string name='app_pref_status_backup_title__out_of_date'>狀態: 過期</string>
+	<string name='app_pref_status_backup_summary__out_of_date'>您的資料未在合理的時間內完成備份。</string>
+	<string name='app_pref_status_backup_title__privacy_settings'>狀態：關閉</string>
+	<string name='app_pref_status_backup_summary__privacy_settings'>手機\"隱私設定\"中的\"備份我的資料\"功能未被啟用。</string>
+
+	<string name='dialog_backup_not_supported_title'>設備未支援</string>
+	<string name='dialog_backup_not_supported_message'>備份功能在這設備上不被支援。</string>
+	<string name='dialog_backup_not_enabled_in_settings_title'>檢查隱私設定</string>
+	<string name='dialog_backup_not_enabled_in_settings_message'>手機隱私設定中的備份我的資料功能未被啟用。欲使用FlingTap Done的備份功能，請先至隱私設定中啟用\"備份我的資料\"。</string>
+	<string name='dialog_backup_not_enabled_in_settings_btn_positive'>設定</string>
+	<string name='dialog_backup_not_enabled_in_settings_btn_negative'>離開</string>
+	<string name='dialog_backup_not_supported_btn_positive'>Android Market</string>
+	<string name='dialog_backup_not_supported_btn_negative'>離開</string>
+
+	<string name='toast_backup_enabled'>備份功能已經啟用</string>
+	<string name='notify_backup_enabled_title'>備份功能已經啟用</string>
+	<string name='notify_backup_enabled_description'>FlingTap Done備份功能已啟用</string>
+	<string name='notify_backup_not_enabled_in_privacy_settings_title'>檢查隱私設定</string>
+	<string name='notify_backup_not_enabled_in_privacy_settings_message'>欲使用FlingTap Done的備份功能，請先至隱私設定中啟用\"備份我的資料\"。</string>
+	<string name='notify_backup_not_supported_title'>不支援備份功能</string>
+	<string name='notify_backup_not_supported_message'>您的設備不支援FlingTap Done的備份功能。</string>
+
+    <!--  ************************************************************** -->
+    <!--  ****                         Common                       **** -->
+    <!--  ************************************************************** -->
+    
+    <!--  ErrorUtil -->
+    <string name='toast_sorryAnErrorOccurred'>抱歉，有錯誤產生。</string>	
+<!-- 
+    <string name="leanAndKeenEULA">Lean &amp; Keen EULA</string>	
+ -->	
+    <string name='agreement'>協議</string>	
+    <string name='button_accept'>接受</string>	
+    <string name='button_decline'>拒絕</string>	
+	
+    <string name='notify_updateAvailable'>有更新</string>
+    <string name='notify_newVersionOfFlingTapDoneFound'>找到新版FlingTap Done</string>
+    <string name='activity_confirmFlingTapDoneUpdate'>確認更新FlingTap Done</string>
+    <string name='wouldYouLikeToUpdateThisApplicationToTheLatestVersion'>你想要將程式更新到最新版本嗎？</string>
+    <string name='dontNotifyMeOfThisUpdateAgain'>不要再通知我有關程式更新的訊息。</string>    
+    
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+        >
+    <LinearLayout android:id="@+id/button_bar"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  style="@android:style/ButtonBar"
+                  android:layout_marginTop="8dip">
+
+        <Button android:id="@+id/positive_button"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/create_widget"
+                />
+        <Button android:id="@+id/negative_button"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_cancel"
+                />
+    </LinearLayout>
+
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/button_bar"
+            >
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+            <TextView
+                    android:id="@+id/select_theme"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginLeft="3dip"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/select_a_theme"
+                    />
+            <RadioGroup
+                    android:id="@+id/radio_theme"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/select_theme"
+                    android:paddingLeft="10dip"
+                    android:orientation="vertical">
+
+                <RadioButton android:id="@+id/theme_light"
+                             android:layout_width="170dip"
+                             android:layout_height="55dip"
+                             android:textAppearance="?android:attr/textAppearanceMedium"
+                             android:text="@string/light_theme" />
+
+                <RadioButton android:id="@+id/theme_dark"
+                             android:layout_width="170dip"
+                             android:layout_height="55dip"
+                             android:textAppearance="?android:attr/textAppearanceMedium"
+                             android:text="@string/dark_theme" />
+
+            </RadioGroup>
+            <TextView
+                    android:id="@+id/select_text_size"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/radio_theme"
+                    android:layout_marginTop="8dip"
+                    android:layout_marginLeft="3dip"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/select_a_font_size"
+                    />
+
+            <RadioGroup
+                    android:id="@+id/radio_text_size"
+                    android:layout_below="@id/select_text_size"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dip"
+                    android:orientation="vertical">
+
+                <RadioButton android:id="@+id/text_small"
+                             android:layout_width="170dip"
+                             android:layout_height="55dip"
+                             android:textSize="14sp"
+                             android:text="@string/small" />
+
+                <RadioButton android:id="@+id/text_medium"
+                             android:layout_width="170dip"
+                             android:layout_height="55dip"
+                             android:textSize="18sp"
+                             android:text="@string/medium" />
+
+                <RadioButton android:id="@+id/text_large"
+                             android:layout_width="170dip"
+                             android:layout_height="55dip"
+                             android:textSize="22sp"
+                             android:text="@string/large" />
+
+                <RadioButton android:id="@+id/text_jumbo"
+                             android:layout_width="170dip"
+                             android:layout_height="55dip"
+                             android:textSize="26sp"
+                             android:text="@string/jumbo" />
+            </RadioGroup>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

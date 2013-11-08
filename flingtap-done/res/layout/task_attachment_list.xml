@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+        >
+    <ImageButton
+            android:id="@+id/task_attachment_add_completable_button"
+            android:layout_width="46dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/btn_add"/>
+    <EditText
+            android:id="@+id/task_attachment_add_completable_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:layout_marginLeft="3dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/task_attachment_add_completable_button"
+            android:layout_weight="1"
+            android:inputType="textCapSentences|textMultiLine|textAutoCorrect"
+            android:hint="@string/hint_vacuumTheTug"
+            />
+    <ScrollView android:id="@android:id/empty"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/task_attachment_add_completable_text"
+                android:fillViewport="true"
+            >
+        <TextView android:id="@+id/emptyText"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/thisTaskHasNoAttachments"
+                  android:textSize="20sp"
+                  android:textColor="?android:attr/textColorSecondary"
+                  android:paddingLeft="10dip"
+                  android:paddingRight="10dip"
+                  android:paddingTop="10dip"
+                  android:lineSpacingMultiplier="0.92"
+                />
+    </ScrollView>
+
+
+    <!-- Here is the list. Since we are using a ListActivity, we
+         have to call it "@android:id/list" so ListActivity will
+         find it -->
+    <ListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/task_attachment_add_completable_text"
+            android:drawSelectorOnTop="false"
+            />
+</RelativeLayout>

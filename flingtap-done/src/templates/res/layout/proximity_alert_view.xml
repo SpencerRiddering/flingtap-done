@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/map_view_layout" android:layout_width="fill_parent"
+             android:layout_height="fill_parent">
+    <com.google.android.maps.MapView
+            android:id="@+id/map_view"
+            android:apiKey="${command.line.googleMapsApiKey}"
+            android:enabled="true"
+            android:clickable="true"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            />
+
+    <LinearLayout
+            android:id="@+id/proximity_alert_view_dialog"
+            android:orientation="vertical"
+            android:background="@drawable/panel_picture_frame_bg_focus_blue"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:id="@+id/proximity_alert_viewer_dialog_title"
+                android:paddingLeft="8dip"
+                android:paddingRight="4dip"
+                android:paddingTop="2dip"
+                android:paddingBottom="1dip"
+                android:textStyle="bold"
+                />
+
+        <ImageView
+                android:src="@android:drawable/divider_horizontal_dark"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_width="fill_parent"/>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:paddingTop="2dip"
+                android:paddingBottom="2dip"
+                >
+
+            <TextView android:id="@+id/proximity_alert_title"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:singleLine="true"
+                      android:paddingLeft="1dip"
+                      android:paddingBottom="4dip"
+                      android:textColor="#FFFFFF"
+                    />
+
+            <LinearLayout android:orientation="horizontal"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:gravity="right"
+                          android:paddingBottom="3dip"
+                          android:paddingRight="0dip"
+                    >
+                <Button android:id="@+id/proximity_alert_button_snooze"
+                        android:text="@string/notify_snooze"
+                        android:background="@android:drawable/btn_default_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                <TextView
+                        android:text="@string/notify_or"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dip"
+                        android:paddingRight="5dip"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        />
+                <Button android:id="@+id/proximity_alert_button_choose_action"
+                        android:text="@string/notify_chooseAction"
+                        android:background="@android:drawable/btn_default_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/map_zoom"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="bottom|center_horizontal"
+            />
+</FrameLayout>
