@@ -28,6 +28,7 @@ target/
 
 # Local configuration file (sdk path, etc)
 local.properties
+default.properties
 
 # API key build information
 api_keys_test.sh
@@ -47,4 +48,4 @@ classes
 tmp
 obj
 .DS_Store
-
+gen-external-apklibs
