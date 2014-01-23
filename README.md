@@ -1,17 +1,15 @@
-[FlingTap Done](https://play.google.com/store/apps/details?id=com.flingtap.done.base&hl=en)
+FlingTap Done
 ==========================
 
-Android ToDo List.
+A feature rich to-do list for Android.
 
 
 Background
 -----
 
-* FlingTap Done placed in the [ADC 2](https://developers.google.com/android/adc/gallery_productivitytools) 
-* FlingTap Done is optimized for an Androdi 1.6 world which doesn't exist much anymore.
- * Features such as keyboard shortcuts and attachments either don't exist anymore or are so poorly supported that the feature is next to useless. 
-* Other features such as purchasing unlockable app content (prior to Android in-app purchases), caller and location reminders were at the bleeding edge when the app was released.
-* Video demos 
+* FlingTap Done placed in the [ADC 2](https://developers.google.com/android/adc/gallery_productivitytools) and then was published on [Android Market (now Google Play)](https://play.google.com/store/apps/details?id=com.flingtap.done.base&hl=en). 
+* Features such as purchasing unlockable app content (prior to Android Market in-app purchases), caller and location reminders were at the bleeding edge when the app was released.
+* Video demos: 
  * [Create, Edit, Update, Complete and Delete Tasks](http://bit.ly/4miFRZ) (YouTube)
   Explains the most common steps including creating a new task, editing a task, updating a task, attaching content to a task, marking the task complete and finally deleting the task.
  * [Filtering and Searching the Task List](http://bit.ly/24Ntp3) (YouTube)
@@ -57,7 +55,7 @@ Usage
 -----
 * Maven build. 
 * Build scripts (build-debug.sh, build-test.sh, and build-release.sh) demonstrate how to launch the build process.
-* See [SETUP.md](./SETUP.md) for details. 
+* See [SETUP](./SETUP.md) for details. 
  
 License
 -------
