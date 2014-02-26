@@ -134,9 +134,7 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 		// Add attachment option
 		MenuItem addAttachmentMenuItem = menu.add(0, ATTACHMENT_MENU_ADD_ITEM_ID, 20,
 				R.string.option_attach);
-//		addAttachmentMenuItem.setShortcut('5', 'a'); // Could also use 'T'
-//		addAttachmentMenuItem.setIcon(R.drawable.addattechment);	
-		addAttachmentMenuItem.setIcon(android.R.drawable.ic_menu_add);	
+		addAttachmentMenuItem.setIcon(android.R.drawable.ic_menu_add);
 		addAttachmentMenuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
 
 			public boolean onMenuItemClick(MenuItem menuitem) {
@@ -179,32 +177,11 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 
 						Intent attachIntent = new Intent(Intent.ACTION_VIEW, data.getData());
 						PackageManager pm = mActivity.getPackageManager();
-//						
-//						ActivityInfo actInfo;
-//						try {
-//							// TODO: !!! Assumes that all ACTION_PICK intents (ie data.getData() != null) are from the Contact App.
-//							actInfo = pm.getActivityInfo(new ComponentName("com.android.contacts", "com.android.contacts.ContactShortcut"), 0); // TODO: !!! Isn't there a way to do this generically?
-//						} catch (NameNotFoundException e) {
-//							Log.e(TAG, "ERR0004M Failed to get activity info for ContactShortcut.", e);
-//							ErrorUtil.handleExceptionNotifyUser("ERR0004M", e, mActivity);
-//							return;
-//						}
-//						theName = actInfo.loadLabel(pm).toString();
-//						// Create the bitmap.
-//						// TODO: !!! Hack because contacts pulls it's icon from the contacts content provider not from this value. 
-//						// NOTE: !!! Storing the image in the database will cause the database to become large much faster!
-//						if( !data.getData().toString().startsWith(Task.Tasks.CONTENT_URI_STRING) ){ // TODO: !!! Assumes that all URIs that aren't Task URIs are from the Contact App.
-//							BitmapDrawable bd = (BitmapDrawable)actInfo.loadIcon(pm); 
-//							theBitmap = bd.getBitmap();
-//						}
-//						
-////						theIconResource = Intent.ShortcutIconResource.fromContext(...); // Isn't suitable in this situation. 
-						
+
 						boolean isContact = data.getData().toString().startsWith(Contacts.CONTENT_URI.toString());
 						
 						UriInfo uriInfo = new UriInfo(attachIntent, data.getData(), mActivity.getContentResolver(), mActivity.getPackageManager(), mActivity.getResources(), null);
 						// TODO: Add a preference to decide whether to Prompt user to edit name or give user an option to always use default value.  
-//						mAttachPart.addAttachment((int)ContentUris.parseId(mURI), -1, attachIntent, uriInfo.getLabel(), isContact?null:uriInfo.getIconBitmap(), isContact?null:uriInfo.getIconResource(), null, null);
 						mAttachPart.addAttachment((int)ContentUris.parseId(mURI), attachIntent, uriInfo.getLabel(), isContact?null:uriInfo.getIconBitmap(), isContact?null:uriInfo.getIconResource(), null);
 						return;
 						
@@ -218,8 +195,7 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 						Bitmap theBitmap = (Bitmap)data.getParcelableExtra(Intent.EXTRA_SHORTCUT_ICON);
 						Intent.ShortcutIconResource theIconResource = (Intent.ShortcutIconResource)data.getParcelableExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE);
 						
-//						mAttachPart.addAttachment((int)ContentUris.parseId(mURI), -1, attachIntent, theName, theBitmap, theIconResource, null, deleteIntent);		
-						mAttachPart.addAttachment((int)ContentUris.parseId(mURI), attachIntent, theName, theBitmap, theIconResource, deleteIntent);		
+						mAttachPart.addAttachment((int)ContentUris.parseId(mURI), attachIntent, theName, theBitmap, theIconResource, deleteIntent);
 					}
 				}else{
 					// TODO: !!! Add error handling code here.
@@ -255,8 +231,6 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 	private void addGenericAttachment(Intent data) {
 		Intent attachIntent = new Intent(Intent.ACTION_VIEW, data.getData());
 		UriInfo uriInfo = new UriInfo(attachIntent, data.getData(), mActivity.getContentResolver(), mActivity.getPackageManager(), mActivity.getResources(), null);
-		// TODO: Add a preference to decide whether to Prompt user to edit name or give user an option to always use default value.  
-//		mAttachPart.addAttachment((int)ContentUris.parseId(mURI), -1, attachIntent, uriInfo.getLabel(), uriInfo.getIconBitmap(), uriInfo.getIconResource(), null, null);
 		mAttachPart.addAttachment((int)ContentUris.parseId(mURI), attachIntent, uriInfo.getLabel(), uriInfo.getIconBitmap(), uriInfo.getIconResource(), null);
 	}
 	
@@ -264,8 +238,6 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 		Intent attachIntent = new Intent(Intent.ACTION_MAIN);
 		attachIntent.setComponent(data.getComponent());
 		UriInfo uriInfo = new UriInfo(attachIntent, data.getData(), mActivity.getContentResolver(), mActivity.getPackageManager(), mActivity.getResources(), null);
-		// TODO: Add a preference to decide whether to Prompt user to edit name or give user an option to always use default value.  
-//		mAttachPart.addAttachment((int)ContentUris.parseId(mURI), -1, attachIntent, uriInfo.getLabel(), uriInfo.getIconBitmap(), uriInfo.getIconResource(), null, null);
 		mAttachPart.addAttachment((int)ContentUris.parseId(mURI), attachIntent, uriInfo.getLabel(), uriInfo.getIconBitmap(), uriInfo.getIconResource(), null);
 	}
 	
@@ -279,33 +251,6 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 //		Intent chooserIntent = Intent.createChooser(intent, "this is a title");
 //		mActivity.startActivityForResult(chooserIntent , ADD_ATTACHMENT_REQUEST);
 //	}
-//	private void addAttachment() {
-//		Intent intent = new Intent(Intent.ACTION_CREATE_SHORTCUT);
-//		Intent chooserIntent = Intent.createChooser(intent, "this is a title");
-//		mActivity.startActivityForResult(chooserIntent , CREATE_SHORTCUT_REQUEST);
-//	}
-	
-// This is just test code.
-//	private void addAttachment() {
-////		Intent intent = new Intent(Intent.ACTION_PICK);
-////		intent.setData(Uri.parse("content:"));
-////		intent.setComponent(new ComponentName("*","*"));
-////		startActivityForResult(intent , ADD_ATTACHMENT_REQUEST);
-//
-////		Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-////		Intent intent = new Intent(Intent.ACTION_PICK);
-////		intent.setType("*/*");
-////		startActivityForResult(intent , ADD_ATTACHMENT_REQUEST);
-//		
-//		Intent intent = new Intent(Intent.ACTION_ATTACH_DATA);
-//		intent.setData(Uri.parse("content://contacts/people/1"));
-////		startActivityForResult(intent , ADD_ATTACHMENT_REQUEST);
-//		
-//		Intent chooserIntent = Intent.createChooser(intent, "this is a title");
-//		startActivityForResult(chooserIntent , ADD_ATTACHMENT_REQUEST);
-//		
-//	}
-	
 	
 	protected static final String ADD_ATTACH_LABEL = "ADD_ATTACH_LABEL"; 
 	protected static final String ADD_ATTACH_RETURN_DATA = "ADD_ATTACH_RETURN_DATA"; 
@@ -326,43 +271,13 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 		List<ResolveInfo> createShortcutResolveInfoList = pm.queryIntentActivities(queryCreateShortcutIntent, PackageManager.MATCH_DEFAULT_ONLY|PackageManager.GET_RESOLVED_FILTER|PackageManager.GET_INTENT_FILTERS );		
 		filterByPriorityAndDefaultFlag(pm, createShortcutResolveInfoList);
 
-		
 // Works, but the standard Android application's support for PICK is spotty at best. 	
 //		Intent queryPickIntent = new Intent(Intent.ACTION_PICK);
 //		queryPickIntent.setType("*/*");
 //		List<ResolveInfo> pickActionResolveInfoList = pm.queryIntentActivities(queryPickIntent, PackageManager.MATCH_DEFAULT_ONLY|PackageManager.GET_RESOLVED_FILTER|PackageManager.GET_INTENT_FILTERS );		
-////		sortAndFilterByPriority(pm, pickActionResolveInfoList);
 //		filterByPriorityAndDefaultFlag(pm, pickActionResolveInfoList);
 
-// No need to merge if only one set (ACTION_CREATE_SHORTCUT) is used.		
-//		// Merge the two lists: 
-////		TreeSet<ResolveInfo> mergedSet = new TreeSet<ResolveInfo>(new android.content.pm.ResolveInfo.DisplayNameComparator(pm));
-//		TreeSet<ResolveInfo> mergedSet = new TreeSet<ResolveInfo>(new Comparator<ResolveInfo>(){
-//			Comparator<ResolveInfo> comparator = new android.content.pm.ResolveInfo.DisplayNameComparator(pm);
-//			public int compare(ResolveInfo object1, ResolveInfo object2) {
-//				Log.v(TAG, "Compare: " + object1.activityInfo.packageName + " with " + object2.activityInfo.packageName);
-//				if( object1.activityInfo.packageName.equals(object2.activityInfo.packageName)){
-//					Log.v(TAG, object1.activityInfo.packageName + " == " + object2.activityInfo.packageName);
-//					if( object1.activityInfo.name.equals(object2.activityInfo.name)){
-//						Log.v(TAG, object1.activityInfo.name + " == " + object2.activityInfo.name);
-//						return 0;
-//					}else{
-//						return comparator.compare(object1, object2);
-////						return object1.activityInfo.packageName.compareTo(object2.activityInfo.packageName);
-//					}
-//				}else{
-//					return comparator.compare(object1, object2);
-////					return object1.activityInfo.packageName.compareTo(object2.activityInfo.packageName);
-//				}
-//			}
-//			
-//		});
-//      // TODO: !! This merge code seems to loose some entries as it merges,, not sure why.
-//		mergedSet.addAll(createShortcutResolveInfoList);
-//		mergedSet.addAll(pickActionResolveInfoList);
 		List<ResolveInfo> mergedSet = createShortcutResolveInfoList;
-		
-//		Collections.sort(resolveInfoList, new android.content.pm.ResolveInfo.DisplayNameComparator(pm));
 
 		final int sdkVersion = Integer.parseInt( Build.VERSION.SDK ); // Build.VERSION.SDK_INT was introduced after API level 3 and so is not compatible with 1.5 devices.
 		
@@ -407,20 +322,9 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 			hm.put(ADD_ATTACH_INTENT, createShortcutIntent);
 			
 			// Add icon
-//			try {
-//				hm.put(ADD_ATTACH_DRAWABLE, pm.getActivityIcon(cn));
-//			} catch (NameNotFoundException e) {
-//				Log.i(TAG, "Failed to find drawable because package returned by PackageManager was not found. Strange,, right?", e);
-//			}
 			hm.put(ADD_ATTACH_DRAWABLE, resolveInfo.loadIcon(pm));
 			
 			// Add Label
-//			CharSequence label = null;
-//			if( null == (label = resolveInfo.loadLabel(pm)) ){
-//				if( null == (label = pm.getText(resolveInfo.activityInfo.packageName, resolveInfo.labelRes, resolveInfo.activityInfo.applicationInfo)) ){
-//					label = pm.getApplicationLabel(resolveInfo.activityInfo.applicationInfo);
-//				}
-//			}
             CharSequence label = resolveInfo.loadLabel(pm);
             if(label == null){
                 label = resolveInfo.activityInfo.name;
@@ -441,32 +345,7 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 			hm.put(ADD_ATTACH_DRAWABLE, mActivity.getResources().getDrawable(R.drawable.question));
 		}		
 		data.add(hm);
-		
-//		// ***********************************************************
-//		// Music
-//		// ***********************************************************
-//		hm = new HashMap<String, Object>();
-//		hm.put(ADD_ATTACH_LABEL,R.string.attachment_type_music_label);
-//		hm.put(ADD_ATTACH_RETURN_DATA, ATTACHMENT_TYPE_MUSIC_INDEX);
-//		hm.put(ADD_ATTACH_DRAWABLE, R.drawable.largephoto);
-//		data.add(hm);
 
-//		// ***********************************************************
-//		// Play Music
-//      //   <string name="type_recordAudio">Record audio</string>		
-//		// ***********************************************************
-//		hm = new HashMap<String, Object>();
-//		hm.put(ADD_ATTACH_LABEL,mActivity.getText(R.string.type_recordAudio));
-//		hm.put(ADD_ATTACH_RETURN_DATA, ATTACHMENT_TYPE_MUSIC_INDEX);
-//		Intent playMusicIntent = new Intent(Intent.ACTION_VIEW);//ACTION_GET_CONTENT
-//		playMusicIntent.setType("audio/*");
-//		try {
-//			hm.put(ADD_ATTACH_DRAWABLE, mActivity.getPackageManager().getActivityIcon(playMusicIntent));
-//		} catch (NameNotFoundException e) {
-//			hm.put(ADD_ATTACH_DRAWABLE, mActivity.getResources().getDrawable(R.drawable.question));
-//		}		
-//		data.add(hm);
-		
 		// ***********************************************************
 		// Audio
 		// ***********************************************************
@@ -487,30 +366,13 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 			}			
 		}		
 		data.add(hm);
-				
-//		// ***********************************************************
-//		// Gallery
-//		//    <string name="attachment_type_gallery_label">Gallery</string>		
-//		// ***********************************************************
-//		hm = new HashMap<String, Object>();
-//		hm.put(ADD_ATTACH_LABEL,mActivity.getText(R.string.attachment_type_gallery_label));
-//		hm.put(ADD_ATTACH_RETURN_DATA, ATTACHMENT_TYPE_MEDIA_GALLERY_INDEX);
-//		Intent galleryIntent = new Intent(Intent.ACTION_PICK);
-//		galleryIntent.setComponent(new ComponentName("com.android.camera","com.android.camera.ImageGallery2"));
-//		try {
-//			hm.put(ADD_ATTACH_DRAWABLE, mActivity.getPackageManager().getActivityIcon(galleryIntent));
-//		} catch (NameNotFoundException e) {
-//			hm.put(ADD_ATTACH_DRAWABLE, mActivity.getResources().getDrawable(R.drawable.question));
-//		}		
-//		data.add(hm);
-		
+
 		// ***********************************************************
 		// Get Video
 		// ***********************************************************
 		hm = new HashMap<String, Object>();
 		hm.put(ADD_ATTACH_LABEL,mActivity.getText(R.string.type_video));
 		hm.put(ADD_ATTACH_RETURN_DATA, ATTACHMENT_TYPE_VIDEO_INDEX);
-//		Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
 		Intent videoPickIntent = new Intent(Intent.ACTION_VIEW);
 		videoPickIntent.setType("video/*");
 		try {
@@ -519,24 +381,7 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 			hm.put(ADD_ATTACH_DRAWABLE, mActivity.getResources().getDrawable(R.drawable.question));
 		}		
 		data.add(hm);
-//		
-//		
-//		// ***********************************************************
-//		// Get Image
-//		// ***********************************************************
-//		hm = new HashMap<String, Object>();
-//		hm.put(ADD_ATTACH_LABEL,mActivity.getText(R.string.type_image));
-//		hm.put(ADD_ATTACH_RETURN_DATA, ATTACHMENT_TYPE_PHOTO_INDEX);
-////		Intent imageIntent = new Intent(Intent.ACTION_GET_CONTENT);
-//		Intent imageIntent = new Intent(Intent.ACTION_PICK);
-//		imageIntent.setType("image/*");
-//		try {
-//			hm.put(ADD_ATTACH_DRAWABLE, mActivity.getPackageManager().getActivityIcon(imageIntent));
-//		} catch (NameNotFoundException e) {
-//			hm.put(ADD_ATTACH_DRAWABLE, mActivity.getResources().getDrawable(R.drawable.question));
-//		}		
-//		data.add(hm);		
-		
+
 		// ***********************************************************
 		// Contact
 		// ***********************************************************
@@ -545,15 +390,8 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 			hm = new HashMap<String, Object>();
 			hm.put(ADD_ATTACH_LABEL,mActivity.getText(R.string.type_contact));
 			hm.put(ADD_ATTACH_RETURN_DATA, ATTACHMENT_TYPE_CONTACT_INDEX);
-	//		Intent contactGetContentIntent = new Intent(Intent.ACTION_PICK);
-	//		contactGetContentIntent.setType("vnd.android.cursor.item/person");
-	//		try {
-	//			hm.put(ADD_ATTACH_DRAWABLE, mActivity.getPackageManager().getActivityIcon(contactGetContentIntent));
-	//		} catch (NameNotFoundException e) {
-	//			hm.put(ADD_ATTACH_DRAWABLE, mActivity.getResources().getDrawable(R.drawable.question));
-	//		}
-				hm.put(ADD_ATTACH_DRAWABLE, mActivity.getResources().getDrawable(R.drawable.ic_launcher_shortcut_contact));
-				data.add(hm);		
+            hm.put(ADD_ATTACH_DRAWABLE, mActivity.getResources().getDrawable(R.drawable.ic_launcher_shortcut_contact));
+            data.add(hm);
 		}
 		
 		// ***********************************************************
@@ -561,48 +399,12 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 		// ***********************************************************
 		hm = new HashMap<String, Object>();
 		hm.put(ADD_ATTACH_RETURN_DATA, ATTACHMENT_TYPE_ACTIVITY_INDEX);
-//		Intent pickActivityIntent = new Intent(Intent.ACTION_PICK_ACTIVITY);
-//		Intent launcherIntent = new Intent(Intent.ACTION_MAIN);
-//		launcherIntent.addCategory(Intent.CATEGORY_LAUNCHER);
-//		pickActivityIntent.putExtra(Intent.EXTRA_INTENT, launcherIntent);
 		Intent pickActivityIntent = new Intent(Intent.ACTION_CREATE_SHORTCUT);
 		pickActivityIntent.setComponent(new ComponentName("com.android.settings","com.android.settings.ActivityPicker"));
-//		try {6
-			//hm.put(ADD_ATTACH_DRAWABLE, mActivity.getPackageManager().getActivityIcon(pickActivityIntent));
-			hm.put(ADD_ATTACH_DRAWABLE_RESOURCE, R.drawable.ic_launcher_application);
-			hm.put(ADD_ATTACH_LABEL, mActivity.getText(R.string.applications));
-			//hm.put(ADD_ATTACH_LABEL, mActivity.getPackageManager().queryIntentActivities(pickActivityIntent, PackageManager.MATCH_DEFAULT_ONLY).get(0).activityInfo.loadLabel(mActivity.getPackageManager()));
-			//ActivityInfo(new ComponentName("com.android.settings","com.android.settings.ActivityPicker"), 0).applicationInfo.loadLabel(mActivity.getPackageManager()));
-//		} catch (NameNotFoundException e) { 
-//			hm.put(ADD_ATTACH_DRAWABLE, mActivity.getResources().getDrawable(R.drawable.question));
-//		}
-		data.add(hm);		
-		
-		
-////		hm = new HashMap<String, Object>();
-////		hm.put(ADD_ATTACH_LABEL, R.string.type_contact);
-////		hm.put(ADD_ATTACH_RETURN_DATA, ATTACHMENT_TYPE_CONTACT_INDEX);
-////		hm.put(ADD_ATTACH_DRAWABLE_RESOURCE, R.drawable.largecontact);
-////		data.add(hm);
-//		
-//		
-////		// ***********************************************************
-////		// Capture Image
-////		//    <string name="attachment_type_capture_image">Take photo</string>		
-////		// ***********************************************************
-////		hm = new HashMap<String, Object>();
-////		hm.put(ADD_ATTACH_LABEL,mActivity.getText(R.string.attachment_type_capture_image));
-////		hm.put(ADD_ATTACH_RETURN_DATA, ATTACHMENT_TYPE_CAMERA_INDEX);
-////		Intent captureImageIntent = new Intent(ACTION_IMAGE_CAPTURE);
-////		try {
-////			hm.put(ADD_ATTACH_DRAWABLE, mActivity.getPackageManager().getActivityIcon(captureImageIntent));
-////		} catch (NameNotFoundException e) {
-////			hm.put(ADD_ATTACH_DRAWABLE, mActivity.getResources().getDrawable(R.drawable.question));
-////		}		
-////		data.add(hm);
-				
+        hm.put(ADD_ATTACH_DRAWABLE_RESOURCE, R.drawable.ic_launcher_application);
+        hm.put(ADD_ATTACH_LABEL, mActivity.getText(R.string.applications));
+		data.add(hm);
 
-		
 		// ***********************************************************
 		// Nearminder
 		// ***********************************************************
@@ -669,9 +471,6 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 					TextView tv = (TextView)view.findViewById(R.id.list_dialog_item_text1);
 					tv.setText(label);
 					
-//				// Set tag
-//				Intent launchIntent = (Intent)data.get(ADD_ATTACH_INTENT);
-//				view.setTag(launchIntent);
 				}catch(HandledException h){ // Ignore.
 				}catch(Exception exp){
 					Log.e(TAG, "ERR0004L", exp);
@@ -693,7 +492,6 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 		};		
 		
 		AlertDialog dialog = new AlertDialog.Builder(mActivity)
-//     dialog.setIcon(mIcon);
        		.setTitle(R.string.dialog_attachmentType)
        		.setAdapter(attachmentAdapter, new DialogInterface.OnClickListener() {
        			public void onClick(DialogInterface dialog, int whichButton) {
@@ -719,7 +517,6 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 	           }
        		})
        		.create();
-//		dialog.show();
 		return dialog;
 
 	}
@@ -740,23 +537,12 @@ public class PickAttachmentPart implements ContextActivityParticipant {
                     for(; i < N; N--)
                     	resolveInfoList.remove(i);
                 }
-//                Collections.sort(resolveInfoList, new android.content.pm.ResolveInfo.DisplayNameComparator(pm));
             }
         }
 	}
 	
 	public void launchAttachementPicker(int choice) {
 		switch( choice ){
-//			case ATTACHMENT_TYPE_CONTACT_INDEX:
-//				mActivity.startActivityForResult(new Intent(Intent.ACTION_PICK,
-//					android.provider.Contacts.People.CONTENT_URI), // new ContentURI("content://contacts/people");
-//					PICK_CONTACT_REQUEST);
-//				break;
-//			case ATTACHMENT_TYPE_CONTACT_INDEX:
-//				Intent contactIntent = new Intent(Intent.ACTION_GET_CONTENT); // ACTION_PICK
-//				contactIntent.setType(android.provider.Contacts.People.CONTENT_ITEM_TYPE);
-//				mActivity.startActivityForResult(contactIntent, PICK_CONTACT_REQUEST);
-//			break;
 			case ATTACHMENT_TYPE_CONTACT_INDEX:
 				Intent contactIntent = new Intent(Intent.ACTION_PICK); //ACTION_GET_CONTENT, ACTION_PICK , ACTION_CREATE_SHORTCUT
 				contactIntent.setClass(mActivity, ContactsListActivity.class);
@@ -775,9 +561,6 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 			case ATTACHMENT_TYPE_PHOTO_INDEX:
 				Intent photoPickerIntent = new Intent();
 				photoPickerIntent.setAction(Intent.ACTION_PICK);
-//				photoPickerIntent.setAction("android.media.action.IMAGE_CAPTURE"); // Doesn't work. Says "inline-data" but I don't get a URI.
-//				photoPickerIntent.setAction(Intent.ACTION_GET_CONTENT); // Doesn't currently work.
-//				photoPickerIntent.setComponent(new ComponentName("com.android.camera", "com.android.camera.Camera")); // Starts the camera but does not receive the result afterwards.
                 photoPickerIntent.setType("image/*");
                 
                 mActivity.startActivityForResult(photoPickerIntent, PICK_IMAGE_REQUEST); 
@@ -785,14 +568,10 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 			case ATTACHMENT_TYPE_MUSIC_INDEX:
 				Intent musicPickerIntent = new Intent();
 				musicPickerIntent.setAction(Intent.ACTION_PICK);
-//				musicPickerIntent.setAction(Intent.ACTION_GET_CONTENT);
-//				musicPickerIntent.setAction("android.intent.action.RINGTONE_PICKER");
-//				musicPickerIntent.setComponent(new ComponentName("com.android.music", "MediaPickerActivity")); 
 				musicPickerIntent.setType("audio/*");
                 mActivity.startActivityForResult(musicPickerIntent, PICK_MUSIC_REQUEST); 
 				break;
 			case ATTACHMENT_TYPE_RECORDING_INDEX:
-				//MediaStore.Audio.Media.RECORD_SOUND_ACTION;
 				Intent recodinGetContentIntent = new Intent(Intent.ACTION_GET_CONTENT);
 				recodinGetContentIntent.setType("audio/*");
                 mActivity.startActivityForResult(recodinGetContentIntent, GET_RECORDING_CONTENT_REQUEST); 
@@ -806,92 +585,34 @@ public class PickAttachmentPart implements ContextActivityParticipant {
 				if(LicenseUtil.hasLicense(mActivity, LicenseUtil.FEATURE_NEARMINDER)){
 					Intent nearminderIntent = new Intent(Intent.ACTION_CREATE_SHORTCUT, Task.ProximityAlerts.CONTENT_URI);
 	                mActivity.startActivityForResult(nearminderIntent, CREATE_SHORTCUT_REQUEST); 
-//					//Intent nearminderIntent = new Intent(Intent.ACTION_CREATE_SHORTCUT);
-////					ComponentName cn = new ComponentName(StaticConfig.PACKAGE_NAME, "com.flingtap.done.NearminderActivity");
-////					nearminderIntent.setComponent(cn);
-////					nearminderIntent.putExtra(NearminderActivity.EXTRA_TASK_ID, (int)ContentUris.parseId(mURI));
-//					hm.put(ADD_ATTACH_INTENT, nearminderIntent);
 				}else{
 					mActivity.showDialog(MINDERS_ADDON_REQUIRED_DIALOG_ID);
 				}
 				break;
-				
-				
-				
+
 			case ATTACHMENT_TYPE_VIDEO_INDEX:
 				Intent videoPickerIntent = new Intent();
 				videoPickerIntent.setAction(Intent.ACTION_PICK);
-//				videoPickerIntent.setAction(Intent.ACTION_GET_CONTENT); // Doesn't work.
 				videoPickerIntent.setType("video/*");
-//				videoPickerIntent.setComponent(new ComponentName("com.android.music", "com.android.music.VideoBrowserActivity")); // Starts the camera but does not receive the result afterwards.
-				
-				
+
                 mActivity.startActivityForResult(videoPickerIntent, PICK_VIDEO_REQUEST); 
 				break;
 				
 			case ATTACHMENT_TYPE_TEST_INDEX:
-	//			try {
-					Intent intent = new Intent();
-	//				intent.setType("application/vnd.google-earth.kml+xml");
-	//				intent.setType("application/vnd.google-earth.kmz");
-	//				intent.setType("audio/mpeg");  
-	//				intent.setType("text/plain");  
-	//				intent.setType("text/html");  
-	//				intent.setType("application/x-gps");  
-	//				intent.setType("application/vnd.google.gmm");
-	//				intent.setType("video/mpeg");  
-	//				intent.setType("video/mp4");  
-	//				intent.setType("application/mp4");  
-					intent.setType("image/jpeg"); // Unsupported action - That action not currently supported.
-	//				intent.setType("image/png");  // Unsupported action - That action not currently supported.
-	//				intent.setType("com.google.android.maps/com.google.android.maps.Maps");  
-	//				intent.setType("com.google.android.browser/com.google.android.browser.BrowserBookmarksPage");  
-	//				intent.setType("com.google.android.browser/com.google.android.browser.AddBookmarkPage");  
-					
-	//				ComponentName cn = new ComponentName("com.google.android.maps", "com.google.android.maps.Maps");
-	//				ComponentName cn = new ComponentName("com.google.android.browser", "com.google.android.browser.BrowserBookmarksPage");
-	//				ComponentName cn = new ComponentName("com.google.android.browser", "com.google.android.browser.AddBookmarkPage");
-	//				intent.setComponent(cn); 
-	//				intent.setType("vnd.riddering.cursor.item/vnd.riddering.task");  
-	//				getContentResolver().getProvider(com.google.android.providers.settings.SettingsProvider);
-					
-					
-					// action=android.intent.action.MAIN launchFlags=4 comp={com.google.android.maps/com.google.android.maps.Maps} }
-					
-					
-	//				intent.setAction(Intent.PICK_ACTION);
-					intent.setAction(Intent.ACTION_GET_CONTENT);
-	//				intent.setAction(Intent.MAIN_ACTION);
-	//				intent.setAction(Intent.SEARCH_ACTION);
-	
-	// action=android.intent.action.SEARCH
-	// launchFlags=4 
-	// comp={com.google.android.maps/com.google.android.maps.Maps} 
-	// extras=Bundle[{app_data=Bundle[{centerLatitude=44.903004, zoomLevel=13, latitudeSpan=0.110402, longitudeSpan=0.109862, centerLongitude=-93.00394}], query=pizza}] }   				
-					
-					Bundle appDataBundle = new Bundle();
-					appDataBundle.putString("centerLatitude","44.903004");
-					appDataBundle.putString("centerLongitude","-93.00394");
-					appDataBundle.putString("zoomLevel","13");
-					appDataBundle.putString("latitudeSpan","0.110402");
-					appDataBundle.putString("longitudeSpan","0.109862");
-					intent.putExtra("app_data",appDataBundle);
-					intent.putExtra("query", "pizza");
-					mActivity.startActivityForResult(intent,
-	//				startSubActivity(new Intent(Intent.GET_CONTENT_ACTION),// 
-							
-	//						new Intent(Intent.VIEW_ACTION,
-	//						new Intent(Intent.PICK_ACTION,
-							// android.provider.SubscribedFeeds.Feeds.CONTENT_URI),
-							// android.provider.Calendar.Events.CONTENT_URI),
-							//android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI),
-	//								new ContentURI("geo:38.899533,-77.036476")),
-	//								new ContentURI("geo:")),
-							PICK_IMAGE_REQUEST);
-	//			} catch (URISyntaxException e) {
-	//				Log.e(TAG, "Failed to start GEO pick activity.", e);
-	//			}
-				break;
+                Intent intent = new Intent();
+                intent.setType("image/jpeg"); // Unsupported action - That action not currently supported.
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+
+                Bundle appDataBundle = new Bundle();
+                appDataBundle.putString("centerLatitude","44.903004");
+                appDataBundle.putString("centerLongitude","-93.00394");
+                appDataBundle.putString("zoomLevel","13");
+                appDataBundle.putString("latitudeSpan","0.110402");
+                appDataBundle.putString("longitudeSpan","0.109862");
+                intent.putExtra("app_data",appDataBundle);
+                intent.putExtra("query", "pizza");
+                mActivity.startActivityForResult(intent,PICK_IMAGE_REQUEST);
+
 			default:
 				ErrorUtil.handleExceptionNotifyUser("ERR0004N", (Exception)(new Exception( String.valueOf(choice) )).fillInStackTrace(), mActivity);
 		}

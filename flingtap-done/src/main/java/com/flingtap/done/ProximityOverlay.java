@@ -28,7 +28,6 @@ public class ProximityOverlay extends Overlay {
     }
 
     public static interface OnProximityAlertDistanceSetListener{
-//        public abstract void distanceSet(View view, int distanceValue, int distanceUnit);
         public abstract void distanceSet(int distanceValue, int distanceUnit);
     }
 
@@ -45,9 +44,6 @@ public class ProximityOverlay extends Overlay {
     
 	float pixelRadius = 30;
     int mMeterRadius = 10;
-//	int currentProximityRadiusValue; // TODO: Maybe change this to float since the LocationManger uses floats? (or maybe not for performance reasons).
-//	int color = Color.BLACK;
-//	int color = Color.WHITE;
     MapView mMapView;
     MapController mController;
 	OnProximityExceedingScreenListener largeListener;
@@ -55,7 +51,6 @@ public class ProximityOverlay extends Overlay {
     private float mScreenDensity = 0;
     
 	public void setColor(int color){
-//		this.color = color;
 	    paint.setColor(color);
 	}
 	
@@ -66,12 +61,6 @@ public class ProximityOverlay extends Overlay {
 	    	paint.setColor(Color.BLACK);;
 	    }
 	}
-	
-	
-//	protected ProximityOverlay(Point point, float initialRadius, 
-//			OnProximityExceedingScreenListener largeListener) {
-//		
-//	}
 
 	public ProximityOverlay(GeoPoint point, int initialMeterRadius, 
 			OnProximityExceedingScreenListener largeListener, MapView mapView,
@@ -87,18 +76,12 @@ public class ProximityOverlay extends Overlay {
 		mScreenDensity = screenDensity;
 		
 	    paint.setStyle(Paint.Style.STROKE);
-//	    paint.setARGB(255, 105, 105, 105); 
-		
+
 	    updateColor();
 	    paint.setStrokeWidth(2);
-	    // TODO: !! Make line thicker.
 		this.mPoint = point;
 		mMeterRadius = initialMeterRadius;
-//		this.zoomLevel = initialZoomLevel;
 		setMeterRadius(initialMeterRadius);
-//		pixelRadius = (float) calcPixelsPerMeter(
-//				(double) point.getLatitudeE6(), mapView.getZoomLevel(),
-//				initialMeterRadius);
 	}
 
 	private boolean mActOnIt = true;
@@ -115,11 +98,8 @@ public class ProximityOverlay extends Overlay {
 			
 			setPixelRadius( pixelsPerMeter );
 			
-			// int[] xyCoords = new int[2];
-			// calculator.getPointXY(point, xyCoords); 
 			sXYCoords = mapView.getProjection().toPixels(mPoint, sXYCoords);
 			
-			// canvas.drawCircle(xyCoords[0], xyCoords[1], pixelRadius, paint);
 			canvas.drawCircle(sXYCoords.x, sXYCoords.y, pixelRadius, paint);
 			displayPoints(mapView, canvas);
 			
@@ -132,16 +112,12 @@ public class ProximityOverlay extends Overlay {
 		}
 	}
 
-//	public boolean draw(Canvas canvas, PixelCalculator calculator,
-//			boolean shadow, long when) {
-//	}
-
 	private void setPixelRadius(float radius){
-//		Log.v(Tags.TAG_RADIUS, "setPixelRadius("+radius+") called.");
+        //		Log.v(Tags.TAG_RADIUS, "setPixelRadius("+radius+") called.");
 		pixelRadius = radius;
 	}
 	public void setMeterRadius(int meterRadius){
-//		Log.v(Tags.TAG_RADIUS, "setMeterRadius("+meterRadius+") called.");
+        //		Log.v(Tags.TAG_RADIUS, "setMeterRadius("+meterRadius+") called.");
 
 		mMeterRadius = meterRadius;		
 		
@@ -157,12 +133,10 @@ public class ProximityOverlay extends Overlay {
 		setPixelRadius((float) calcPixelsPerMeter((double) mPoint.getLatitudeE6(), mMapView.getZoomLevel(),
 				mMeterRadius, mScreenDensity));
 	}
-//	int zoomLevel;
-	
-//	public void displayPoints(MapView m_MapView, Canvas canvas, PixelCalculator calculator){
+
 	public void displayPoints(MapView m_MapView, Canvas canvas){
-//		Log.e(TAG, "displayPoints(..) called.");
-//		Log.e(TAG, "pixelRadius == "+pixelRadius);
+        //		Log.e(TAG, "displayPoints(..) called.");
+        //		Log.e(TAG, "pixelRadius == "+pixelRadius);
 
 		// calculate the lat/long span of the screen
 		int latSpan = m_MapView.getLatitudeSpan();
@@ -179,106 +153,25 @@ public class ProximityOverlay extends Overlay {
 		GeoPoint upperRightCornerPoint = new GeoPoint(latitudeE6TopEdge, longitudeE6ToTop);
 		GeoPoint lowerLeftCornerPoint = new GeoPoint(latitudeE6BottomEdge, longitudeE6BottomTop);
 		
-//		Point topPoint = new Point(mapCenter.getLatitudeE6(), longitudeToTop);
-//		Point centerPoint = new Point(mapCenter.getLatitudeE6(), mapCenter.getLongitudeE6()); // Duplicate
-		
-//		int[] xyCoords = new int[2];
 		Paint spot = new Paint();
 		spot.setStyle(Paint.Style.FILL);
 
-		
-		
-//		Paint greenSpot = new Paint(spot);
-//		greenSpot.setColor(Color.GREEN);
-//		calculator.getPointXY(upperRightCornerPoint, xyCoords);
-//		calculator.getPointXY(upperRightCornerPoint, xyCoords);
 		Point xyCoords = mMapView.getProjection().toPixels(upperRightCornerPoint, null);
 		
-//		canvas.drawCircle(xyCoords[0], xyCoords[1], 10, greenSpot);
-
 		int mapTopEdge = xyCoords.y;
 		int mapRightEdge = xyCoords.x;
 		
-//		Paint cyanSpot = new Paint(spot);
-//		cyanSpot.setColor(Color.CYAN);
-//		calculator.getPointXY(lowerLeftCornerPoint, xyCoords);
-		xyCoords = mMapView.getProjection().toPixels(lowerLeftCornerPoint, xyCoords); 
-		
-		
-//		canvas.drawCircle(xyCoords[0], xyCoords[1], 10, cyanSpot);
+		xyCoords = mMapView.getProjection().toPixels(lowerLeftCornerPoint, xyCoords);
 
-//		int mapBottomEdge = xyCoords[1];
-//		int mapLeftEdge = xyCoords[0];
 		int mapBottomEdge = xyCoords.y;
 		int mapLeftEdge = xyCoords.x;
 		
-//		Paint blueSpot = new Paint(spot);
-//		blueSpot.setColor(Color.BLUE);
-//		calculator.getPointXY(topPoint, xyCoords);
-//		canvas.drawCircle(xyCoords[0], xyCoords[1], 10, blueSpot);
-		
-//		Paint redSpot = new Paint(spot);
-//		redSpot.setColor(Color.RED); 
-//		calculator.getPointXY(mapCenter, xyCoords);
-//		canvas.drawCircle(xyCoords[0], xyCoords[1], 10, redSpot);
-		
-		
-//		Paint yellowSpot = new Paint(spot);
-//		yellowSpot.setColor(Color.YELLOW);
-//		calculator.getPointXY(point, xyCoords);
-//		xyCoords[0] = xyCoords[0] + (int)radius;
-//		canvas.drawCircle(xyCoords[0], xyCoords[1], 10, yellowSpot);
-		
-	
-//		Paint magentaSpot = new Paint(spot);
-//		magentaSpot.setColor(Color.MAGENTA);
-//		calculator.getPointXY(point, xyCoords);
-//		xyCoords[1] = xyCoords[1] + (int)radius;
-//		canvas.drawCircle(xyCoords[0], xyCoords[1], 10, magentaSpot);
-
-
-//		calculator.getPointXY(point, xyCoords);
-		xyCoords = mMapView.getProjection().toPixels(mPoint, xyCoords); 
-
-// TODO: !! The following code removed because not used. Maybe still need something to initially set the ring within what ever bounds the current view has.
-//		
-//		// Bottom edge
-////		if( xyCoords[1] + (int)pixelRadius > mapBottomEdge ){
-//		if( xyCoords.y + (int)pixelRadius > mapBottomEdge ){
-//			Log.e(TAG, "Bottom edge exceeded.");
-//			largeListener.proximityExceededScreen();
-//		}
-//
-//		// Top edge
-////		if( xyCoords[1] - (int)pixelRadius < mapTopEdge ){
-//		if( xyCoords.y - (int)pixelRadius < mapTopEdge ){
-//			Log.e(TAG, "Top edge exceeded.");
-//			largeListener.proximityExceededScreen();
-//		}
-//		
-//		// Right edge
-////		if( xyCoords[0] + (int)pixelRadius > mapRightEdge ){
-//		if( xyCoords.x + (int)pixelRadius > mapRightEdge ){
-//			Log.e(TAG, "Right edge exceeded.");
-//			largeListener.proximityExceededScreen();
-//		}
-//		
-//		// Left edge
-////		if( xyCoords[0] - (int)pixelRadius < mapLeftEdge ){
-//		if( xyCoords.x - (int)pixelRadius < mapLeftEdge ){
-//			Log.e(TAG, "Left edge exceeded.");
-//			largeListener.proximityExceededScreen();
-//		}
-
+		xyCoords = mMapView.getProjection().toPixels(mPoint, xyCoords);
 	}
 
 	public MapView getMapView() {
 		return mMapView;
 	}
-
-//	public void setMapView(MapView mapView) {
-//		this.mapView = mapView;
-//	}
 
 	public MapController getController() {
 		return mController;
@@ -288,7 +181,6 @@ public class ProximityOverlay extends Overlay {
 		mController = controller;
 	}
 
-	
 	// ***************************************
 	// From ProximityAlertEditor
 	// ***************************************
@@ -297,9 +189,7 @@ public class ProximityOverlay extends Overlay {
 			* EARTH_RADIUS;
 
 	public static double calcCircumference(double latitude) {
-//		return CIRCUMFERENCE_MULTIPLIER * Math.abs(Math.cos(latitude));
 		return CIRCUMFERENCE_MULTIPLIER * Math.abs(Math.cos(Math.toRadians(latitude)));
-		
 	}
 
 	public static final double[] WIDTH_ZOOM_TABLE = new double[] { 0, // not used.
@@ -348,24 +238,19 @@ public class ProximityOverlay extends Overlay {
 		assert zoomLevel >= 1;
 		assert zoomLevel <= 21;
 		
-//		Log.v(Tags.TAG_RADIUS, "zoomLevel == " + zoomLevel + ", WIDTH_ZOOM_TABLE[zoomLevel] == " + WIDTH_ZOOM_TABLE[zoomLevel] );
+        //		Log.v(Tags.TAG_RADIUS, "zoomLevel == " + zoomLevel + ", WIDTH_ZOOM_TABLE[zoomLevel] == " + WIDTH_ZOOM_TABLE[zoomLevel] );
 		
 		double metersXzoomTable = meters * WIDTH_ZOOM_TABLE[zoomLevel]; 
-//		Log.v(Tags.TAG_RADIUS, metersXzoomTable + " == " + meters + " * " + WIDTH_ZOOM_TABLE[zoomLevel] + ")");
+        //		Log.v(Tags.TAG_RADIUS, metersXzoomTable + " == " + meters + " * " + WIDTH_ZOOM_TABLE[zoomLevel] + ")");
 		
 		double calcCircumference = calcCircumference(latitudeE6/1E6);
-//		Log.v(Tags.TAG_RADIUS, calcCircumference + " calcCircumference("
-//				+ latitudeE6/1E6 + ")");
+        //		Log.v(Tags.TAG_RADIUS, calcCircumference + " calcCircumference("+ latitudeE6/1E6 + ")");
 		
 		double pixels = metersXzoomTable / calcCircumference;
 		
-//		Log.v(Tags.TAG_RADIUS, pixels + " == " + metersXzoomTable + " / " + calcCircumference );
+        //		Log.v(Tags.TAG_RADIUS, pixels + " == " + metersXzoomTable + " / " + calcCircumference );
 		
-////		Log.v(Tags.TAG_RADIUS, "(37.891402,-122.278512)*1E6 == (" + (new Double((37.891402d)*1E6)).intValue() + ","+ (new Double((-122.278512)*1E6)).intValue() + ") called.");
-
-		
-//		Log.v(Tags.TAG_RADIUS, pixels +" == calcPixelsPerMeter(" + latitudeE6/1E6 + "," + zoomLevel + ","
-//				+ meters + ") called.");
+        // Log.v(Tags.TAG_RADIUS, pixels +" == calcPixelsPerMeter(" + latitudeE6/1E6 + "," + zoomLevel + "," + meters + ") called.");
 		
 		// Adjust pixels for screen density.
 		pixels *= screenDensity;
@@ -381,8 +266,7 @@ public class ProximityOverlay extends Overlay {
 				.getLatitudeE6(), mMapView.getZoomLevel(),
 				mMeterRadius,
 				mScreenDensity));
-		mMapView.invalidate(); // TODO: Restrict the invalidate to a smaller
-								// region.
+		mMapView.invalidate(); // TODO: Restrict the invalidate to a smaller region.
 	}
 
 }

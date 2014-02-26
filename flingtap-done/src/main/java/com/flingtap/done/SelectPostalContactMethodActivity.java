@@ -154,28 +154,7 @@ public class SelectPostalContactMethodActivity extends Activity {
 				ErrorUtil.handle("ERR00061", "No postal addresses exist.", this); // TODO: Consider whether this should be an error.
 				setResult(RESULT_CANCELED);
 				finish();
-				return;			
-//			}else if(1 == mContactMethodPostalCursor.getCount()){
-//				// ******************************************************
-//				// A single postal address exists
-//				// ******************************************************
-//
-//				if( !mContactMethodPostalCursor.moveToFirst()){
-//					Log.e(TAG, "No postal address exists (despite the fact that cursor said so).");
-//					setResult(RESULT_CANCELED);
-//					finish();
-//					return;
-//				}
-//
-//				Long contactMethodId = mContactMethodPostalCursor.getLong(ContactMethodProjectionGps.CONTACT_M_ID_INDEX);
-//
-//				mContactMethodPostalCursor.close();
-//
-//				Uri returnData = constructReturnData(personId, contactMethodId);
-//
-//		        setResult(RESULT_OK, new Intent().setData(returnData));
-//		        finish();
-//		        return;
+				return;
 			}
 
 			// ******************************************************
@@ -277,7 +256,6 @@ public class SelectPostalContactMethodActivity extends Activity {
 						long contactMethodId = addressSelectionAdapter.getItemId(which);
 						//Log.d(TAG, "returnValue == " + contactMethodId);
 						
-						//	Uri returnData = ContentUris.appendId(ContactMethods.CONTENT_URI.buildUpon(), contactMethodId).build();
 						Uri returnData = constructReturnData(personId, contactMethodId);
 						
 						setResult(RESULT_OK, new Intent().setData(returnData));

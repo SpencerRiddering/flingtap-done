@@ -22,8 +22,8 @@ public class ReinstallBroadcastReceiver extends BroadcastReceiver {
 		try{
 			//Log.v(TAG, "onReceive(..) called.");
 			String data = intent.getDataString();
-//			Log.v(TAG, "data == " + data + ", " + "action == " + intent.getAction());
-//			Log.v(TAG, "context.getPackageName() == " + context.getPackageName());
+            //			Log.v(TAG, "data == " + data + ", " + "action == " + intent.getAction());
+            //			Log.v(TAG, "context.getPackageName() == " + context.getPackageName());
 				        
 			if(Intent.ACTION_PACKAGE_REPLACED.equals(intent.getAction()) && 
 					("package:"+context.getPackageName()).equals(data)) { //data.equals("package:"+ReinstallBroadcastReceiver.class.getName()) "package:com.ericcrook.InstallReceiver"

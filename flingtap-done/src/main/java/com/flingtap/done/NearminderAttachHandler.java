@@ -47,9 +47,6 @@ import android.widget.Toast;
 
 /**
  * TODO: Refactor this code so that it sub-classes DefaultAttachHandler since there is alot of overlap.
- * TODO: Reconsider whether the proximity alert record should include it's own "name" field rather than re-using the attachment's name field.
- *
- * 
  */
 public class NearminderAttachHandler 
 		extends AttachmentListAdapterDelegate 
@@ -93,25 +90,12 @@ public class NearminderAttachHandler
 			TextView secondLineText = (TextView) view.findViewById(R.id.second_line);
 			secondLineText.setVisibility(View.GONE);
 			
-//			// Set the item height.
-//			RelativeLayout itemLayout = (RelativeLayout) view.findViewById(R.id.item_layout);
-//			ViewGroup.LayoutParams layoutParams = itemLayout.getLayoutParams();
-////			layoutParams.height = context.getResources().getInteger(android.R.attr.listPreferredItemHeight);
-//			layoutParams.height = 64; // TODO: !!! Hack, fix it later.
-//			itemLayout.setLayoutParams(layoutParams);
-
-			
 			// **************************************
 			// Nearminder Name
 			// **************************************
 			TextView singleLineText = (TextView) view.findViewById(R.id.first_line);
 			singleLineText.setMinimumHeight(64);
 
-//			singleLineText.setVisibility(View.VISIBLE);
-			
-//			LinearLayout dualLineText = (LinearLayout) view.findViewById(R.id.attach_list_item_dual_line_text);
-//			dualLineText.setVisibility(View.GONE);
-			
 			String name = cursor.getString(TaskAttachmentListTab.PROJ_ATTACH_NAME_INDEX);
 			singleLineText.setText(name);
 			
@@ -127,11 +111,6 @@ public class NearminderAttachHandler
 		}
 	}
 
-//	// Handle broken attachment links.
-//	Uri attachURI = ContentUris.withAppendedId(Task.TaskAttachments.CONTENT_URI, cursor.getLong(TaskAttachmentListTab.PROJ_ATTACH_ID_INDEX));
-//	context.getContentResolver().delete(attachURI, null, null);
-
-	
 	public void onCreateContextMenu(ContextMenu menu, View view, ContextMenu.ContextMenuInfo menuInfo){
     	//Log.v(TAG, "onCreateContextMenu(..) called.");
     				
@@ -150,16 +129,14 @@ public class NearminderAttachHandler
 		MenuItem editProximityAlertMenuItem = null;
 		editProximityAlertMenuItem = menu.add(8, PROXIMITY_MENU_EDIT_ITEM_ID,
 				PROXIMITY_MENU_EDIT_ITEM_ID, R.string.context_editNearminder); 
-		//editProximityAlertMenuItem.setIcon(R.drawable.editproximityalert);
-		
+
     	// *******************
 		// "Remove" menu item.
     	// *******************
 		MenuItem removeProximityAlertMenuItem = null;
 		removeProximityAlertMenuItem = menu.add(8, PROXIMITY_MENU_DELETE_ITEM_ID,
 				PROXIMITY_MENU_DELETE_ITEM_ID, R.string.context_deleteNearminder); 	
-		// removeProximityAlertMenuItem.setIcon(R.drawable.deleteproximityalert);
-    	
+
     	// *******************
 		// Add "Rename" menu item.
     	// *******************
@@ -185,8 +162,6 @@ public class NearminderAttachHandler
 				Event.onEvent(Event.NEARMINDER_ATTACHMENT_HANDLER_EDIT_CONTEXT_MENU_ITEM_CLICKED, null); 
 				
 				Intent nearminderIntent = new Intent(Intent.ACTION_EDIT, mProxAlertUri);
-//				ComponentName cn = new ComponentName(StaticConfig.PACKAGE_NAME, "com.flingtap.done.NearminderActivity");
-//				nearminderIntent.setComponent(cn);		
 				mActivity.startActivity(nearminderIntent);
 				return true;
 			case PROXIMITY_MENU_DELETE_ITEM_ID:
@@ -203,9 +178,6 @@ public class NearminderAttachHandler
 				
 				// Prepare event info.
 				Event.onEvent(Event.NEARMINDER_ATTACHMENT_HANDLER_RENAME_CONTEXT_MENU_ITEM_CLICKED, null); 
-				
-//				Uri attachmentUri = ContentUris.withAppendedId(TaskAttachments.CONTENT_URI, mMenuInfo.id);
-//				AttachmentPart.renameAttachment(mActivity, attachmentUri, mEditContentNamePart);
 				return true;
 			default:
 				ErrorUtil.handle("ERR00044", "onContextItemSelected() called with unknown item id" + item.getItemId(), this);

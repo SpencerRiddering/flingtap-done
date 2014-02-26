@@ -29,16 +29,12 @@ import android.os.Parcelable;
 import android.util.Log;
 import android.widget.Toast;
 
-// TODO: !!! Nearminder viewer should contain a options menu item for editing the nearminder.
-
 /**
  * 
  */
 public class NearminderActivity extends CoordinatedActivity {
 	public static final String TAG = "NearminderActivity";
 
-	// private AttachmentPart attachPart = null;
-	// private TextEntryDialogPart editContentNamePart = null;
 	private static final int SELECT_AREA_REQUEST = 1;
 	private Uri mUri = null;
 	private String mDefaultName = null;
@@ -65,10 +61,6 @@ public class NearminderActivity extends CoordinatedActivity {
 
 	private static final int SET_NEARMINDER_NAME_DIALOG_ID = 58;
 
-	// private OverlayItemCollectionPart itemOverlayCollection = null;
-	// private ContactOverlayItemFactoryPart contactOverlayItemFactoryPart =
-	// null;
-
 	protected void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		try {
@@ -84,7 +76,6 @@ public class NearminderActivity extends CoordinatedActivity {
 
 				if (null != icicle) {
 					mResultData = icicle.getParcelable(SAVE_RESULT_DATA);
-//					showDialog(SET_NEARMINDER_NAME_DIALOG_ID);
 					return;
 				}
 			} else if (Intent.ACTION_EDIT.equals(intent.getAction())) {
@@ -122,75 +113,13 @@ public class NearminderActivity extends CoordinatedActivity {
 				return;
 			}
 
-			// // Add AttachmentPart
-			// attachPart = new AttachmentPart(this);
-			// addParticipant(attachPart);
-
-			// // Get list of locations from the user's context.
-			// itemOverlayCollection = new OverlayItemCollectionPart();
-			// addParticipant(itemOverlayCollection);
-
-			// Prepare to geocode postal contact methods.
-//			PostalContactMethodGeocoderPart postalContactMethodGeocoderPart = new PostalContactMethodGeocoderPart(this);
-			// addParticipant(postalContactMethodGeocoderPart); // No need to
-			// register it because callback (and thus dialog) is never used.
-
-			// // Get list of contact addresses.
-			// contactOverlayItemFactoryPart = new
-			// ContactOverlayItemFactoryPart(this,
-			// postalContactMethodGeocoderPart);
-			// addParticipant(contactOverlayItemFactoryPart);
-
-			// editContentNamePart = new TextEntryDialogPart(this);
-			// addParticipant(editContentNamePart);
-
-			// ************************
-
-			// showDialog(PROGRESS_DIALOG_ID);
-			// dialog = new ProgressDialog(this);
-			// dialog.setMessage(getString(R.string.
-			// nearminder_progress_dialog_message)); <string name="nearminder_progress_dialog_message">Please wait while loading...</string>
-			// dialog.setIndeterminate(true);
-			// dialog.setCancelable(true);
-			// dialog.show();
-
-			// new Handler().post(new Runnable(){
-			//
-			// public void run() {
-			// TODO: Start SelectAreaActivity and pass that ItemlizedOverlay
-			// using the SelectAreaActivity.EXTRA_OVERLAY_ITEMS extra.
 			Intent selectAreaIntent = new Intent();
 			ComponentName cn = new ComponentName(this, SelectAreaActivity.class); // "com.flingtap.done.SelectAreaActivity"
 			selectAreaIntent.setComponent(cn);
 
-			// TODO: !!! Remove the following code because it was taking too
-			// long (often times timming out) and I couldn't find an easy way to
-			// make a ProgressDialog appear.
-			// // Geocode the addresses.
-			// itemOverlayCollection.addOverlayAllItems(
-			// contactOverlayItemFactoryPart.buildOverlayList());
-			//					
-			// // TODO: Get a list of photo GPS positions
-			// // TODO: Get a list of (web) bookmark positions.
-			// // TODO: Get a list of MyPlacemarks GPS positions.
-			//					
-			// // TODO: Create a merged array of SelectAreaOverlayItem.
-			// SelectAreaOverlayItem[] overlayItems =
-			// itemOverlayCollection.toArray();
-			// selectAreaIntent.putExtra(SelectAreaActivity.EXTRA_OVERLAY_ITEMS,
-			// overlayItems);
-
 			if (mState == STATE_EDIT) {
-				Cursor proxCursor = getContentResolver().query(mUri, // Task.
-																		// ProximityAlerts
-																		// .
-																		// CONTENT_URI
-																		// item.
+				Cursor proxCursor = getContentResolver().query(mUri, // Task.ProximityAlerts.CONTENT_URI item.
 						new String[] { Task.ProximityAlerts._GEO_URI, Task.ProximityAlerts._ZOOM_LEVEL, Task.ProximityAlerts.RADIUS, Task.ProximityAlerts._SELECTED_URI,
-						// Task.ProximityAlerts._IS_SATELLITE,
-						// Task.ProximityAlerts._IS_TRAFFIC,
-						// Task.ProximityAlerts._BORDER_TYPE,
-						// Task.ProximityAlerts.RADIUS_UNIT,
 						}, null, null, null);
 				if (!proxCursor.moveToFirst()) {
 					Log.e(TAG, "ERR0003X URI not found in DB. " + mUri.toString());
@@ -207,8 +136,6 @@ public class NearminderActivity extends CoordinatedActivity {
 				}
 				selectAreaIntent.putExtra(SelectAreaActivity.EXTRA_ZOOM, proxCursor.getInt(1));
 				selectAreaIntent.putExtra(SelectAreaActivity.EXTRA_RADIUS, proxCursor.getInt(2));
-				//selectAreaIntent.putExtra(SelectAreaActivity.EXTRA_RADIUS_UNIT
-				// , overlayItems);
 				proxCursor.close();
 			} else if (mState == STATE_CREATE_SHORTCUT) {
 				Parcelable parcelable = getIntent().getParcelableExtra(EXTRA_GLOBAL_POSITION);
@@ -216,12 +143,8 @@ public class NearminderActivity extends CoordinatedActivity {
 					selectAreaIntent.putExtra(SelectAreaActivity.EXTRA_FIXED_POSITION, parcelable);
 				}
 			}
-			// dismissDialog(PROGRESS_DIALOG_ID);
 
 			startActivityForResult(selectAreaIntent, SELECT_AREA_REQUEST);
-
-			// }
-			// });
 
 		} catch (HandledException h) { // Ignore.
 		} catch (Exception exp) {
@@ -230,25 +153,6 @@ public class NearminderActivity extends CoordinatedActivity {
 		}
 
 	}
-
-	// private ProgressDialog dialog = null;
-	// @Override
-	// protected void onStop() {
-	// super.onStop();
-	// // itemOverlayCollection.clear();
-	// // dialog.dismiss();
-	// }
-	//	
-	//	
-	// @Override
-	// protected void onStart() {
-	// super.onStart();
-	// }
-	// @Override
-	// protected void onResume() {
-	// super.onResume();
-	// // Let user know we are working.
-	// }
 
 	private TextEntryDialog.OnTextSetListener listener = new TextEntryDialog.OnTextSetListener() {
 
@@ -259,14 +163,6 @@ public class NearminderActivity extends CoordinatedActivity {
 					finish();
 					return;
 				}
-
-				
-				// if( null == mResultData ){
-				// Log.e(TAG, "ERR0003Z mResultData is null.");
-				// ErrorUtil.handleFinish("ERR0003Z", "mResultData is null." ,
-				// this, NearminderActivity.this);
-				// return;
-				// }
 
 				ParcelableGeoPoint geoPoint = (ParcelableGeoPoint) mResultData.getParcelableExtra(SelectAreaActivity.EXTRA_GLOBAL_POSITION);
 				int radius = mResultData.getIntExtra(SelectAreaActivity.EXTRA_RADIUS, -1);
@@ -329,7 +225,6 @@ public class NearminderActivity extends CoordinatedActivity {
 
 		public void onCancel() {
 			try {
-//				Toast.makeText(NearminderActivity.this, "Operation cancelled.", Toast.LENGTH_SHORT).show();
 				//Log.d(TAG, "User cancelled the content namming part.");
 				setResult(RESULT_CANCELED);
 				finish();
@@ -366,22 +261,7 @@ public class NearminderActivity extends CoordinatedActivity {
 					mResultData = data;
 
 					if (mState == STATE_CREATE_SHORTCUT) {
-						//******************************************************
-						// **
-						// Prompt user for a name for this nearminder.
-						//******************************************************
-						// **
-						// editContentNamePart.promptUser(null==mDefaultName?
-						// getText
-						// (R.string.edit_content_name_dialog_name_default
-						// ):mDefaultName, listener,
-						// getText(R.string.edit_content_name_dialog_title)); //
-						// TODO: !! Create preferences for the types of default
-						// values that will be used. Example: date, time,
-						// "Unknown", the task name, using the geocoder to
-						// attempt to find a nearby business name, etc...
 						showDialog(SET_NEARMINDER_NAME_DIALOG_ID);
-
 					} else if (mState == STATE_EDIT) {
 
 						ParcelableGeoPoint geoPoint = (ParcelableGeoPoint) mResultData.getParcelableExtra(SelectAreaActivity.EXTRA_GLOBAL_POSITION);
@@ -444,13 +324,6 @@ public class NearminderActivity extends CoordinatedActivity {
 			switch (id) {
 				case SET_NEARMINDER_NAME_DIALOG_ID: {
 					return TextEntryDialog.onCreateDialog(this, listener, getText(R.string.dialog_setNearminderName), null, getDefaultName()); 
-																																																							// ...
-					// ProgressDialog dialog = new ProgressDialog(this);
-					// dialog.setMessage(getString(R.string.
-					// nearminder_progress_dialog_message)); <string name="nearminder_progress_dialog_message">Please wait while loading...</string>
-					// dialog.setIndeterminate(true);
-					// dialog.setCancelable(true);
-					// return dialog;
 				}
 			}
 

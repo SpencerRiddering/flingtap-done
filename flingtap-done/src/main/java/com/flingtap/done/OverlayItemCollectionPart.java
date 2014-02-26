@@ -7,8 +7,6 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * TODO: Add menu items/shortcuts which enable user to toggle the display of different sets of overlays.
- *
  */
 public class OverlayItemCollectionPart extends AbstractContextActivityParticipant {
 	
@@ -23,15 +21,7 @@ public class OverlayItemCollectionPart extends AbstractContextActivityParticipan
 	public void clear(){
 		overlayList.clear();
 	}
-	
-//	public boolean addOverlayAllItems(SelectAreaOverlayItem[] items){
-//		boolean retValue = true;
-//		for(SelectAreaOverlayItem item : items){
-//			retValue = retValue && overlayList.add(item);
-//		}
-//		return retValue;
-//	}
-	
+
 	public SelectAreaOverlayItem[] toArray(){
 		return (SelectAreaOverlayItem[])overlayList.toArray(new SelectAreaOverlayItem[]{});
 	}

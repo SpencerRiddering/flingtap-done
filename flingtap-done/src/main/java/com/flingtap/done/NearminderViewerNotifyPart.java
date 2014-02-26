@@ -35,12 +35,7 @@ import android.widget.TextView;
 /** 
  * Displays a Nearminder. 
  * 
- * TODO: !!!! Mark the actual location of the nearminder (with contact method bubble if available)
- * 
- * TODO: !!! What happens if the user just hits the back button? Should snooze,, right?
  * TODO: !!! Snooze needs some polish. Problem is that GPS is a little flakey, so the user appears to come and go from the region even if they stand still. Maybe deactivate the proximity alert for 30 minutes,, or something.
- * 
- * 
  */
 public class NearminderViewerNotifyPart extends AbstractContextActivityParticipant {
 	private static final String TAG = "NearminderViewerNotifyPart";
@@ -123,47 +118,7 @@ public class NearminderViewerNotifyPart extends AbstractContextActivityParticipa
 		
 		mTaskId = mProximityCursor.getString(TASK_ID_INDEX);
 		mProximityCursor.close();
-	    
-	    
-//	    // Get Task Id.
-//		Cursor mAttachCursor = activity.getContentResolver().query(
-//				Task.TaskAttachments.CONTENT_URI, 
-//				new String[] {Task.TaskAttachments.TASK_ID}, // Assumes a 1:1 relationship between proximity alert and task.  
-//				Task.TaskAttachments._URI + "=?", 
-//				new String[]{Task.ProximityAlerts.CONTENT_URI.buildUpon().appendPath(proximityAlertId).toString()}, 
-//				null);
-//		
-//		assert mAttachCursor.getCount() <= 1; // Assert a 1:1 relationship between proximity alert and task.  
-//		
-//		if(!mAttachCursor.moveToFirst()){
-//			Log.e(TAG, "Failed to find referenced task attachment in database.");
-//			Toast.makeText(activity, "Internal error.", Toast.LENGTH_SHORT).show();
-//			activity.setResult(Activity.RESULT_CANCELED);
-//			activity.finish();
-//			return; // TODO: ! ContextActivityParticipant needs an init() method (separate from constructor) so that in it's return value it can let the main activity know that it needs to abort.
-//		}
-//		final String taskId = mAttachCursor.getString(0);
-//		mAttachCursor.close(); 
-//	    
-//		// No need to manage this cursor because it's used only once to set the task name. 
-//		Cursor mTaskCursor = activity.getContentResolver().query(
-//				Task.Tasks.CONTENT_URI.buildUpon().appendPath(taskId).build(), 
-//				new String[] {Task.Tasks.TASK_TITLE}, 
-//				null, 
-//				null, 
-//				null);
-//		if(!mTaskCursor.moveToFirst()){
-//			Log.e(TAG, "Failed to find referenced task in database.");
-//			Toast.makeText(activity, "Internal error.", Toast.LENGTH_SHORT).show();
-//			activity.setResult(Activity.RESULT_CANCELED);
-//			activity.finish();
-//			return; // TODO: ! ContextActivityParticipant needs an init() method (separate from constructor) so that in it's return value it can let the main activity know that it needs to abort.
-//		}
-//		TextView taskName = (TextView)activity.findViewById(R.id.proximity_alert_title);
-//		taskName.setText(mTaskCursor.getString(0));
-//		mTaskCursor.close(); 
-		
-			
+
 		// Listen for "Task" button clicks. 
 		Button nearminderActionButton = (Button) mActivity.findViewById(R.id.proximity_alert_button_choose_action);
 		nearminderActionButton.setOnClickListener(new Button.OnClickListener() {

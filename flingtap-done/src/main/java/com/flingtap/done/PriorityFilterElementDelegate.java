@@ -52,7 +52,6 @@ public class PriorityFilterElementDelegate
 		uriDelegateMapping = new UriDelegateMapping[1];
 		uriDelegateMapping[0] = new UriDelegateMapping();
 		uriDelegateMapping[0].authority = Task.AUTHORITY;
-//		uriDelegateMapping[0].pathPattern = "tasks/"+Constraint.CONSTRAINT+"/"+Constraint.Version1.VERSION+"/"+Constraint.Version1.PRIORITY;
 		uriDelegateMapping[0].pathPattern = Constraint.Version1.PRIORITY_URI_PATTERN_STRING;
 		uriDelegateMapping[0].code = 0; // Uniquely identifies this mapping. Some Attachment handlers may handle multiple different mime-types so this allows us to distinguish between them. The value is passed into bindView(..)
 		// TODO: Couldn't the array index be used instead of adding the .code member? 
@@ -97,32 +96,6 @@ public class PriorityFilterElementDelegate
 
 		tag = view.getTag();
 		
-//		Uri filterElementUri = ContentUris.withAppendedId(Task.FilterElement.CONTENT_URI, (Long)((Object[]) view.getTag())[FilterElementListAdapter.TAG_FILTER_ELEMENT_ID_INDEX]);
-//		Cursor filterElementCursor = context.getContentResolver().query(filterElementUri, new String[]{Task.FilterElementColumns._ACTIVE}, null, null, Task.FilterElementColumns._ID);
-//		assert null != filterElementCursor;
-//		if( !filterElementCursor.moveToFirst() ){
-//			// TODO: !! Handle error.
-//			Log.e(TAG, "Failed to select filter element.");
-//			return;
-//		}
-//		boolean included = !Task.FilterElementColumns.ACTIVE_FALSE.equals(filterElementCursor.getString(0));
-//		filterElementCursor.close();
-//		
-//		final ToggleButton tButton = (ToggleButton)view.findViewById(R.id.label_list_item_toggle_button);
-//		tButton.setChecked(included);
-//		tButton.setOnClickListener(new View.OnClickListener(){
-//			public void onClick(View v) {
-//				long filterElementId = (Long)((Object[]) view.getTag())[FilterElementListAdapter.TAG_FILTER_ELEMENT_ID_INDEX];
-//				Uri filterElementUri = ContentUris.withAppendedId(Task.FilterElement.CONTENT_URI, filterElementId);
-//				ContentValues cv = new ContentValues(1);
-//				cv.put(Task.FilterElement._ACTIVE, tButton.isChecked()?Task.FilterElement.ACTIVE_TRUE:Task.FilterElement.ACTIVE_FALSE);
-//				int count = mActivity.getContentResolver().update(filterElementUri, cv, null, null);
-//				if( 1 != count ){
-//					// TODO: Handle this error.
-//					Log.e(TAG, "Failed to update filter element.");
-//				}
-//			}
-//		});
 	}
 
 	private static void updateLabelText(Context context, TextView primaryLineText, int selectedIndex) {
@@ -133,25 +106,10 @@ public class PriorityFilterElementDelegate
     	//Log.v(TAG, "onCreateContextMenu(..) called.");
 		final String action = mIntent.getAction();
 		if (Intent.ACTION_EDIT.equals(action) || Intent.ACTION_INSERT.equals(action)) {
-			
-//	    	AdapterView.AdapterContextMenuInfo mMenuInfo = (AdapterView.AdapterContextMenuInfo)menuInfo;
-//	    	Object[] tagArray = (Object[])((mMenuInfo.targetView).getTag());
-//	    	Uri locationUri = (Uri)(tagArray[AttachmentListAdapter.TAG_ATTACHMENTS_URI_INDEX]);
-	    	
-	    	
-//	    	// *******************
-//			// Add "Remove" menu item.
-//	    	// *******************
-//	    	addRemoveAttachmentMenuItems(menu, LABEL_MENU_REMOVE_ITEM_ID);
-	    	
-//	    	// *******************
-//			// Add "Rename" menu item.
-//	    	// *******************
-//			addRenameAttachmentMenuItems(menu, LABEL_MENU_RENAME_ITEM_ID);
 
-		}		
+		}
 	}
-	
+
 	
 
 	/**
@@ -162,34 +120,6 @@ public class PriorityFilterElementDelegate
 		// Prepare event info.
 		Event.onEvent(Event.OPEN_PRIORITY_FILTER_ELEMENT, null); // Map<String,String> parameters = new HashMap<String,String>();
 				
-//		long filterElementId = ((Intent) view.getTag()).getLongExtra(FilterElementListAdapter.TAG_FILTER_ELEMENT_ID_INDEX, Constants.DEFAULT_NON_ID);
-//		assert Constants.DEFAULT_NON_ID != filterElementId;
-//		Uri filterElementUri = ContentUris.withAppendedId(Task.FilterElement.CONTENT_URI, filterElementId);
-//		
-//		Uri mSelectedLabelUri = ((Intent) view.getTag()).getData();
-//		
-//		// Prepare custom title
-////		LayoutInflater lf = (LayoutInflater)mActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-////		View includeNotDueDateItemsView = lf.inflate(R.layout.dialog_selectDueDateFilter, null);
-//		
-////		TextView singleLineText = (TextView) view.findViewById(R.id.label_list_item_single_line_text);		
-//		TextView primaryLineText = (TextView) view.findViewById(R.id.label_list_item_dual_line_text_1);
-//		int selectedIndex = null==mSelectedLabelUri.getQueryParameter(FILTER_ELEMENT_INDEX_PARAMETER)?0:Integer.parseInt(mSelectedLabelUri.getQueryParameter(FILTER_ELEMENT_INDEX_PARAMETER));
-//		SelectPriorityOnClickListener clickListener = new SelectPriorityOnClickListener(mActivity, selectedIndex, filterElementUri, primaryLineText, (Intent) view.getTag());
-//		
-//		AlertDialog dialog =  new AlertDialog.Builder(mActivity)
-////				.setTitle(R.string.dialog_lowestDisplayedPriority)
-////				.setCustomTitle(includeNotDueDateItemsView)
-//				.setTitle(R.string.dialog_lowestDisplayedPriority)
-//				.setSingleChoiceItems(
-//					R.array.priority_label_delegate_options, 
-//					selectedIndex,
-//					clickListener)
-//				.setPositiveButton(R.string.button_ok, clickListener)
-//				.setNegativeButton(R.string.button_cancel, null)
-//				.create();
-//		dialog.show();
-		
 		mActivity.showDialog(SELECT_PRIORITY_DIALOG_ID);
 		
 		// HandledException is handled elsewhere --> }catch(HandledException h){ // Ignore.
@@ -205,16 +135,6 @@ public class PriorityFilterElementDelegate
 			ErrorUtil.notifyUser(mActivity);
 			return;
 		}
-
-//		switch(requestCode){
-//			case DELETE_LABEL_REQUEST:
-//				// Notify the ListAdapter that it's cursor needs refreshing
-////				findViewById(R.id.task_editor_geos).invalidate();
-//				notifyDataSetChanged();
-//				break;
-//				
-//			default:
-//		}
 	}
 
 	public boolean onContextItemSelected(MenuItem item) {
@@ -222,12 +142,6 @@ public class PriorityFilterElementDelegate
     	AdapterView.AdapterContextMenuInfo mMenuInfo = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
     	
         switch (item.getItemId()) {
-//			case LABEL_MENU_REMOVE_ITEM_ID:
-//				removeAttachment(mMenuInfo.id, DELETE_LABEL_REQUEST);
-//				return true;
-//			case LABEL_MENU_RENAME_ITEM_ID:
-//				renameAttachment(mMenuInfo.id, mEditContentNamePart);
-//				return true;
         }
         return false;
 	}
@@ -245,14 +159,6 @@ public class PriorityFilterElementDelegate
 		try{
 			switch(dialogId){
 				case SELECT_PRIORITY_DIALOG_ID:
-					
-//					long filterElementId = ((Intent) view.getTag()).getLongExtra(FilterElementListAdapter.TAG_FILTER_ELEMENT_ID_INDEX, Constants.DEFAULT_NON_ID);
-//					assert Constants.DEFAULT_NON_ID != filterElementId;
-//					Uri filterElementUri = ContentUris.withAppendedId(Task.FilterElement.CONTENT_URI, filterElementId);
-					
-//					Uri mSelectedLabelUri = ((Intent) view.getTag()).getData();
-					
-//					TextView primaryLineText = (TextView) view.findViewById(R.id.label_list_item_dual_line_text_1);
 					
 					int selectedIndex = null==mSelectedLabelUri.getQueryParameter(FILTER_ELEMENT_INDEX_PARAMETER)?0:Integer.parseInt(mSelectedLabelUri.getQueryParameter(FILTER_ELEMENT_INDEX_PARAMETER));
 					clickListener = createClickListener(mFilterElementUri, selectedIndex);

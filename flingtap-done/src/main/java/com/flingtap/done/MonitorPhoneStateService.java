@@ -34,11 +34,7 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 
 /**
- * TODO: Notification dismissal should be pegged to the end of the call, and maybe some configurable amount of additional "linger" time. Needs a database table to track since services can lose their state.
- * TODO: ! It seems that onCallStateChanged(TelephonyManager.CALL_STATE_RINGING, ..) is only called for incomming calls. So, I must use the  
- * TODO: Shoudln't this be called "PhoneStateMonitorService" ?
- * 
- * 
+ *
  */
 public class MonitorPhoneStateService extends Service {
 	private static final String TAG = "MonitorPhoneStateService";
@@ -47,23 +43,6 @@ public class MonitorPhoneStateService extends Service {
 	public static final String EXTRA_ENABLE_CALLMINDERS = "com.flingtap.done.intent.extra.ENABLE_CALLMINDERS";
 	
 	private PhoneStateListener mPhoneStateListener = null; // TODO: !!! Consider wrapping this in an atomic reference.
-	
-	
-//	@Override
-//	public void onCreate() {
-//		try{
-//			Log.v(TAG, "onCreate() called.");
-//			super.onCreate();
-//				
-//
-//	        
-//		}catch(HandledException h){ // Ignore.
-//		}catch(Exception exp){
-//			Log.e(TAG, "ERR0003H", exp);
-//			ErrorUtil.handleException("ERR0003H", exp, this);
-//		}
-//
-//	}
 
 	// This is the old onStart method that will be called on the pre-2.0
 	// platform.  On 2.0 or later we override onStartCommand() so this
@@ -204,23 +183,7 @@ public class MonitorPhoneStateService extends Service {
 						setupNotifications(mService, dialedNumber);
 						
 						break;
-						
-						
-						// TODO: ! Use the CALL_STATE_IDLE to identify the end of the call and use this event to update the CancelNotificationBroadcastReceiver alarm to so that there are StaticConfig.CALLMINDER_TRAILING_DURATION milliseconds remaining before the Callminder notification is dismissed. 	
-//			    			case TelephonyManager.CALL_STATE_IDLE:
-//			    		        Log.v(TAG, "state == TelephonyManager.CALL_STATE_IDLE ");
-//			    		        
-//			    		    	NotificationManager nm = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-//			    		    	int personId = intent.getIntExtra(EXTRA_PERSON_ID, -1); 
-//			    		    	if( -1 != personId ){
-//			    		    		nm.cancel(personId);
-//			    		    	}	    		        
-//			    				break;
-						
-//			    			case TelephonyManager.CALL_STATE_OFFHOOK: // Does not include a number.
-//			    		        Log.v(TAG, "state == TelephonyManager.CALL_STATE_OFFHOOK ");
-//			    				break;
-						
+
 				}
 			}catch(HandledException h){ // Ignore.
 			}catch(Exception exp){
@@ -278,29 +241,8 @@ public class MonitorPhoneStateService extends Service {
 					null, 
 					null, 
 					null);
-			
-			
-//			phoneCursor = context.getContentResolver().query(
-////					Uri.parse("content://com.android.contacts/data"), // ContactsContract.Data.CONTENT_URI
-//					Uri.parse("content://com.android.contacts/phones"), // ContactsContract.CommonDataKinds.Phone.CONTENT_URI
-//					new String[]{ 
-//						"lookup", // ContactsContract.ContactsColumns.LOOKUP_KEY
-//						"data1", // ContactsContract.CommonDataKinds.Phone.NUMBER 
-//						"display_name"}, // ContactsContract.ContactsColumns.DISPLAY_NAME  
-//					"data4 LIKE '" + PhoneNumberUtils.toCallerIDMinMatch(dialedNumber) + "%'", // data4 is not documented, but I'm not sure where else to find this reversed phone value.
-//					null, 
-//					null);
-
-//			 Cursor c = getContentResolver().query(,
-//			          new String[] {Data._ID, Phone.NUMBER, Phone.TYPE, Phone.LABEL},
-//			          Data.CONTACT_ID + "=?" + " AND "
-//			                  + Data.MIMETYPE + "='" + Phone.CONTENT_ITEM_TYPE + "'",
-//			          new String[] {String.valueOf(contactId)}, null);			
-			
 		}
-		
 
-		
 		NotificationManager nm = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
 		
 		int count = 0;
@@ -322,7 +264,6 @@ public class MonitorPhoneStateService extends Service {
 				}
 				
 				// Only notify user if there are tasks which _actually_ refer to the remote person.
-//				Cursor taskIdForPersonCursor = TaskList.createDefaultFilteredTasksForPersonCursor(context, phoneCursor.getInt(CONTACT_PROJ_LOOKUP_KEY), new String[]{});
 				Cursor taskIdForPersonCursor = TaskList.createDefaultFilteredTasksForPersonCursor(context, phoneCursor.getString(CONTACT_PROJ_LOOKUP_KEY), new String[]{});
 				assert null != taskIdForPersonCursor;
 				if( taskIdForPersonCursor.getCount() > 0 ){
@@ -392,10 +333,6 @@ public class MonitorPhoneStateService extends Service {
 			    	}
 			    	if( preferences.getBoolean(ApplicationPreference.CALLMINDER_FLASH, ApplicationPreference.CALLMINDER_FLASH_DEFAULT)){
 			    		n.defaults |= Notification.DEFAULT_LIGHTS;
-//			            n.ledARGB = Color.MAGENTA;
-//			            n.ledOnMS = 300;
-//			            n.ledOffMS = 1000;
-//			            n.flags |= Notification.FLAG_SHOW_LIGHTS; 	    		
 			    	}
 			    	
 			    	n.sound = Uri.parse(  preferences.getString(ApplicationPreference.CALLMINDER_RINGTONE, ApplicationPreference.CALLMINDER_RINGTONE_DEFAULT.toString()) );

@@ -166,28 +166,6 @@ public class SelectPostalContactMethodActivitySDK5 extends Activity {
 				setResult(RESULT_CANCELED);
 				finish();
 				return;			
-//			}else if(1 == mContactMethodPostalCursor.getCount()){
-//				// ******************************************************
-//				// A single postal address exists
-//				// ******************************************************				
-//				
-//				if( !mContactMethodPostalCursor.moveToFirst()){
-//					Log.e(TAG, "No postal address exists (despite the fact that cursor said so).");
-//					setResult(RESULT_CANCELED);
-//					finish();
-//					return;		
-//				}
-//
-//				Long contactMethodId = mContactMethodPostalCursor.getLong(ContactMethodProjectionGps.CONTACT_CONTRACT_DATA_ID_INDEX);		
-//				
-//				mContactMethodPostalCursor.close();
-//				
-//				Uri returnData = constructReturnData(personId, contactMethodId);
-//				
-//				
-//		        setResult(RESULT_OK, new Intent().setData(returnData));
-//		        finish();
-//		        return;
 			}
 
 			// ******************************************************

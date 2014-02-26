@@ -49,13 +49,7 @@ public class LocationUtil {
 
 	public static boolean doesUriContainLocationInfo(Context ctx, Uri uri) throws RuntimeException {
 		//Log.d(TAG, "uri.toString()=="+uri.toString());
-		
-// Location extension point. 
-//		if(uri.toString().startsWith(GeoMap.GeoMapBookmarks.CONTENT_URI.toString())) {
-//			return true;
-//		}else 
-		
-		// TODO: !!!! Do this parsing in the ApplicationContext at startup time.
+
 		final int sdkVersion = Integer.parseInt( Build.VERSION.SDK ); // Build.VERSION.SDK_INT was introduced after API level 3 and so is not compatible with 1.5 devices.
 		
 		if( 5 > sdkVersion ){ // Anrdoid 1.x series code.
@@ -72,16 +66,6 @@ public class LocationUtil {
 				return false;
 			}			
 		}			
-//		}else{
-//			// TODO: !!! Choosing option menu "search services" from the attachments tab results in this exception being thrown.
-//			// TODO: !!! Long clicking a "Task" task attachment results in this exception being thrown.
-//
-//// NOTE: Why is the error code below here? If there is no location info,, just return false,, right? 			
-////			Exception exp = (Exception)(new Exception("Wrong URI type. " + uri).fillInStackTrace());
-////			Log.e(TAG, "ERR0003G Wrong URI type.", exp);
-////			ErrorUtil.handleExceptionNotifyUserAndThrow("ERR0003G", exp, ctx);
-//			return false;
-//		}
 	}
 	
 	
@@ -89,8 +73,6 @@ public class LocationUtil {
 	 * Checks whether the contact refered to by the URI contains any postal contact methods.
 	 *    Postal contact methods usually can be geocoded and thus can be used for proximity alerts.
 	 *    
-	 * TODO Move this out to some sort of plugin.
-	 * 
 	 * @param uri A android.provider.Contacts.People.CONTENT_URI with id.
 	 * @return
 	 */
@@ -130,8 +112,6 @@ public class LocationUtil {
 	 * Checks whether the contact refered to by the URI contains any postal contact methods.
 	 *    Postal contact methods usually can be geocoded and thus can be used for proximity alerts.
 	 *    
-	 * TODO Move this out to some sort of plugin.
-	 * 
 	 * @param uri A android.provider.Contacts.People.CONTENT_URI with id.
 	 * @return
 	 */
@@ -162,34 +142,12 @@ public class LocationUtil {
 		// Find the postal address that the user wants to use
 		// ******************************************************
 
-//		Cursor mimetypeCursor = ctx.getContentResolver().query(Uri.parse("content://com.android.contacts/mimetypes"),
-//				new String[]{"_id"},
-//		                 "mimetype='vnd.android.cursor.item/postal-address_v2'", // ContactsContract.Data.MIMETYPE, StructuredPostal.CONTENT_ITEM_TYPE
-//		          null, null);		
-//		assert null != mimetypeCursor;
-//		assert mimetypeCursor.getCount() == 1;
-//		String mimeTypeId = null;
-//		try{
-//			mimeTypeId = mimetypeCursor.getString(0);
-//		}finally{
-//			mimetypeCursor.close();
-//		}
-//		if( null == mimeTypeId ){
-//			Exception exp = (Exception)(new Exception("Unable to find mimetype.").fillInStackTrace());
-//			Log.e(TAG, "ERR000JK Unable to find mimetype.");
-//			ErrorUtil.handleException("ERR000JK", exp, ctx);			
-//			return false;
-//		}
-		
 		// Get a list of the postal contact data (ie addresses)
 		Cursor mContactMethodPostalCursor = ctx.getContentResolver().query(Uri.parse("content://com.android.contacts/data"),
 				null,
-//				ContactMethodProjectionGps.CONTACT_CONTRACT_DATA_PROJECTION, // TODO: !!!! Why bother passing a projection?
 		          "contact_id=?" + " AND " // ContactsContract.Data.CONTACT_ID
                   + "mimetype=?", // ContactsContract.Data.MIMETYPE, StructuredPostal.CONTENT_ITEM_TYPE
-//                + "mimetype_id=?", // ContactsContract.Data.MIMETYPE, StructuredPostal.CONTENT_ITEM_TYPE
-		          new String[] {String.valueOf(contactId), "vnd.android.cursor.item/postal-address_v2"}, null);		
-//		          new String[] {String.valueOf(contactId), mimeTypeId}, null);		
+		          new String[] {String.valueOf(contactId), "vnd.android.cursor.item/postal-address_v2"}, null);
 		assert null != mContactMethodPostalCursor;
 		try{
 			// Zero postal addresses
@@ -205,16 +163,6 @@ public class LocationUtil {
 
 	public static Class findContactsContractsContactsClass() throws Exception {
 		Class contactsContractClass = Class.forName("android.provider.ContactsContract");
-				
-//		Class[] contactsContractClasses = contactsContractClass.getDeclaredClasses();
-//		//Class contactsClass = Class.forName("android.provider.ContactsContract.Contacts");
-//		for(Class checkClass: contactsContractClasses){
-//			String canonicalName = checkClass.getCanonicalName();
-//			if("android.provider.ContactsContract.Contacts".equals(checkClass.getCanonicalName())){
-//				return checkClass;				
-//			}
-//		}
-//		return null;
 		return findInnerClass(contactsContractClass, "android.provider.ContactsContract.Contacts");
 	}
 	
@@ -222,7 +170,6 @@ public class LocationUtil {
 		if( (null == theClass) || (null == name) ){
 			return null;
 		}
-		//Class contactsClass = Class.forName("android.provider.ContactsContract.CommonDataKinds");
 		Class[] contactsContractClasses = theClass.getDeclaredClasses();
 		for(Class checkClass: contactsContractClasses){
 			if(name.equals(checkClass.getCanonicalName())){
@@ -235,13 +182,6 @@ public class LocationUtil {
 	public static Class findContactsContractsCommonDataKindsStruturedPostalClass() throws Exception {
 		Class contactsContractClass = Class.forName("android.provider.ContactsContract");
 		
-		//Class contactsClass = Class.forName("android.provider.ContactsContract.CommonDataKinds");
-//		Class[] contactsContractClasses = contactsContractClass.getDeclaredClasses();
-//		for(Class checkClass: contactsContractClasses){
-//			if("android.provider.ContactsContract.CommonDataKinds".equals(checkClass.getCanonicalName())){
-//				return checkClass;				
-//			}
-//		}
 		Class commonDataKindsClass = findInnerClass(contactsContractClass, "android.provider.ContactsContract.CommonDataKinds");
 		if( null != commonDataKindsClass ){
 			return findInnerClass(commonDataKindsClass, "android.provider.ContactsContract.CommonDataKinds.StructuredPostal");
@@ -268,6 +208,4 @@ public class LocationUtil {
 		}
 		
 	}
-
-	
 }

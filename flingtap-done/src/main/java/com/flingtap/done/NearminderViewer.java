@@ -36,8 +36,6 @@ import android.widget.Toast;
 public class NearminderViewer extends BasicMapActivity implements OnProximityExceedingScreenListener {
 
 	static final String TAG = "NearminderViewer";
-	
-//	public static final String EXTRA_TASK_ID 		= "com.flingtap.done.ProximityAlertViewer.EXTRA_TASK_ID";
 
 	public static final String ACTION_PROXIMITY_ALERT_NOTIFY = "com.flingtap.done.ACTION_PROXIMITY_ALERT_NOTIFY"; 
 
@@ -80,8 +78,6 @@ public class NearminderViewer extends BasicMapActivity implements OnProximityExc
 		super.onCreate(icicle);
 		try{
 			mScreenDensity = getResources().getDisplayMetrics().density;
-// Moved into BasicMapActvity.			
-//			initMap();
 			//Log.v(TAG, "onCreate(..) called.");
 			
 	        // Allow user to use menu shortcuts without opening menu.
@@ -108,9 +104,7 @@ public class NearminderViewer extends BasicMapActivity implements OnProximityExc
 			}
 			
 		    doPrepareView();
-			
-//			EulaPromptPart.checkAndPrompt(this); // Not needed because will only be triggered after app update and so user has already accepted an earlier EULA, and wil have to accept the new version of EULA if they want to keep using the app.
-			
+
 		}catch(HandledException h){ // Ignore.
 		}catch(Exception exp){
 			// TODO: !!! If this activity is called from a notification then it causes the Activity to finish without user ever seeing a message!
@@ -176,9 +170,7 @@ public class NearminderViewer extends BasicMapActivity implements OnProximityExc
 			}
 			mapView.getOverlays().add(overlay);
 			
-			
-//			LocationDescriptionOverlay overlay = new LocationDescriptionOverlay(this, mapView, mGeoPoint, locationName);
-			
+
 			// ***********************
 			// Setup push pin 
 			// ***********************
@@ -199,21 +191,12 @@ public class NearminderViewer extends BasicMapActivity implements OnProximityExc
 
 	private PushPinOverlay mPushPinOveraly;
 	private ProximityOverlay overlay = null;
-//    final Handler mHandler = new Handler();
-    
-	public void proximityExceededScreen() {// TODO: Remove this code.
-//		Log.v(TAG, "proximityExceededScreen(..) called.");
-//		mapController.zoomOut();
-//		overlay.setMeterRadius(radius);
-//		mapView.invalidate(); // TODO: Restrict the invalidate to a smaller region.		
-	}
 
 	protected void onPause() {
 		super.onPause();
 		try{
 			//Log.v(TAG, "onPause() called.");	
 			mapView.getOverlays().clear(); // TODO: !!! This is removing overlays in the parent class,,, is it _really_ necessary? 
-//			mapView.postInvalidate(); 
 		}catch(HandledException h){ // Ignore.
 		}catch(Exception exp){
 			Log.e(TAG, "ERR0004D", exp);
@@ -223,27 +206,13 @@ public class NearminderViewer extends BasicMapActivity implements OnProximityExc
 	
 	
 	protected void initMap() {
-//		try{
-			setDefaultKeyMode(DEFAULT_KEYS_SHORTCUT);
-			
-			setContentView(R.layout.proximity_alert_view);
-			mapView = (MapView)findViewById(R.id.map_view);		
-			mapController = mapView.getController();
+        setDefaultKeyMode(DEFAULT_KEYS_SHORTCUT);
 
-			// Add zoom controls.
-//			LinearLayout zoomLayout = (LinearLayout) findViewById(R.id.map_zoom);
-//			zoomLayout.addView(mapView.getZoomControls(),
-//					new ViewGroup.LayoutParams(LayoutParams.WRAP_CONTENT,
-//							LayoutParams.WRAP_CONTENT));		
-//			zoomLayout.addView(,
-//					new ViewGroup.LayoutParams(LayoutParams.WRAP_CONTENT,
-//							LayoutParams.WRAP_CONTENT));		
-			mapView.setBuiltInZoomControls(true);
-//		}catch(HandledException h){ // Ignore.
-//		}catch(Exception exp){
-//			Log.e(TAG, "ERR0004E", exp);
-//			ErrorUtil.handleExceptionFinish("ERR0004E", exp, this);
-//		}
+        setContentView(R.layout.proximity_alert_view);
+        mapView = (MapView)findViewById(R.id.map_view);
+        mapController = mapView.getController();
+
+		mapView.setBuiltInZoomControls(true);
 	}
 
 	protected void onLayerChanged(){
@@ -263,18 +232,12 @@ public class NearminderViewer extends BasicMapActivity implements OnProximityExc
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
 		try{
-//	        MenuItem helpMenuItem = menu.add(0, HELP_ID, Menu.NONE, R.string.option_help);
-////	        helpMenuItem.setAlphabeticShortcut('h');
-//	        helpMenuItem.setIcon(android.R.drawable.ic_menu_help); 
 
 	        MenuItem editMenuItem = menu.add(0, EDIT_ID, 50, R.string.option_edit);
-//	        editMenuItem.setAlphabeticShortcut('e');
-//	        editMenuItem.setIcon(R.drawable.editproximityalert); 
-	        editMenuItem.setIcon(android.R.drawable.ic_menu_edit); 
+	        editMenuItem.setIcon(android.R.drawable.ic_menu_edit);
 
 	        MenuItem directionsMenuItem = menu.add(0, DIRECTIONS_MENU_ITEM_ID, 20, R.string.option_directions);
-//	        directionsMenuItem.setAlphabeticShortcut('e');
-	        directionsMenuItem.setIcon(android.R.drawable.ic_menu_directions); 
+	        directionsMenuItem.setIcon(android.R.drawable.ic_menu_directions);
         
 		}catch(HandledException h){ // Ignore.
 		}catch(Exception exp){
@@ -293,9 +256,6 @@ public class NearminderViewer extends BasicMapActivity implements OnProximityExc
 						Event.onEvent(Event.NEARMINDER_ATTACHMENT_HANDLER_EDIT_OPTIONS_MENU_ITEM_CLICKED, null); 
 						
 						Intent nearminderIntent = new Intent(Intent.ACTION_EDIT, mUri);
-						// ComponentName cn = new ComponentName(StaticConfig.PACKAGE_NAME, "com.flingtap.done.NearminderActivity");
-						// nearminderIntent.setComponent(cn);		
-						// nearminderIntent.setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
 						startActivityForResult(nearminderIntent, REQUEST_EDIT); // TODO: !!! Consider changing all calls to startActivity to startActivityForResult so the error message can be displayed.
 						return true;
 					case HELP_ID:
@@ -306,11 +266,6 @@ public class NearminderViewer extends BasicMapActivity implements OnProximityExc
 					case DIRECTIONS_MENU_ITEM_ID:
 						Nearminder.launchGetDirections(this, mUri);
 						return true;
-						
-//					default:
-						// May be participant or child activity's item. Not necessarily a problem.
-//						Log.w(TAG, "ERR000CQ Unrecognized options item selected. " + item.getItemId());
-//						ErrorUtil.handleNotifyUser("ERR000CQ", "Unrecognized options item selected. " + item.getItemId(), this, this);
 				}
 
 			}catch(HandledException h){ // Ignore.

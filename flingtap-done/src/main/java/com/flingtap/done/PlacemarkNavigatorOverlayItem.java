@@ -18,9 +18,8 @@ import com.google.android.maps.OverlayItem;
 import com.flingtap.common.HandledException;
 import com.flingtap.done.base.R;
 
-// TODO: !!! There has got to be a cleaner way to do this.
 /**
- * 
+ * TODO: !!! There has got to be a cleaner way to do this.
  */
 public class PlacemarkNavigatorOverlayItem extends OverlayItem  {
 	public static final String TAG = "PlacemarkNavigatorOverlayItem";
@@ -56,21 +55,14 @@ public class PlacemarkNavigatorOverlayItem extends OverlayItem  {
                 MyItemizedOverlay.boundCenterBottom(marker);
 		    	
 				final TextView tvTitle = new TextView(mContext); // TODO: Is there a better way to keep this manually drawn text in sync with the users presentation preferences?
-//					final TextView tvSnippet = new TextView(mContext); // TODO: Is there a better way to keep this manually drawn text in sync with the users presentation preferences?
-				
+
 				final Paint paint = new Paint();
 			    paint.setColor(Color.BLACK);
 				paint.setTextSize(tvTitle.getTextSize());
 				paint.setAntiAlias(true);
-//					paint.setStyle(Paint.Style.FILL);
-//					Log.v(TAG, "canvas.getWidth()=="+canvas.getWidth() + " canvas.getHeight()="+canvas.getHeight());
-//					canvas.drawText("TEST", 0 - marker.getIntrinsicWidth()/2 + 2, 0 - 2 * (marker.getIntrinsicHeight()/3), paint);
-//					canvas.drawText("TEST", 0, 0, paint);
-//					String snippet = getSnippet();
-				
+
 				String snippet = mSnippet;
-//				String snippet = getSnippet(); // TODO: ! verify that this works
-															
+
 				int splitIndex = snippet.indexOf('\n');
 				String findSnippetText = null;
 				if( -1 != splitIndex ){
@@ -84,42 +76,22 @@ public class PlacemarkNavigatorOverlayItem extends OverlayItem  {
 				}
 				final String snippetText = findSnippetText;
 				
-//					// Find snippet width
-//					tvSnippet.setText(snippetText);
-//					tvSnippet.requestLayout();
-//					tvSnippet.measure(View.MeasureSpec.AT_MOST, View.MeasureSpec.AT_MOST);											
-//					int snippetWidth = tvSnippet.getMeasuredWidth(); 
-//					
 				final String title = getTitle()==null?"  ":getTitle(); // NOTE: String with spaces ensures that the title is measured correctly.
-//					// Find snippet width
-//					tvTitle.setText(title);
-//					tvTitle.requestLayout();
-//					tvTitle.measure(View.MeasureSpec.AT_MOST, View.MeasureSpec.AT_MOST);											
-//					int titleWidth = tvTitle.getMeasuredWidth(); 
-//					
-//					int width = marker.getIntrinsicWidth();
-//					int height = marker.getIntrinsicHeight();
 				int width = marker.getIntrinsicWidth();
 				int height = marker.getIntrinsicHeight();
 				
-				
-				//											
-//					int fullWidth = (Math.max(width, (Math.max(snippetWidth, titleWidth))));
-//					int halfWidth = fullWidth/2;
 				float titleWidth = paint.measureText(title);
 				float snippetWidth = paint.measureText(snippetText);
 				int fullWidth = (Math.max(width, Math.round((Math.max(snippetWidth, titleWidth)))));
 				final int halfWidth = fullWidth/2;
 				
-//			        marker.setBounds(-halfWidth - 10, 1 - height, halfWidth  + 10, 1);
 				marker.setBounds(-halfWidth - 10, 1 - height, halfWidth  + 10, 1);
 
 				Drawable[] drawableArray = new Drawable[2];	    	
 		    	
 				drawableArray[0] = marker; 
 				drawableArray[1] = new Drawable(){
-//					drawableArray[0] = new Drawable(){
-					
+
 					@Override
 					public void setColorFilter(ColorFilter colorfilter) {
 					}
@@ -135,43 +107,14 @@ public class PlacemarkNavigatorOverlayItem extends OverlayItem  {
 
 					@Override
 					public void draw(Canvas canvas) {
-						
-
-
-//							canvas.drawText(title, 0 - 52, 0 - 52, paint);
-//							canvas.drawText(snippetText, 0 - 52, 0 - 36, paint);
-						
 						canvas.drawText(title, -halfWidth, 0 - 52, paint);
 						canvas.drawText(snippetText, -halfWidth, 0 - 36, paint);
-						
-						// snippet.substring(splitIndex+1)
-
-						
-						// This doesn't display anything. I don't know why.
-//							titleTv.setText(snippet.substring(0, splitIndex));
-//							snippetTv.setText(snippet.substring(splitIndex+1));
-//							searchServiceMarker.draw(canvas);
-						
 					}
 				};								
 				
 				LayerDrawable ld = new LayerDrawable(drawableArray);
-//					return super.getMarker(stateBitset);
 				return ld;
-
-	//TODO: why doesn't this code work? 									
-//					String snippet = getSnippet();
-//					int splitIndex = snippet.indexOf('\n');
-//					titleTv.setText(snippet.substring(0, splitIndex));
-//					snippetTv.setText(snippet.substring(splitIndex+1));
-//					searchServiceMarker.buildDrawingCache();
-//					Bitmap bitmap = searchServiceMarker.getDrawingCache(); // bitmap is always null! why?
-//					searchServiceMarker.destroyDrawingCache();
-//					BitmapDrawable bDrawable = new BitmapDrawable(bitmap);
-//					return bDrawable;
-				
 			}else{
-//					return plainMarker;
 				return null;
 			}
 			

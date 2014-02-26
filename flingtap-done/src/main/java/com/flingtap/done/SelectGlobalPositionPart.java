@@ -74,7 +74,7 @@ public class SelectGlobalPositionPart extends AbstractContextActivityParticipant
 			public boolean onLongClick(View v) {
 				return true;
 			}
-        });
+             });
     	selectAreaItemView = (LinearLayout)activity.findViewById(R.id.select_area_item);
     	selectAreaItemTitleView = (TextView)activity.findViewById(R.id.select_area_item_title);
     	selectAreaItemSnippetView = (TextView)activity.findViewById(R.id.select_area_item_snippet);

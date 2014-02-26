@@ -33,10 +33,6 @@ public class NearminderEnterIntentReceiver extends BroadcastReceiver {
 		    boolean entering = (Boolean)intent.getBooleanExtra(LocationManager.KEY_PROXIMITY_ENTERING, false);
 		    if( !entering ){
 		    	//Log.v(TAG, "onReceive(..) called with entering == false.");
-		    	
-//		    	// TODO: ! reconsider whether the notification should be removed when leaving the proximity.
-//			    NotificationManager nm = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
-//			    nm.cancel(Integer.parseInt(uri.getLastPathSegment()));	    	
 		    	return;
 		    }else{
 		    	//Log.v(TAG, "onReceive(..) called with entering == true.");

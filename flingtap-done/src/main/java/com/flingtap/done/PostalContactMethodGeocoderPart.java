@@ -39,13 +39,9 @@ import android.widget.Toast;
 
 /**
  * Resolves a contact method URI into a GeoPoint, optionally prompting the user to resolve ambiguous situations. 
- * 
- * TODO: !!! Add events.
- * 
+ *
  * TODO: Handle condition where the contact method's address changes (externally) but the GPS position is not updated.
  *       Contact Methods does not contain a "last updated" field (up to SDK 4), so it's difficult to notice changes. Could cache the address and check for changes.
- *       
- * 
  */
 public class PostalContactMethodGeocoderPart extends AbstractContextActivityParticipant {
 	public static final String TAG = "PostalContactMethodGeocoderPart";
@@ -69,17 +65,12 @@ public class PostalContactMethodGeocoderPart extends AbstractContextActivityPart
 		settings = mActivity.getSharedPreferences(ApplicationPreference.NAME, Activity.MODE_PRIVATE);
 	}
 	
-//	public final static String LATITUDE_EXTRA = "com.flingtap.done.intent.ContactGeocoder.extra.LATITUDE"; 
-//	public final static String LONGITUDE_EXTRA = "com.flingtap.done.intent.ContactGeocoder.extra.LONGITUDE"; 
-////	public final static String DESCRIPTION_EXTRA = "com.flingtap.done.intent.ContactGeocoder.extra.DESCRIPTION"; 
-
 	protected OnAddressGeocodedListener mListener = null;
     protected final List<Address> mAddresses = new ArrayList<Address>();
     protected String mAddress = null;
     
 	public GeoPoint resolveAddressPositionSDK5(Uri postalContactDataUri, OnAddressGeocodedListener listener){
 		Cursor postalContactDataCursor = mActivity.getContentResolver().query(postalContactDataUri,
-//				ContactMethodProjectionGps.CONTACT_CONTRACT_DATA_PROJECTION, "mimetype=?", new String[]{"vnd.android.cursor.item/postal-address_v2"}, null);
 				ContactMethodProjectionGps.CONTACT_CONTRACT_DATA_PROJECTION, null, null, null);
 		assert null != postalContactDataCursor;
 		try{
@@ -134,7 +125,6 @@ public class PostalContactMethodGeocoderPart extends AbstractContextActivityPart
 	private GeoPoint internalResolveAddressPosition(String address, Uri postalContactMethodUri, OnAddressGeocodedListener listener){
 		//Log.v(TAG, "resolveAddressPosition(..) called.");
 		
-//		assert null != listener;
 		mListener = listener;
 		
 		assert null != address;
@@ -144,57 +134,14 @@ public class PostalContactMethodGeocoderPart extends AbstractContextActivityPart
 		assert null != postalContactMethodUri;
 		mPostalContactMethodUri = postalContactMethodUri;
 
-//	    // **********************************************************************
-//	    // Check if contact method already contains a GPS position
-//	    // **********************************************************************
-//		Cursor checkForPositionCursor = mActivity.getContentResolver().query(
-//				postalContactMethodUri, 
-//				new String[]{ContactMethodsColumns.AUX_DATA}, 
-//				null, null, null);
-//		if(null == checkForPositionCursor || !checkForPositionCursor.moveToFirst() ){
-//			// Whoops, bad data! Bail.
-//			Log.e(TAG, "Failed to query ContactMethods for GPS info.");
-//			Toast.makeText(mActivity, "Internal error.", Toast.LENGTH_SHORT).show();
-//			return;
-//		}
-//		if( !checkForPositionCursor.isNull(0) ){		
-//			int gpsPositionId = checkForPositionCursor.getInt(0);
-//			Uri gpsPositionContactMethoUri = ContentUris.withAppendedId(ContactMethods.CONTENT_URI, gpsPositionId);
-//			
-//			Cursor gpsPositionCursor = mActivity.getContentResolver().query(
-//					gpsPositionContactMethoUri, 
-//					new String[]{ContactMethods.POSTAL_LOCATION_LATITUDE, ContactMethods.POSTAL_LOCATION_LONGITUDE}, 
-//					null, null, null);
-//			if(null == gpsPositionCursor || !gpsPositionCursor.moveToFirst() ){
-//				// Whoops, bad data! Bail.
-//				Log.e(TAG, "Failed to query ContactMethods for GPS info.");
-//				Toast.makeText(mActivity, "Internal error.", Toast.LENGTH_SHORT).show();
-//				return;
-//			}
-//			double latitude = gpsPositionCursor.getDouble(0);
-//			double longitude = gpsPositionCursor.getDouble(1);
-//			
-//			gpsPositionCursor.close();
-//			
-//			mListener.onAddressGeocodeFound(new GeoPoint((int)(latitude*1E6), (int)(longitude*1E6)));
-//		}
-//		checkForPositionCursor.close();				
-		
-		
-//		address = address.replace("\n",", "); 
-//		String noNewlienContactData = address.replace("\n",", "); 
 		String addressContactData = address.replace("\n",", "); // TODO: !! Verify this logic
-//		String addressContactData = address; 
-		
+
         Geocoder g = new Geocoder(mActivity, Locale.getDefault());
-		
 
         try {
 			// TODO: Re-evaluate how to handle the max number of addresses returned. Currently set to 5.
-        	// TODO: Add a preference for how many addresses should be returned.
-        	// TODO: Re-evaluate the longitude/latitude range. Where should this info come from? 
+        	// TODO: Re-evaluate the longitude/latitude range. Where should this info come from?
         	List<Address> tmpAddresses = g.getFromLocationName(addressContactData, 5); // TODO: !!! This call will block, so a "waiting" box should be displayed.
-            		//,-90, -180, 90, 180); 
         	mAddresses.clear();
         	mAddresses.addAll(tmpAddresses);
         } catch (IOException ioe2) {
@@ -257,10 +204,6 @@ public class PostalContactMethodGeocoderPart extends AbstractContextActivityPart
 			case DIALOG_SELECT:
 				prepareDialogTitle();
 				break;
-//			case DIALOG_UPDATE:
-//			    checkBoxView.setChecked(!settings.getBoolean(ApplicationPreference.UPDATE_ADDRESS_PROMPT_KEY, ApplicationPreference.UPDATE_ADDRESS_PROMPT_DEFAULT));
-//				addressAdapter.notifyDataSetInvalidated();
-//				break;
 		}
 	}
 	
@@ -280,7 +223,6 @@ public class PostalContactMethodGeocoderPart extends AbstractContextActivityPart
 				// It's here that the user should be prompted to resolve any ambiguity 
 				// ********************************************************************
 				//Log.d(TAG, "addresses.size()=="+mAddresses.size());
-//				final List<Address> finalAddresses = mAddresses;    
 				assert null != mAddresses;
 				addressAdapter = new LeanAdapter<Address>(mActivity, R.layout.address_list_dialog_item){
 
@@ -312,7 +254,6 @@ public class PostalContactMethodGeocoderPart extends AbstractContextActivityPart
 								// TODO Strange error condition.
 								ErrorUtil.handle("ERR0004V", "Strange error condition.", this);
 							}
-							// rg.addView(((RadioButton)view.findViewById(R.id.address_list_dialog_radio_button)));
 						}catch(HandledException h){ // Ignore.
 						}catch(Exception exp){
 							if( actOnIt ){
@@ -329,9 +270,6 @@ public class PostalContactMethodGeocoderPart extends AbstractContextActivityPart
 					}
 					
 				};
-				//      setListAdapter(addressAdapter);
-				//		getListView().setOnItemClickListener(this);
-				
 				View title = lf.inflate(R.layout.address_list_dialog_title, null);
 				ImageView iv = (ImageView)title.findViewById(R.id.address_list_dialog_icon);
 				iv.setImageResource(android.R.drawable.ic_dialog_info);
@@ -339,8 +277,6 @@ public class PostalContactMethodGeocoderPart extends AbstractContextActivityPart
 				// dialogTitleText will be initialized later in onPrepareDialog(..) with prepareDialogTitle();
 				
 				AlertDialog dialog = new AlertDialog.Builder(mActivity)
-//			.setIcon(R.drawable.ic_dialog_info)
-//			.setTitle(strAddrNotUnderstood)
 				.setCustomTitle(title)
 				.setSingleChoiceItems(addressAdapter, -1, new DialogInterface.OnClickListener(){
 					public void onClick(DialogInterface dialog, int which) {
@@ -348,18 +284,7 @@ public class PostalContactMethodGeocoderPart extends AbstractContextActivityPart
 							address = mAddresses.get(which);
 							mActivity.dismissDialog(DIALOG_SELECT);//dialog.dismiss();
 							
-// TODO: !!! Add a cache for addresses and their GPS position.
-// NOTE: This code works in general but since I don't want to change the contact method I don't need it anymore.
-//						if( settings.getBoolean(ApplicationPreference.UPDATE_ADDRESS_PROMPT_KEY, ApplicationPreference.UPDATE_ADDRESS_PROMPT_DEFAULT)){
-//
-//							if( ApplicationPreference.UPDATE_ADDRESS_VALUE_ALWAYS.equals(settings.getString(ApplicationPreference.UPDATE_ADDRESS_ACTION_KEY, ApplicationPreference.UPDATE_ADDRESS_VALUE_DEFALUT))){
-//		        				// Always Update contact address.
-//		        				updateContactMethodAddress();
-//							}
 							mListener.onAddressGeocodeFound(makeGeoPoint(address));
-//						}else{
-//							mActivity.showDialog(DIALOG_UPDATE);
-//						}
 						}catch(HandledException h){ // Ignore.
 						}catch(Exception exp){
 							Log.e(TAG, "ERR0004W", exp);
@@ -394,69 +319,12 @@ public class PostalContactMethodGeocoderPart extends AbstractContextActivityPart
 				})
 				.create();
 				return dialog;
-//			case DIALOG_UPDATE:
-// NOTE: Working code but not needed anymore.				
-//				// *******************************************************************
-//				// Offer to update the contact's address field with the new address.		
-//				// *******************************************************************
-//				View updateView = lf.inflate(R.layout.address_geocoder_update_body, null);
-//				
-//			    final CheckBox checkBoxView = (CheckBox)updateView.findViewById(R.id.address_geocoder_update_always_ask_checkbox);
-//			    assert null != checkBoxView;
-//			    this.checkBoxView = checkBoxView;
-//				
-//	            return new AlertDialog.Builder(mActivity)
-////                .setIcon(R.drawable.alert_dialog_icon)
-//                .setTitle(R.string.address_geocoder_part_update_title_label)
-////                .setMessage(R.string.address_geocoder_part_update_message_label)
-//                .setView(updateView)
-//                .setPositiveButton(R.string.address_geocoder_update_yes_label, new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int whichButton) {
-//        				mActivity.dismissDialog(DIALOG_UPDATE);
-//        				// Update preferences
-//        				if( !checkBoxView.isChecked() ){
-//        					updatePreferences(ApplicationPreference.UPDATE_ADDRESS_VALUE_ALWAYS);
-//        				}
-//        				// Update contact address.
-//        				updateContactMethodAddress();
-//        				// Notify listener
-//						mListener.onAddressGeocodeFound(makeGeoPoint(address));
-//                    }
-//
-//                })
-//                .setNegativeButton(R.string.address_geocoder_update_no_label, new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int whichButton) {
-//        				mActivity.dismissDialog(DIALOG_UPDATE);
-//
-//        				if( !checkBoxView.isChecked() ){
-//        					updatePreferences(ApplicationPreference.UPDATE_ADDRESS_VALUE_NEVER);
-//        				}
-//        				// Notify listener
-//						mListener.onAddressGeocodeFound(makeGeoPoint(address));
-//                    }
-//                })
-//                
-//                .create();				
-				
-
-			default: 
+			default:
 				return null;
 		}
 	}
-//	private void updatePreferences(String preferenceValue) {
-//		SharedPreferences.Editor editor = settings.edit();
-//		editor.putBoolean(ApplicationPreference.UPDATE_ADDRESS_PROMPT_KEY, true);        				
-//		editor.putString(ApplicationPreference.UPDATE_ADDRESS_ACTION_KEY, preferenceValue);        				
-//		if( !editor.commit() ){
-//        	Log.e(TAG, "Unable to change preference.");
-//        	Toast.makeText(mActivity, "Internal error.", Toast.LENGTH_SHORT).show();
-//		}
-//	}
 
 	private void prepareDialogTitle() {
-//		CharSequence addrNotUnderstood = mActivity.getText(R.string.dialog_theAddressXWasNotUnderstood);
-//		String strAddrNotUnderstood = addrNotUnderstood.toString();
-//		strAddrNotUnderstood = strAddrNotUnderstood.replaceFirst("\\$1", mAddress); //  
 		dialogTitleText.setText(TextUtils.expandTemplate(mActivity.getText(R.string.dialog_theAddressXWasNotUnderstood), mAddress));
 	}
 
@@ -481,12 +349,6 @@ public class PostalContactMethodGeocoderPart extends AbstractContextActivityPart
         	ErrorUtil.handle("ERR0004Z", "Failed to update contact method address. contact method not found.", this);
         	return;
         }
-		// TODO: Add a preference here. Should we also update the gps position. 
-		// TODO: ! Add GPS position to a GpsCacheProvider for use later. 
-//		if( address.hasLatitude() && address.hasLongitude() ){
-//          // This code doesn't work because there is no way to add a latitude/longitude to a contact method.
-//			Util.addPostalLocation(mActivity, mPostalContactMethodUri, address.getLatitude(), address.getLongitude());
-//		}
 	}
 
 	private static GeoPoint makeGeoPoint(Address address) {
